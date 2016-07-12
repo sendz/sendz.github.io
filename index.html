@@ -24,7 +24,7 @@ layout: default
                 {% endif %}
                 {% endfor %}
                 <div class="card-content black-text">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="card-title" style="line-height: 0;">{{ post.title }}</h2></a>
+                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="card-title" style="line-height: 1;">{{ post.title }}</h2></a>
                     <p>{{ post.excerpt | strip_html | truncatewords:175 }}</p>
                 </div>
                 <div class="card-action">
