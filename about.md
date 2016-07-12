@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Tentang
+permalink: /tentang/
 ---
 
 Sebenernya bingung mau nulis apa disini, lha kalau interview disuruh menjelaskan diri sendiri aja susah -_-. Jadi ya ceritanya gini . . .

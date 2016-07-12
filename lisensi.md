@@ -1,23 +1,7 @@
 ---
 layout: page
 title: Lisensi Tulisan
-date: 2014-04-24 10:52:18.000000000 +07:00
-type: page
-published: true
-status: publish
-categories: []
-tags: []
-meta:
-  _edit_last: '1'
-  spacious_page_layout: default_layout
-  _wp_page_template: default
-  _wpas_done_all: '1'
-author:
-  login: sendy
-  email: sendzation@gmail.com
-  display_name: sendy
-  first_name: ''
-  last_name: ''
+permalink: /lisensi/
 ---
 <pre>
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
