@@ -1,0 +1,59 @@
+---
+layout: post
+title: CrunchBang Ogah WiFi-an
+date: 2013-09-25 18:07:48.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- broadcom
+- connect
+- debian
+- hotspot
+- konek
+- lan
+- tidak bisa
+- wifi
+- wireless
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467514116;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3931;}i:1;a:1:{s:2:"id";i:3221;}i:2;a:1:{s:2:"id";i:3279;}}}}
+  dsq_thread_id: '4131287851'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Baru install CrunchBang, terus dibawa ke kampus niatnya biar bisa wifi-an pake akun mahasiwa, ternyata kandas ditengah ruang serbaguna :| Setelah googling sana-sini dengan bantuan USB tethering dari HP jadul, ternyata masalah utamanya adalah si debian gak install driver wireless LAN dalam paketannya, akhirnya cari dulu ini WLAN pake chipset apa dengan perintah 'lspci' dan menemukan si neneg pake Broadcom.<br />
+<!--more--><br />
+Terus kalau ngikutin <a href="https://wiki.debian.org/wl">https://wiki.debian.org/wl</a>, cara pertama untuk debian wheezy adalah:</p>
+<pre class="prettyprint">
+deb http://http.debian.net/debian/ wheezy main contrib non-free
+</pre>
+<p>Tapi karena ini CrunchBang, cara pertama itu bisa di-skip :D</p>
+<p>Selanjutnya update repo terus download driver Broadcom Wireless</p>
+<pre class="prettyprint">
+# apt-get update
+# apt-get install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
+</pre>
+<p>Terus unload modul yang nantinya bisa menimbulkan prahara dan konflik</p>
+<pre class="prettyprint">
+# modprobe -r b44 b43 b43legacy ssb brcmsmac
+</pre>
+<p>Terus ganti pake modul wl</p>
+<pre class="prettyprint">
+# modprobe wl
+</pre>
+<p>Selesai, langsung bisa ngacir wifi-an :D</p>

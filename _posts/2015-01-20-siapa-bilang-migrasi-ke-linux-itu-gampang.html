@@ -1,0 +1,54 @@
+---
+layout: post
+title: Siapa Bilang Migrasi ke Linux itu Gampang?
+date: 2015-01-20 18:10:46.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  dsq_thread_id: '3773089430'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466405483;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3485;}i:1;a:1:{s:2:"id";i:3761;}i:2;a:1:{s:2:"id";i:3368;}}}}
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>[caption id="attachment_3687" align="alignnone" width="650"]<img class="size-full wp-image-3687" src="{{ site.baseurl }}/assets/migrasi1_fcy8yt.jpg" alt="Gambar diambil dari http://www.kidsdiscover.com/spotlight/animal-migrations-for-kids/" width="650" height="434" /> Gambar diambil dari http://www.kidsdiscover.com/spotlight/animal-migrations-for-kids/[/caption]</p>
+<p>Mungkin ada yang bilang kalau migrasi ke Linux itu gampang, cuma modal niat dan kemauan. Eits! Gak bisa, gak segampang itu, gak segampang ada niat terus install, apalagi kalau migrasi dari platform lain, dari Windows misal.</p>
+<p>Saya kenal linux sejak masuk SMK, sekitar 2006, itupun kenal pertama yang text mode, linux pertama yang saya pegang adalah trustix, text base, butuh usaha buat install. Desktop pertama saya Knoppix, bonus dari buku tutorial linux, linux pertama yang saya install adalah Ubuntu 7.04 Gutsy Gibon yang saya dapat dari program Ship-It CD.</p>
+<p>Dari perjalanan tersebut, saya tidak menemukan atau merasakan kemudahan sama sekali, sudah berapa kali data hilang karena salah format partisi, atau karena tergiur dengan fitur LVM yang ternyata menyebabkan semua HDD dilahap habis, atau driver printer yang tidak tersedia, tidak ada kemudahan dalam proses ini.</p>
+<p>Saya akan sharing kesulitan yang dialami selama 'migrasi' dari Microsoft Windows, yang dari Mac rasanya tidak perlu, karena saya sendiri belum pernah migrasi dari Mac, dan satu lagi "once you goin' Mac, you ain't go back" (70% saya mengamini kalimat ini)</p>
+<h3>Dari FAT32 / NTFS ke ext3 / ext4 dan lainnya</h3>
+<p>Ini masalah awal, kita sudah punya data, file, dokumen yang diolah di Windows dan disimpan di partisi yang memiliki file system bawaan windows ke file system punya linux, bukan sesuatu hal yang mudah kecuali punya space harddisk yang besar. Saat saya install linux dan menghapus seluruh drive C di Windows, saya kemudian bingung, bukan karena Windows nya kehapus, tapi bingung bagaimana caranya data di D-nya windows bisa dibawa masuk ke /home/ nya linux tapi space saya sangat terbatas.</p>
+<p>Memang, linux bisa membuka dan membaca bahkan menulis data dengan baik ke file system bawaan windows, tapi apakah akan terus seperti itu selamanya?</p>
+<h3>Dari Microsoft Office ke OpenOffice, LibreOffice, WPS/Kingsoft Office</h3>
+<p>Mungkin sekarang bukan masalah lagi untuk membuka dokumen dengan format bawaan dari Microsoft Office di aplikasi pengolah dokumen di linux, tapi saya dulu merasakannya, dimana file Office 2007 hancur berantakan dibuka di OpenOffice, sekarang juga masih kok, apalagi file dari Microsoft Word, pasti layout-nya berbeda ketika dibuka di LibreOffice, bahkan WPS / Kingsoft office sekalipun. Ini merepotkan, kerja dua kali jadinya, iya kan?</p>
+<h3>Dari .exe atau .msi ke .deb, .rpm, Bahkan Compile Sendiri</h3>
+<p>Ini yang paling repot, saat saya belum selalu terkoneksi dengan internet, install software/aplikasi dengan offline installer adalah hal paling penting, terbiasa dengan file .exe atau .msi yang tinggal klik langsung bisa install (kecuali butuh framework yang belum terinstall) tentu sangat mudah. Nah, saya pernah membawa sebuah file .deb, sebuah file kecil dari <strong>wine</strong> (yes, saya sempat belum bisa move on dari aplikasi Windows), ternyata saat saya install dengan gdebi, butuh file kecil lainnya, butuh yang namanya dependensi, dan itu saya harus catat dependensi apa saja yang dibutuhkan, lalu besoknya download di sekolah, lalu saat pulang ke rumah, install dependensi, dan dependensi itu membutuhkan dependensi lain. AMPUUUUN!</p>
+<p>Tapi kan sekarang internet sudah biasa. Iya, tapi apa akan selalu terhubung dengan jaringan internet?</p>
+<p>Ini adalah worst case kalau tidak ada internet dan tidak bisa install dari Software Center atau repositori.</p>
+<h3>Kompatibilitas Hardware</h3>
+<p>Biasa dengan driver yang sudah disediakan oleh vendor, pindah ke Linux adalah sebuah tantangan paling besar untuk pengguna biasa seperti saya sebelum ini, lha? coba bayangkan, beli printer baru, katakanlah printer canon, dan tidak ada driver untuk linux di paket penjualannya. Tapi kan ada driver bawaan dari Linux? Iya, tapi tidak semua printer baru di pasaran langsung didukung oleh linux, dan googling untuk driver di linux itu gak singkat.</p>
+<h3>Habit</h3>
+<p>Yang paling sulit dari semua hal diatas adalah, migrasi kebiasaan, memindahkan kebiasaan dari environment Microsoft Windows ke environment di linux, kenapa? Karena ternyata environment di linux gak cuma satu, ada KDE, ada gnome, ada MATE, ada cinnamon, ada LXDE, dan masih banyak yang lainnya. Dan masing-masing mereka punya keunikan sendiri. Bingung? Iya, saya juga sampe sekarang bingung kalau mikirin harus pilih environment apa.</p>
+<h3>Kesimpulan</h3>
+<p>Apalah pake kesimpulan. Sekali lagi, gak cukup NIAT dan KEMAUAN untuk pindah dari Windows ke Linux, tapi butuh usaha tanpa henti, dukungan dari teman dan komunitas, dan INTERNET! Selama ada Internet, masalah-masalah di Linux lebih mudah untuk diselesaikan.</p>
+<p>Masih mau migrasi ke Linux? Kalau mau, mari saya bantu!</p>

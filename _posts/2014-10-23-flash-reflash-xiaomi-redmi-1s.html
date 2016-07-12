@@ -1,0 +1,71 @@
+---
+layout: post
+title: Flash/ReFlash Xiaomi Redmi 1S
+date: 2014-10-23 18:38:24.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Android
+- Blog
+- ID-ID
+- Internationalized
+tags:
+- 1s
+- Android
+- bootloader
+- fastboot
+- flash
+- redmi
+- reflash
+- update
+- xiaomi
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467119859;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2934;}i:1;a:1:{s:2:"id";i:3155;}i:2;a:1:{s:2:"id";i:3162;}}}}
+  _wpas_done_all: '1'
+  _wp_old_slug: flash-xiaomi-redmi-1s
+  dsq_thread_id: '3830797970'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Udah lama gak pegang HP Android, eh ada pasien yang curhat Redmi-nya gagal update karena update-nya dari CWM(?), hasilnya dia stuck di splash screen.<br />
+Terus gimana? Ya re-flash :D OK, tak jelaskan langkah-langkahnya di sini.</p>
+<ol>
+<li>Siapkan PC, usahakan linux</li>
+<li>Download salah satu flasher ROM dari sini <a title="http://en.miui.com/thread-21812-1-1.html" href="http://en.miui.com/thread-21812-1-1.html" target="_blank">http://en.miui.com/thread-21812-1-1.html</a> (ROM China).</li>
+<li>Ekstrak file yang udah didownload.</li>
+<li>Buka terminal, mount ke folder hasil ekstrak.
+<pre>$ cd folder_name</pre>
+</li>
+<li>Kasih akses executable ke semua file .sh
+<pre>$ chmod +x *.sh</pre>
+</li>
+<li>Sekarang masuk ke fastboot di Redmi, hold <strong>volume down + power button</strong>, nanti muncul gambar begini:<br />
+<img class="alignnone size-full wp-image-3625" src="{{ site.baseurl }}/assets/Fastboot-redmi-1s_hwdskp.jpg" alt="Fastboot-redmi-1s" width="346" height="342" /></li>
+<li>Terus eksekusi file .sh nya, oh iya itu ada beberapa file sh, ini penjelasannya:
+<ol>
+<li><strong>flash_all.sh</strong> artinya semua data bakal kehapus, termasuk yang ada di internal storage.</li>
+<li><strong>flash_all_except_data_storage.sh</strong> ini cuma hapus system, internal storage sama data gak akan kehapus.</li>
+<li><strong>flash_all_except_storage.sh</strong> yang ini internal storage aman, data kehapus.</li>
+</ol>
+</li>
+<li>Eksekusi file sh:
+<pre>$ ./file_yang_dipilih.sh</pre>
+<p>contoh:</p>
+<pre>$ ./flash_all.sh</pre>
+</li>
+<li>Setelah selesai, karena ini ROM China, download ROM Global dari sini (kecuali memang nyaman dengan settingan buat negeri tirai bambu yang tanpa Google Services) <a title="http://en.miui.com/download-226.html#325" href="http://en.miui.com/download-226.html#325" target="_blank">http://en.miui.com/download-226.html#325</a> (pilih tab <span id="t_325" class="tab current_tab">Redmi 1S-WCDMA Global)</span></li>
+<li>Terus install ROM global pake Updater-nya Redmi.</li>
+</ol>
+<p>Selesai deh... Selamat mencoba :D</p>
+<p>Psssttt... ini orangnya seneng banget Redmi-nya udah sembuh :D<br />
+<a href="http://sendy.pw/wp-content/uploads/2015/05/wpid-img_20141023_184911_vca5ms.jpg"><img title="IMG_20141023_184911.jpg" class="alignnone size-full" alt="image" src="{{ site.baseurl }}/assets/wpid-img_20141023_184911_vca5ms.jpg" /></a></p>

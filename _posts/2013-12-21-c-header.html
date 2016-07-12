@@ -1,0 +1,47 @@
+---
+layout: post
+title: C++ Header
+date: 2013-12-21 02:26:05.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+tags: []
+meta:
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465802905;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3334;}i:1;a:1:{s:2:"id";i:2987;}i:2;a:1:{s:2:"id";i:2690;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Nyambungin tulisan dari <a title="C++ Function atau Bisa disebut Fungsi C++" href="http://sendy.pw/article/c-function.html" target="_blank">sini</a>, gimana kalau fungsinya dibikin file terpisah? Atau kalau kata Pak Sumarsono dibikin file header. Caranya ya bikin file baru tanpa ekstensi, mau pake ekstensi .h juga terserah, tapi karena ini C++ rasanya gak perlu :D Misal nama file-nya "header". Terus? Masukin fungsi-fungsi C++ ke file itu, jadi misal nanti punya file "header" yang isinya kaya gini:</p>
+<pre class="prettyprint linenums lang-c">datatype NamaFungsi() {
+	// Codes
+}
+
+datatype NamaFungsi(datatype parameter/variable) {
+	// Codes
+}</pre>
+<p><!--more-->Atau contoh aslinya:</p>
+<pre class="prettyprint linenums lang-c">double akar(double x, double n) {
+	double z = pow(x,1/y);
+	return z;
+}</pre>
+<p>Beberapa library header dukungan juga wajib di load di file header, misal library math.h, jadi jangan lupa tambahin #include<br />
+juga di header yang kita bikin itu. Terus simpan kemana? Kalau mau ya simpan ke koleksi library C++, atau sembarang folder aja, nanti dipanggil dengan lokasi lengkap foldernya dimana.</p>
+<p>Misal file "header" tadi disimpen di <code>/home/user/documents/header</code>, jadi nanti pas manggil file header, perintahnya seperti ini</p>
+<pre class="prettyprint linenums lang-c">#include</pre>
+<p><em>*bisa beda kalau di windows</em></p>
+<p>Sudah bisa? Oke, selamat mencoba dan selamat mengerjakan tugas akhir :D</p>

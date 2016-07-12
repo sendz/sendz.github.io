@@ -1,0 +1,55 @@
+---
+layout: post
+title: Aktifin Android Softkey
+date: 2013-11-21 01:45:48.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Android
+- ID-ID
+- Internationalized
+tags:
+- Android
+- softkey
+- tweak
+- tweaking
+meta:
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  tiga_social_check: 'false'
+  _wpas_done_all: '1'
+  _thumbnail_id: '3325'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '15'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467119860;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:92;}i:1;a:1:{s:2:"id";i:2991;}i:2;a:1:{s:2:"id";i:3162;}}}}
+  dsq_thread_id: '4069033200'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Ini gara-gara tadi pagi touch panel yang isinya menu sama back gak jalan di HP, emang ringkih sih ini panel, akhirnya punya ide buat "memanggil softkey dari kubur. Ada yang gak ngerti Android Softkey itu apa? Itu lho, tombol yang ada di layar, yang mirip HP nexus yang baru. Ini nih:</p>
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/softkey_gv4hrp.png"><img class="alignnone size-full wp-image-3325" alt="softkey" src="{{ site.baseurl }}/assets/softkey_gv4hrp.png" width="480" height="75" /></a></p>
+<p><!--more-->Nah, ngerti kan? Terus tujuannya biar layarnya jadi begini nih:</p>
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/device-2013-11-21-010428_l9kbi2.png"><img class="alignnone size-full wp-image-3326" alt="device-2013-11-21-010428" src="{{ site.baseurl }}/assets/device-2013-11-21-010428_l9kbi2.png" width="480" height="800" /></a></p>
+<p>Nah, caranya sih gampang, asal device udah di-root, ada text editor sama file browser yang bisa akses ke folder <kbd>/system/</kbd> seperti Root Browser atau Root Explorer.</p>
+<p>Nah, sekarang buka folder <kbd>/system/</kbd> terus buka file <kbd>build.prop</kbd> terus tambah baris kode ini di ujung aja:</p>
+<pre class="prettyprint lang-bash">qemu.hw.mainkeys=0</pre>
+<p>Terus <strong>save</strong>, <strong>restart</strong>, nikmati hasilnya :D</p>
+<p>Nah, sekarang kalau mau disable atau mematikan tombol-tombol di device kaya tombol back, menu sama home biar gak bentrok, buka folder <kbd>/system/usr/keylayout/</kbd> terus buka file <kbd>Generic.kl</kbd>, cari baris ini:</p>
+<pre class="prettyprint lang-bash">key 158   BACK
+key 139   MENU
+key 172     HOME</pre>
+<p>terus kasih tanda pagar di depannya, jadinya begini:</p>
+<pre class="prettyprint lang-bash"># key 158   BACK
+# key 139   MENU
+# key 172       HOME</pre>
+<p>Selamat mencoba dan jangan lupa restart device-nya :)</p>

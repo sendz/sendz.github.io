@@ -1,0 +1,88 @@
+---
+layout: post
+title: Buat JSON dengan JavaScript
+date: 2014-06-14 02:27:10.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- HTML
+- HTML5
+- ID-ID
+- Internationalized
+- JavaScript
+- Webdev
+tags:
+- array
+- data
+- HTML
+- HTML5
+- JavaScript
+- json
+- localstorage
+- web
+meta:
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467944151;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2915;}i:1;a:1:{s:2:"id";i:3306;}i:2;a:1:{s:2:"id";i:3004;}}}}
+  dsq_thread_id: '3849329009'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Sebelumnya, sempet bingung bikin project buat tugas UAS karena harus bisa handle data, ada banyak pilihan dari mulai database server atau data disimpen di pointer dan ada juga yang simpen input form. Karena pilih bikin project dengan HTML, jadinya pilihannya jatuh ke JSON. Jadi nantinya, data yang masuk akan disimpan sebagai JSON array, lalu disimpan di local storage biar bisa disimpen dan diambil kalau perlu.</p>
+<p>Sekarang, gimana caranya bikin array di JSON?</p>
+<pre class="prettyprint lang-js linenums">// buat variable baru
+var data = {orang:[]};
+
+// fungsi memasukan data ke JSON
+data.orang.push(
+	{"id":"1","nama":"Udin","umur":"22"}
+);
+</pre>
+<p>Setelah disimpan dan dieksekusi, maka json yang didapat adalah:</p>
+<pre class="prettyprint lang-json linenums">{
+    "orang": [
+        {
+            "id": "1",
+            "nama": "Udin",
+            "umur": "22"
+        }
+    ]
+}
+</pre>
+<p>Sekarang gimana caranya biar bisa disimpen di local storage? Pertama, tentukan dulu key untuk local storage, misal <code>DataOrang</code>, lalu kita buat pengecekan apakah DataOrang ini memiliki data atau masih kosong.</p>
+<pre class="prettyprint lang-js linenums">
+// Cek jika tidak ada data di localStorage dengan key DataOrang, maka eksekusi script ini
+if(!localStorage.getItem("DataOrang") {
+	var data = {orang:[]};
+	data.orang.push(
+		{"id":"1","nama":"Udin","umur":"22"}
+	);
+}
+// Jika ada data di localStorage dengan key DataOrang, ambil dulu data yang ada di localStorage, lalu tambahkan datanya
+else {
+	// JSON.parse() digunakan untuk deklarasi data yang diambil dari localStorage sebagai JSON
+	var data = JSON.parse(localStorage.getItem("DataOrang"));
+	data.orang.push(
+		{"id":"1","nama":"Udin","umur":"22"}
+	);
+}
+// Ubah variable data menjadi format JSON
+data = JSON.stringify(data);
+// Simpan variable data di localStorage
+localStorage.setItem("DataOrang",data);
+</pre>
+<p>Begitulah kira-kira pelajaran yang bisa dibagi dari tugas UAS, silakan dikondisikan sesuai dengan kebutuhan, karena tulisan diatas hanya sebagai contoh.</p>
+<p>Selamat mencoba dan jangan lupa makan malam :D</p>

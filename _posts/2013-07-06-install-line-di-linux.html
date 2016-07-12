@@ -1,0 +1,74 @@
+---
+layout: post
+title: Install LINE di Linux.
+date: 2013-07-06 20:23:30.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- install
+- internet
+- line
+- messenger
+- naver
+- wine
+- winetricks
+meta:
+  _edit_last: '1'
+  _yoast_wpseo_linkdex: '61'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  tiga_social_check: 'false'
+  _yoast_wpseo_focuskw: Install Naver LINE di Linux Ubuntu 12.04
+  _yoast_wpseo_title: Install Naver LINE di Linux Ubuntu 12.04
+  _yoast_wpseo_metadesc: Cara install aplikasi messenger Naver LINE di linux ubuntu
+    dengan wine dan winetricks, pasti berhasil dan sudah dicoba.
+  _yoast_wpseo_metakeywords: install, line, ubuntu, wine, naver, winetricks, messenger
+  _thumbnail_id: '3060'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '36'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466828531;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3684;}i:1;a:1:{s:2:"id";i:3219;}i:2;a:1:{s:2:"id";i:3585;}}}}
+  dsq_thread_id: '3773089668'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p><img class=" wp-image-3060 alignleft" alt="line-app-logo" src="{{ site.baseurl }}/assets/line-app-logo_bys0w9.png" width="97" height="97" />Ada yang gak tau aplikasi messenger LINE? Kebangetan! Nah, kemaren si gueh coba install naver line di linux ubuntu 12.04 pake wine, tapi ternyata gak bisa, muncul error yang katanya LINE udah running. WHAT? Yaudah, googling-googling ternyata harus install Visual C Runtime, terus install deh pake winetricks yang perintahnya kayak begini:</p>
+<pre>$ winetricks vcrun2008</pre>
+<p>Terus coba install lagi, eh ternyata gak bisa. Akhirnya nemu video tutorial di youtube katanya harus copy hasil install di windows. DUH.<!--more--></p>
+<p><iframe src="//www.youtube.com/embed/XFAToIc4fF0" height="315" width="560" allowfullscreen="" frameborder="0"></iframe></p>
+<p>Akhirnya download dulu deh hasil install yang dia punya dari sini: <a title="LINE" href="http://db.tt/G5doCAO1" target="_blank">http://db.tt/G5doCAO1</a></p>
+<p>Terus ikutin deh langkahnya disini:</p>
+<ol>
+<li><span style="line-height: 13px;"><span style="line-height: 13px;"><span style="line-height: 13px;">Pertama, harus ada wine, cara installnya gimana? Nih</span></span></span>
+<pre>$ sudo apt-get install wine</pre>
+</li>
+<li>Terus install visual C runtime pake winetricks
+<pre>$ winetricks vcrun2008</pre>
+</li>
+<li>Download file di link diatas tadi atau link ini: <a title="LINE download" href="http://db.tt/K1yslM4w" target="_blank">http://db.tt/K1yslM4w</a></li>
+<li>Extract hasil download.</li>
+<li>Copy folder LINE ke <strong>/home/username/.wine/drive_c/Program Files</strong></li>
+<li>Terus buat file baru dengan nama line di <strong>/usr/bin</strong> dengan nama line
+<pre>$ sudo gedit /usr/bin/line</pre>
+</li>
+<li>Copy string ini ke file:
+<pre>#!/bin/bash
+wine /home/sendz/.wine/drive_c/Program Files/LINE/Line.exe 2&gt;&amp;1
+/dev/null</pre>
+</li>
+<li>Save, jalankan line via terminal, ketik line terus enter.</li>
+<li>Beres deh.</li>
+</ol>

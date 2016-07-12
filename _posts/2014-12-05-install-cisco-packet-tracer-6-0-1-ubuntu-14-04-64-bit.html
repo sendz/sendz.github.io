@@ -1,0 +1,44 @@
+---
+layout: post
+title: Install Cisco Packet Tracer 6.0.1 Ubuntu 14.04 64-bit
+date: 2014-12-05 22:02:23.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Networking
+tags: []
+meta:
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465653483;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:92;}i:1;a:1:{s:2:"id";i:4094;}i:2;a:1:{s:2:"id";i:3162;}}}}
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _thumbnail_id: '3664'
+  _wpas_done_all: '1'
+  dsq_thread_id: '4280511207'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p><img src="{{ site.baseurl }}/assets/Screenshot-from-2014-12-05-124801_kvtpqi.png" alt="Screenshot from 2014-12-05 12:48:01" width="700" height="380" class="alignnone size-large wp-image-3664" /></p>
+<p>Kalau bukan karena tugas kuliah, mungkin gak akan pernah share tentang networking atau jaringan.</p>
+<p>Karena di kampus simulasi jaringan mengandalkan cisco packet tracer, dan agak susah buat cari installer di linux, yasudah ditulis ulang di sini. Barangkali belum ada yang menuliskan dalam Bahasa Indonesia?</p>
+<p>Siap?</p>
+<ol>
+<li>Download Cisco Packet Tracer 6.0 di sini <a href="http://turbobit.net/ia8q1bw7nspl.html" target="_blank">http://turbobit.net/ia8q1bw7nspl.html</a></li>
+<li>Biar lebih gampang, rename hasil download tadi jadi CiscoPacketTracer_6.0</li>
+<li>Buka terminal dan mount folder download dimanapun itu berada</li>
+<li>Tambah hak untuk eksekusi dengan chmod +x (chmod +x namafile)</li>
+<li>Eksekusi file installer dengan perintah <kbd>./namafile</kbd> atau misal ./CiscoPacketTracer_6.0</li>
+<li>Kalau misal gagal, tambahkan 'sudo' sebelum perintah</li>
+<li>Di EULA atau persetujuan lisensi, di ujungnya itu lho, Y saja atau yes</li>
+</ol>
+<p>Sekarang tinggal cari Packet Tracer di panel, atau kalau masih gagal, coba cara ini di terminal:</p>
+<pre>sudo ln -s /usr/local/PacketTracer6/bin/PacketTracer6 /usr/local/bin/</pre>

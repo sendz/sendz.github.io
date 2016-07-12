@@ -1,0 +1,59 @@
+---
+layout: post
+title: C++ Function atau Bisa disebut Fungsi C++
+date: 2013-12-11 02:11:50.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- C++
+- ID-ID
+- Internationalized
+- Programming
+tags: []
+meta:
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '17'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465843237;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3355;}i:1;a:1:{s:2:"id";i:2915;}i:2;a:1:{s:2:"id";i:2987;}}}}
+  dsq_thread_id: '4066483583'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Menjelang UAS, mata kuliah Algoritma Pemrograman punya yang namanya Tugas Akhir, jadi nantinya gak bakal ada UAS. *HOREEEEE* Tugasnya adalah bikin 20 fungsi pemrograman di C++ dan harus jadi file header, alias bisa dipanggil pake fungsi <code>#include</code>.</p>
+<p>Buat awal-awal, gimana cara bikin fungsi? Pertama, bikin fungsi dulu yang pasti harus di-luar <code>main()</code> dan lebih baik disimpen sebelum <code>main()</code> itu.<!--more--></p>
+<p>Struktur dalam fungsi itu kayak gini:</p>
+<pre class="prettyprint linenums lang-c">datatype NamaFungsi() {
+	// Codes
+}</pre>
+<p>atau</p>
+<pre class="prettyprint linenums lang-c">datatype NamaFungsi(datatype parameter/variable) {
+	// Codes
+}</pre>
+<p>Contoh disini buat fungsi akar pangkat, misal nanti ada 8 akar pangkat 3:</p>
+<pre class="prettyprint linenums lang-c">double akar(double x, double n) {
+	double z = pow(x,1/y);
+	return z;
+}</pre>
+<p>Kenapa harus pake <code>return</code>? Karena kita punya variable yang harus dikirim dari fungsi tersebut yang akan dikirim dari fungsi ke code yang ada di main(). beda lagi kalau tanpa varible, gak harus ada return.</p>
+<p>Contoh tanpa parameter, otomatis gak usah pake <code>return</code></p>
+<pre class="prettyprint linenums lang-c">string TulisNama() {
+	cout &gt;&gt; "Nama Saya Udin";
+}</pre>
+<p>Terus cara pake fungsinya gimana? Didalam <code>main()</code> tinggal panggil aja pake nama fungsi, misal kalau dari contoh tadi:</p>
+<pre class="prettyprint linenums lang-c">int main(){
+	double hasil = akar(8,3);
+	cout &gt;&gt; hasil;
+	TulisNama(); // "Nama Saya Udin"
+}</pre>
+<p>Gampang tho? Nggak? Yaudah yang penting selamat mencoba dan jangan lupa besok kuliah.!</p>
+<blockquote><p>Post lanjutan ada <a title="C++ Header" href="http://sendy.pw/article/c-header.html" target="_blank">dimari</a></p></blockquote>

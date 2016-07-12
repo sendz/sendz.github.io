@@ -1,0 +1,65 @@
+---
+layout: post
+title: '[C++] Aplikasi Penghitung Luas dan Keliling Lingkaran.'
+date: 2013-09-18 21:50:21.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- C++
+- ID-ID
+- Internationalized
+- Programming
+tags:
+- algoritma
+- c++
+- keliling
+- lingkaran
+- luas
+- rumus
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '11'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466568577;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3334;}i:1;a:1:{s:2:"id";i:3322;}i:2;a:1:{s:2:"id";i:92;}}}}
+  dsq_thread_id: '4280451739'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Tugas kuliah dishare disini ah (Akhirnya bisa kuliah juga :D ). Dapet tugas Mata Kuliah Algoritma dan Pemrograman, disuruh bikin aplikasi buat ngitung luas dan keliling lingkaran di C++. Bingung lah yang gak pernah nyentuh C++ akhirnya harus bersetubuh dengan bahasa ini, ubek-ubek referensi dari <a href="http://www.cplusplus.com/">http://www.cplusplus.com/</a> dan akhirnya dapet flowchart seperti ini:<br />
+<!--more--></p>
+<p><img title="5idraw" alt="%7B%22w%22:1200,%22h%22:720,%22fillColor%22:%22white%22,%22version%22:1,%22magic%22:%225idraw%22,%22type%22:%22Flow%20Chart%22,%22pages%22:%5B%7B%22index%22:0,%22shapes%22:%5B%7B%22id%22:%22fc-start-end%22,%22dx%22:350,%22dy%22:10,%22w%22:200,%22h%22:60,%22text%22:%22START%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-data%22,%22dx%22:350,%22dy%22:90,%22w%22:200,%22h%22:60,%22text%22:%22input%20%3E%20r%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-process%22,%22dx%22:350,%22dy%22:170,%22w%22:200,%22h%22:60,%22text%22:%22r%20modulo%207%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-decision%22,%22dx%22:350,%22dy%22:250,%22w%22:200,%22h%22:60,%22text%22:%22if%20r%20%25%207%20=%200%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-process%22,%22dx%22:149,%22dy%22:328,%22w%22:200,%22h%22:60,%22text%22:%22phi%20=%2022/7%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-process%22,%22dx%22:549,%22dy%22:328,%22w%22:200,%22h%22:60,%22text%22:%22phi%20=%203.14%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-process%22,%22dx%22:350,%22dy%22:420,%22w%22:200,%22h%22:60,%22text%22:%22k_lingk%20=%20phi%20*%20r%20*%202%20and%20l_lingk%20=%20phi%20*%20r%20*%20r%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-data%22,%22dx%22:330,%22dy%22:510,%22w%22:250,%22h%22:60,%22text%22:%22output%20k_lingk%20and%20l_lingk%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22fc-start-end%22,%22dx%22:350,%22dy%22:610,%22w%22:200,%22h%22:60,%22text%22:%22END%22,%22imageUrl%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:1,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D,%22rotate%22:0%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:454,%22y%22:70%7D,%7B%22x%22:454,%22y%22:90%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:450,%22y%22:150%7D,%7B%22x%22:450,%22y%22:170%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:451,%22y%22:230%7D,%7B%22x%22:451,%22y%22:250%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22h-line%22,%22points%22:%5B%7B%22x%22:550,%22y%22:280%7D,%7B%22x%22:650,%22y%22:280%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22h-line%22,%22points%22:%5B%7B%22x%22:250,%22y%22:280%7D,%7B%22x%22:350,%22y%22:280%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:649,%22y%22:280%7D,%7B%22x%22:649,%22y%22:328%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:251,%22y%22:280%7D,%7B%22x%22:251,%22y%22:328%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:651,%22y%22:390%7D,%7B%22x%22:651,%22y%22:450%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22h-line%22,%22points%22:%5B%7B%22x%22:550,%22y%22:449%7D,%7B%22x%22:650,%22y%22:449%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22h-line%22,%22points%22:%5B%7B%22x%22:250,%22y%22:451%7D,%7B%22x%22:350,%22y%22:451%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:250,%22y%22:390%7D,%7B%22x%22:250,%22y%22:450%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:452,%22y%22:480%7D,%7B%22x%22:452,%22y%22:510%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D,%7B%22id%22:%22v-line%22,%22points%22:%5B%7B%22x%22:455,%22y%22:570%7D,%7B%22x%22:455,%22y%22:610%7D%5D,%22text%22:%22%22,%22style%22:%7B%22ls%22:65280,%22lw%22:2,%22lc%22:%22Black%22,%22fc%22:%22White%22,%22tc%22:%22Blue%22,%22fs%22:16,%22fat%22:0,%22sat%22:0,%22as%22:12,%22b%22:false,%22i%22:false,%22u%22:false,%22es%22:false,%22eg%22:false%7D%7D%5D%7D%5D%7D" src="{{ site.baseurl }}/assets/5idraw_21_39_27.png" border="2" /></p>
+<p>Nah, terus code nya seperti ini:</p>
+<pre class="prettyprint linenums lang-cpp">#include
+using namespace std;
+
+int main()
+{
+float l_lingk, k_lingk;
+int r;
+// Input radius value
+cout << "Input your radius value.n";
+cin >> r;
+// r % 7 computes the remainder when r is divided by 7
+if ( r % 7 == 0 )
+// Calculate them!
+l_lingk = 3.14*r*r; // luas
+k_lingk = 3.14*2*r; // keliling
+// Bring it on display
+cout << "The area of circle is " << l_lingk << ".n";
+cout << "The circumference of circle is " << k_lingk << ".n";
+return 0;
+}</pre>
+<p>Kalau code diatas sudah selesai, save dengan nama apa saja dan ekstensi .cpp lalu compile dengan compiler apa aja lalu coba jalankan. Contoh:</p>
+<pre class="prettyprint">
+$ g++ lingkaran.cpp -o lingkaran
+$ chmod +x lingkaran
+$ ./lingkaran
+</pre>

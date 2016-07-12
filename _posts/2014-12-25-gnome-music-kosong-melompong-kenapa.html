@@ -1,0 +1,47 @@
+---
+layout: post
+title: Gnome Music Kosong Melompong, Kenapa?
+date: 2014-12-25 14:13:50.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- arch
+- gnome
+- import
+- music
+- sync
+- tracker
+- tracker-control
+meta:
+  dsq_thread_id: '3802094648'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466280742;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3460;}i:1;a:1:{s:2:"id";i:3585;}i:2;a:1:{s:2:"id";i:4034;}}}}
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Cerita pengalaman di Arch lagi, kenapa? Karena ternyata di arch gak semuanya serba otomatis macam di ubuntu. Sudah tiga hari sejak install Gnome Music, kok kosong terus ya... Google-kena-google, ternyata file di home nggak ke-track secara otomatis, jadinya file yang ada di folder Music gak masuk ke Gnome Music.</p>
+<p>Caranya gimana? Gini:</p>
+<pre>$ tracker-control -e
+$ tracker-control --start
+</pre>
+<p>Untuk melihat statusnya:</p>
+<pre>$tracker-control --status
+</pre>
+<p>Terus tunggu hingga semua statusnya ada tanda centangnya, terutama di File System.</p>
+<p>Selanjutnya restart Gnome Music dan tunggu sampai proses import-nya selesai :D</p>
+<p>Videonya:<br />
+<script type="text/javascript" src="https://asciinema.org/a/15013.js" id="asciicast-15013" async></script></p>

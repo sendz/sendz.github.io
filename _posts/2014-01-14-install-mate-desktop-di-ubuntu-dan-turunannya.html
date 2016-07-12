@@ -1,0 +1,51 @@
+---
+layout: post
+title: Install Mate Desktop di Ubuntu dan Turunannya
+date: 2014-01-14 22:06:24.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Aplikasi
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _thumbnail_id: '3430'
+  _wpas_done_all: '1'
+  post_views_count: '9'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466430528;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3434;}i:1;a:1:{s:2:"id";i:3992;}i:2;a:1:{s:2:"id";i:3429;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>[caption id="attachment_3430" align="alignnone" width="940"]<a href="http://sendy.pw/wp-content/uploads/2015/05/mate-desktop_ddejht.jpg"><img class="size-full wp-image-3430" alt="Gambar dari http://mate-desktop.org/" src="{{ site.baseurl }}/assets/mate-desktop_ddejht.jpg" width="940" height="282" /></a> Gambar dari http://mate-desktop.org/[/caption]</p>
+<p>Kalau di Ubuntu 14.04 Trusty Tahr si <a title="MATE Desktop Akan Tersedia di Repositori Ubuntu 14.04" href="http://sendy.pw/article/mate-desktop-akan-tersedia-di-repositori-ubuntu-14-04.html">Mate Desktop</a> ini udah masuk repository testing, gimana dengan 12.04 atau pengen install karena gagal move on dari Gnome 2 ke Gnome 3 :p</p>
+<p>Sekarang, mari install Mate Desktop biar bisa bernostalgila :D<!--more--></p>
+<p>Buat Ubuntu 12.04 LTS Precise Pangolin, buka terminal lalu tambahkan satu aja list repo atau satu perintah saja dari tiga perintah dibawah.</p>
+<pre class="prettyprint">$ sudo add-apt-repository "deb http://packages.mate-desktop.org/repo/ubuntu precise main"
+$ sudo add-apt-repository "deb http://repo.mate-desktop.org/ubuntu precise main"
+$ sudo add-apt-repository "deb http://mirror1.mate-desktop.org/ubuntu precise main"</pre>
+<p>Inget ya, satu aja dan gak usah ketiganya.</p>
+<p>Buat Ubuntu 13.10 Saucy Salamander, tinggal ganti precise diatas jadi saucy. Jadinya begini, salah satu ya.!</p>
+<pre class="prettyprint">$ sudo add-apt-repository "deb http://repo.mate-desktop.org/ubuntu saucy main"
+$ sudo add-apt-repository "deb http://packages.mate-desktop.org/repo/ubuntu saucy main"
+$ sudo add-apt-repository "deb http://mirror1.mate-desktop.org/ubuntu saucy main"</pre>
+<p>Kalau udah, update repository list dan autentikasi mate-archive-keyring, caranya? Ini:</p>
+<pre class="prettyprint">$ sudo apt-get update
+$ sudo apt-get --yes --quiet --allow-unauthenticated install mate-archive-keyring
+$ sudo apt-get update</pre>
+<p>Terus install mate desktop, kalau mau install base package atau cuma desktop dan beberapa aplikasi inti, install dengan perintah:</p>
+<pre class="prettyprint">$ sudo apt-get install mate-core</pre>
+<p>Nah, kalau mau komplit pake telor dan kornet alias install juga beberapa paket pendukung, install dengan cara:</p>
+<pre class="prettyprint">$ sudo apt-get install mate-desktop-environment</pre>
+<p>Sekarang, gimana caranya buat distro lain yang bukan turunan ubuntu? Gampang, buka aja wiki mate <a title="Install [wiki.mate-desktop.org]" href="http://wiki.mate-desktop.org/download#ubuntu_precise_pangolin_1204_lts_repository" target="_blank">disini</a></p>
+<p>Oke, selamat mencoba dan selamat bernostalgia :)</p>

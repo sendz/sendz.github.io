@@ -1,0 +1,40 @@
+---
+layout: post
+title: '[elementary OS] Ganti Skema Warna Terminal'
+date: 2014-01-08 17:30:08.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  post_views_count: '8'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465883934;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3553;}i:1;a:1:{s:2:"id";i:2987;}i:2;a:1:{s:2:"id";i:3434;}}}}
+  dsq_thread_id: '4059847465'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Karena background hitam dan foreground putih di terminal itu gak jelas dilihat kalau pake proyektor, jadinya sebelum presentasi mikir dulu gimana caranya biar background putih, foreground hitam. Mulai dari install elementary tweak tools tapi gak puas, sampe akhirnya nemu cara edit pake dconf-tools.</p>
+<blockquote><p>Jadi terminal di elementary ini gak punya menu preference buat edit tampilannya kaya gnome-terminal atau yang lainnya.</p></blockquote>
+<p><!--more-->Cara pertama, buka terminal terus install dconf-tools. Caranya? Piye masa gak tau.</p>
+<pre class="prettyprint">$ sudo apt-get install dconf-tools</pre>
+<p>Terus panggil dconf-editor, masih di terminal, tinggal ketik</p>
+<pre class="prettyprint">$ dconf-editor</pre>
+<p>lalu enter.</p>
+<p>Buka <kbd>org → pantheon → terminal → settings</kbd> disitu tinggal edit value <kbd>background</kbd>, <kbd>cursor-color</kbd>, <kbd>foreground</kbd>.</p>
+<p>Sudah? Terus buka aja terminalnya.</p>
+<p>Selamat mencoba dan semoga gak kebingungan :)</p>

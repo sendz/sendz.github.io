@@ -1,0 +1,39 @@
+---
+layout: post
+title: Speedy Redirect ke LinkBucks? Oh, well.
+date: 2015-01-04 17:03:17.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+- Networking
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466295558;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3395;}i:1;a:1:{s:2:"id";i:3279;}i:2;a:1:{s:2:"id";i:3553;}}}}
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  dsq_thread_id: '3773090135'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Lagi ngerjain kerjaan yang sebenernya udah lama harus dikerjain sejak dulu tapi gak dikerjain juga. Di rumah temen, pake koneksi speedy, dan sepertinya udah gak inject script iklan lagi. Etapi, kenapa suka redirect ke linkbucks? Awalnya ngira ini browser add-on atau malware... Tapi, aku kan pake linux, dan selama ini install aplikasi dari pacman / AUR, coba di beda browser juga masih sama. Jadi kesimupalannya adalah: Speedy!</p>
+<p>Speedy masih kurang ajar, entah apa yang ada dipikiran petingginya, konsumen bayar, masih harus diporotin lagi bandwidth <del>yang gak begitu kenceng</del> buat liatin iklan. Screw you!</p>
+<p>Berhubung gak bisa ganti DNS di modem, yasudah ganti DNS di client side aja :D</p>
+<p>Caranya? Cari network settings / wifi settings, terus Configure / edit. Kalau punyaku sih gini:</p>
+<p><img class="alignnone size-full wp-image-3680" src="{{ site.baseurl }}/assets/Screenshot-from-2015-01-04-165242_qc7yvz.png" alt="Screenshot from 2015-01-04 16:52:42" width="740" height="495" /></p>
+<p>Kalau di gnome, tinggal klik tombol Gear di active network sekarang, nanti muncul kayak gini:</p>
+<p><img class="alignnone size-full wp-image-3681" src="{{ site.baseurl }}/assets/Screenshot-from-2015-01-04-165334_a2b5di.png" alt="Screenshot from 2015-01-04 16:53:34" width="718" height="529" /></p>
+<p>Masuk ke kolom IPv4, terus DNS Automatic nya matiin (OFF) *itu lupa di SS gak dimatiin. Terus Server nya edit, kalau ogut pake IP DNS punya google <code>8.8.8.8</code> sama <code>8.8.4.4.</code></p>
+<p>Sudah? Terus Apply, terus lanjut browsing.</p>
+<p>Selamat mencoba dan jangan sampai Speedy maksa kita buat nyariin recehan buat dia!</p>

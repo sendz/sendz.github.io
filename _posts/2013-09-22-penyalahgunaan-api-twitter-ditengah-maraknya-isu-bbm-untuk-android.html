@@ -1,0 +1,79 @@
+---
+layout: post
+title: Penyalahgunaan API Twitter ditengah Maraknya Isu BBM untuk Android.
+date: 2013-09-22 12:38:22.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+tags:
+- Android
+- api
+- bbm
+- for
+- twitter
+meta:
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '7'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466617447;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2902;}i:1;a:1:{s:2:"id";i:3490;}i:2;a:1:{s:2:"id";i:2673;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Judulnya sok serius :)) soalnya tadi pagi ada yang kena korban, ciri-ciri korban itu dia akan retweet sebuah tweet yang mengandung link yang menuju ke domain gratisan dari .tk, lalu redirect ke Authentication Page twitter, alias minta akses read and write API twitter. Bingung? Iya aku juga bingung.</p>
+<p>Langsung aja ceritanya, tadi pagi temen yang biasa dipanggil Evan terindikasi jadi korban, doi retweet sebuah tweet yang katanya "BBM untuk Android bisa didownload disini &gt;&gt; link gak jelas", ciri-ciri tweet-nya punya retweet bejibun, terus link nya pake goo.gl. Akhirnya ogut RT dengan balesan "ngapusi." karena ogut dulu pernah jadi korban dan gak dapet apapun, malah redirect gak jelas (waktu itu pake alter akun sih karena curiga).<!--more--></p>
+<p>Terus mbah yang punya tweet marah, adu mulut adu cingcong lah, lalu nimbrung yang juga pernah menjadi korban dan menghujat si pelaku. Dulu yang post dan retweet digituin gak tau apa-apa, yang ini sih pelakunya mencurigakan, seorang pelajar Software Engineering di salah satu sekolah terkemuka di Indonesia (kalau tertutup mana bisa dia daftar di itu sekolah). Doi ngotot kalau itu cuma API dan gak store password, iye gue ngerti itu API, tapi kalau sampe di Authorize, SELAMAT..! Akun ente bakal retweet tweet yang ada link nya tiap jam.</p>
+<p>Tapi buat apa.? Nambahi traffic blog dia lah dengan keyword yang dia kirim ke twitter :p Emang doi punya blog? Ada, blog jualan, nih <a href="http://gfgratisfollowers.blogspot.com/">http://gfgratisfollowers.blogspot.com/</a> Jualan polower lho.. :))</p>
+<p>Terus mana aja yang disalah gunakan?</p>
+<p>Buka deh ini <a href="https://dev.twitter.com/terms/api-terms">https://dev.twitter.com/terms/api-terms</a> terus coba ente buka <a href="http://preket.tk/redirect.php" target="_blank">http://preket.tk</a> tapi jangan authorize app, jangan! JANGAN..! Disitu aja dulu. Terus perhatiin gambar ini:</p>
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/twitter_harom_akkpsn.png"><img class="alignnone size-full wp-image-3204" alt="twitter_harom" src="{{ site.baseurl }}/assets/twitter_harom_akkpsn.png" width="1351" height="620" /></a></p>
+<p>&nbsp;</p>
+<p>Ada yang mencurigakan? Banyak! Salah satunya nama aplikasi yaitu VERIFIKASI AKSES TWITTER. Kenapa masih ada Bahasa Indonesia kalau twitter gue pake Bahasa Inggris?  Biasa bro, biar meyakinkan calon korban biar authorize. Terus nama aplikasi, home page, company name juga melanggar aturan twitter yang bunyinya begini:</p>
+<blockquote><p>4. You will not attempt or encourage others to:</p>
+<p>D. use Twitter Marks or Twitter Certified Products Program badges in a manner that creates a sense of endorsement, sponsorship, or false association with Twitter. You may not use Twitter Marks as part of the name of your company or Service, or in any product, service, name field or logos created by you. All use of Twitter Marks, and all goodwill arising out of such use, will inure to Twitter's benefit.</p></blockquote>
+<p>Pada ngerti kan? Jadi twitter melarang penggunaan nama, logo, atau nama perusahaan yang mengandung nama "twitter" dan atau dukungan palsu terhadap twitter.</p>
+<p>Mau cari kesalahan lain? Ini perlu usaha, bikin akun baru atau korbanin akun sendiri juga boleh. Klik Authorize App, tunggu sehari, lalu cek apa aja yang udah ente tweet atau retweet, pasti kaget :p</p>
+<p>Point ini disebut Surprise to User sama pihak twitter, termasuk kategori distribute spam. Nah lho.... Bingung? Quote lagi dari Undang-undang Developer dari Twitter.</p>
+<blockquote>
+<h3>1. Don't surprise users</h3>
+<ol>
+<li>You must maintain the integrity of Twitter Content (such as Tweets and timelines of Tweets) by adhering to the <a href="https://dev.twitter.com/terms/display-requirements">Display Requirements</a>.</li>
+<li>Get users' permission before:
+<ul>
+<li>sending Tweets or other messages on their behalf. A user authenticating through your application does not constitute consent to send a message.</li>
+<li>modifying their profile information or taking account actions (including following, unfollowing, and blocking) on their behalf.</li>
+<li>adding hashtags, annotations data, or other content to a user's Tweet. If your application allows users to send Tweets or other content to Twitter, show the user exactly what will be published.</li>
+<li>republishing Twitter Content accessed through means other than via the Twitter API or other tools that may be provided to you by Twitter, or in a manner inconsistent with the <a href="https://dev.twitter.com/terms/display-requirements">Display Requirements</a>.</li>
+</ul>
+</li>
+<li>Your Service should not:
+<ul>
+<li><strong>use business names and/or logos in a manner that can mislead, confuse, or deceive users. For more information on use of Twitter Marks, see our trademark rules <a href="https://twitter.com/logo" target="_blank">here</a></strong></li>
+<li>confuse or mislead users about the source or purpose of your application.</li>
+<li><strong>use as its Application Website URL: an unrelated URL, a site intended to entice or encourage users to violate the Twitter Rules, a spam or malware site, or a shortened URL to mask the true destination.</strong></li>
+<li>replicate, frame, or mirror the Twitter website or its design.</li>
+<li>impersonate or facilitate impersonation of others in a manner that can mislead, confuse, or deceive users.</li>
+</ul>
+</li>
+<li>Respect the privacy and sharing settings of Twitter Content. Do not share, or encourage or facilitate the sharing of protected Twitter Content. Promptly change your treatment of Twitter Content (for example, deletions, modifications, and sharing options) as changes are reported through the Twitter API.</li>
+<li>It is important for all users and Twitter API developers that we maintain the integrity and addressability of the Twitter identity across the ecosystem. If your Service submits content to Twitter that includes a username beginning with an "@" symbol, it must submit the correct Twitter username, if known by your Service.</li>
+</ol>
+</blockquote>
+<p>Yang penting-pentingnya udah ane bold, silakan ente pelajari kenapa Aplikasi begituan gue benci dan memang sudah dilarang oleh pihak twitter. Silakan baca <a href="https://dev.twitter.com/terms/api-terms" target="_blank">https://dev.twitter.com/terms/api-terms</a> kalau butuh info lengkap tentang Hak dan Kewajiban pengguna API Twitter.</p>
+<p>Kepada inisial MG, silakan hapur aplikasi anda, atau kami akan mengubek-ubek kerjaan anda.</p>
+<p>Salam Hangat,<br />
+Para Korban.</p>

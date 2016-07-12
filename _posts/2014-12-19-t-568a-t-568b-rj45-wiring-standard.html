@@ -1,0 +1,75 @@
+---
+layout: post
+title: T-568A, T-568B - RJ45 Wiring Standard
+date: 2014-12-19 17:07:21.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Networking
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465790814;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2984;}i:1;a:1:{s:2:"id";i:3567;}i:2;a:1:{s:2:"id";i:4156;}}}}
+  _wpas_done_all: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Biasa disebut "Cross" atau "Straight", padahal nama atau istilahnya standarnya bukan itu. Cross itu jika kedua ujung menggunakan pola yang berbeda di kedua sisinya, misal sisi 1 menggunakan T-568A dan sisi 2 menggunakan T-568B, untuk Straight, terserah jika mau menggunakan T-568A atau T-568B di kedua sisinya, jadi, bukan "yang ini urutan warna cross, yang ini urutan warna straight".</p>
+<h3>T-568A</h3>
+<p><img class="alignnone size-full wp-image-3670" src="{{ site.baseurl }}/assets/t568a_rpha9q.jpg" alt="t568a" width="120" height="285" /></p>
+<ul>
+<li>Putih-Hijau</li>
+<li>Hijau</li>
+<li>Putih-Orange</li>
+<li>Biru</li>
+<li>Putih-Biru</li>
+<li>Orange</li>
+<li>Putih-Coklat</li>
+<li>Coklat</li>
+</ul>
+<h3>T-568B</h3>
+<p><img class="alignnone size-full wp-image-3671" src="{{ site.baseurl }}/assets/t568b_svxnlr.jpg" alt="t568b" width="120" height="285" /></p>
+<ul>
+<li>Putih-Orange</li>
+<li>Orange</li>
+<li>Putih-Hijau</li>
+<li>Biru</li>
+<li>Putih-Biru</li>
+<li>Hijau</li>
+<li>Putih-Coklat</li>
+<li>Coklat</li>
+</ul>
+<p>Lalu buat apa ada pola standar seperti itu? Untuk memudahkan pekerjaan tentunya, karena yang sebenarnya bekerja dalam jaringan adalah pin 1, 2, 3 dan 6. Sisanya? Ground dan power kalau tidak salah. Nah, pola Cross itu seperti ini jadinya:</p>
+<ul>
+<li>1 - 3</li>
+<li>2 - 6</li>
+<li>3 - 1</li>
+<li>6 - 2</li>
+</ul>
+<p>Nah, skema utuhnya seperti ini untuk tiap pin</p>
+<pre>
+                 T-568B                         T-568A
+       --------------------------      ------------------------
+Pin    Color             Pin Name      Color           Pin Name
+---    -------------     --------      -------------   --------
+ 1     Orange Stripe     Tx+           Green Stripe    Rx+
+ 2     Orange            Tx-           Green           Rx-
+ 3     Green Stripe      Rx+           Orange Stripe   Tx+
+ 4     Blue              Not Used      Blue            Not Used
+ 5     Blue Stripe       Not Used      Blue Stripe     Not Used
+ 6     Green             Rx-           Orange          Tx-
+ 7     Brown Stripe      Not Used      Brown Stripe    Not Used
+ 8     Brown             Not Used      Brown           Not Used
+</pre>
+<p>Sekian, semoga bermanfaat.</p>

@@ -1,0 +1,52 @@
+---
+layout: post
+title: Membuat Kategori di Gnome Application Tray
+date: 2014-05-06 06:14:46.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- category
+- desktop
+- gnome
+- kategori
+- Linux
+- rapi
+- ubuntu
+meta:
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  spacious_page_layout: no_sidebar_content_centered
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466719694;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3395;}i:1;a:1:{s:2:"id";i:3460;}i:2;a:1:{s:2:"id";i:3567;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Wujud asli Gnome 3 setelah diinstall memang agak berantakan application tray-nya, mungkin sengaja agar mirip android dan bisa digunakan di device layar sentuh alias touchscreen. Nah, walau berantakan, secara default sudah ada 2 folder kategori disana, Utilities dan Sundry, kalau bisa ada dua folder kategori itu, pasti bisa juga menambah kategori lainnya, iya toh? Lha iya.</p>
+<p>&nbsp;</p>
+<p>[caption id="attachment_3556" align="alignnone" width="700"]<a href="http://sendy.pw/article/membuat-kategori-di-gnome-application-tray.html/screenshot-from-2014-05-06-053439" rel="attachment wp-att-3556"><img class="wp-image-3556 size-large" src="{{ site.baseurl }}/assets/Screenshot-from-2014-05-06-053439_xeqfke.png" alt="Gnome Application Tray Sebelum Ditambahkan Kategori" width="700" height="393" /></a> Gnome Application Tray Sebelum Ditambahkan Kategori[/caption]</p>
+<p>Berantakan kan? Iya, terkesan kurang rapih, tapi kalau suka seperti itu ya gak apa, sesuai selera. Nah sekarang gimana kalau mau ditambahkan kategori biar rapi? Gampang.</p>
+<p>Buka dconf-editor, kalau gak ada tinggal download dan install dconf-editor dari software manager. Di dconf-editor, buka <kbd>org &gt; gnome &gt; shell</kbd> terus edit isi dari <kbd>app-folder-categories</kbd> lalu ganti dengan ini:</p>
+<pre class="prettify">['Utilities', 'Chromium Apps', 'Science', 'Games', 'Sundry', 'Office', 'Network', 'Internet', 'Graphics', 'Multimedia', 'System', 'Development', 'Accessories', 'System Settings', 'Other']
+</pre>
+<p>[caption id="attachment_3554" align="alignnone" width="694"]<a href="http://sendy.pw/wp-content/uploads/2015/05/Screenshot-from-2014-05-06-053640_xsuaks.png"><img class="wp-image-3554 " src="{{ site.baseurl }}/assets/Screenshot-from-2014-05-06-053640_xsuaks.png" alt="Edit app-folder-categories di dconf-editor" width="694" height="553" /></a> Edit app-folder-categories di dconf-editor[/caption]</p>
+<p>Kalau sudah, sekarang coba lihat perbedaannya, jelas lebih rapi kan?</p>
+<p>[caption id="attachment_3557" align="alignnone" width="700"]<a href="http://sendy.pw/article/membuat-kategori-di-gnome-application-tray.html/screenshot-from-2014-05-06-053554" rel="attachment wp-att-3557"><img class="size-large wp-image-3557" src="{{ site.baseurl }}/assets/Screenshot-from-2014-05-06-053554_u8haop.png" alt="Application Tray setelah ditambahkan kategori." width="700" height="393" /></a> Application Tray setelah ditambahkan kategori.[/caption]</p>
+<p>[caption id="attachment_3555" align="alignnone" width="700"]<a href="http://sendy.pw/wp-content/uploads/2015/05/Screenshot-from-2014-05-06-053613_xppfth.png"><img class="size-large wp-image-3555" src="{{ site.baseurl }}/assets/Screenshot-from-2014-05-06-053613_xppfth.png" alt="Membuka kategori" width="700" height="393" /></a> Membuka kategori[/caption]</p>
+<p>Kalau begitu, selamat mencoba dan tetaplah ngoprek!</p>
+<blockquote><p>Gak ngerti juga kenapa Chrome Apps atau Chromium Apps gak bisa dibikin kategori, entahlah.</p></blockquote>

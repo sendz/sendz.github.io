@@ -1,0 +1,68 @@
+---
+layout: post
+title: Selamat Tinggal px, Selamat Datang vw dan vh.
+date: 2014-11-03 09:06:52.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- CSS3
+- ID-ID
+- Internationalized
+- Webdev
+tags:
+- CSS
+- css3
+- height
+- viewport
+- width
+meta:
+  dsq_thread_id: '3816559548'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466793813;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2934;}i:1;a:1:{s:2:"id";i:3306;}i:2;a:1:{s:2:"id";i:2746;}}}}
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Udah lama gak ngoprek CSS dan gak nge-blog juga. Padahal baru kemarin <a title="Flash/ReFlash Xiaomi Redmi 1S" href="http://sendy.pw/article/flash-reflash-xiaomi-redmi-1s.html" target="_blank">nulis</a> di blog. Sekarang bahas apa? Bahas CSS unit aja. Udah tau satuan px (pixel) kan? Sekarang mari bahas satuan <abbr title="viewport width">vw</abbr> dan <abbr title="viewport height">vh</abbr> atau satuan viewport dari CSS3. Sebenernya udah ada sejak lama, tapi baru dipake kemaren -_-"</p>
+<p>Konsep dari vw dan vh itu adalah: mewakili persentase dari tampilan lebar dan tinggi browser. Jadi, kalau kita memasukan <em>value</em> 80vw, artinya lebar dari elemen tersebut sama dengan 80% dari lebar window browser, yang vh juga sama, bedanya dia representasi dari tinggi window browser.</p>
+<blockquote><p>1vw = 1/100 (1%) dari lebar window browser</p>
+<p>10vw = 10/100 (10%) dari lebar window browser</p>
+<p>50vh = 50/100 (50%) dari tinggi window browser</p></blockquote>
+<h3>Apa bedanya dengan satuan persen?</h3>
+<p>Beda dari satuan persen (%) adalah, satuan persen mengacu pada inheritance dari parent, atau diukur berdasarkan lebar / tinggi dari parent. Misal, tag <code>header</code> memiliki lebar 800px, maka tag apapun yang ada di dalam <code>header</code> akan memiliki persentase dari 800px.</p>
+<h3>Sekarang, apa bedanya dengan em?</h3>
+<p>em biasa digunakan untuk font, nilai yang digunakan adalah "bagaimana browser atau device menampilkan ukuran font secara native, pendeknya ukuran font ditentukan oleh browser atau device itu sendiri."</p>
+<h3>Kalau masih kurang mudeng, silakan simak demo dibawah dan coba resize lebar dari browser</h3>
+<p>Atau buka link ini <a href="http://codepen.io/sendz/full/cbDpf" target="_blank">http://codepen.io/sendz/full/cbDpf</a> untuk lihat hasil dengan full-size.<br />
+[codepen_embed height="259" theme_id="0" slug_hash="cbDpf" default_tab="css" user="sendz"]<br />
+.container {<br />
+width: 800px;<br />
+background-color: #333;<br />
+padding: 5px;<br />
+margin: 10px 0px;<br />
+}</p>
+<p>.title-wrapper-persen {<br />
+background-color: #555;<br />
+width: 80%;<br />
+}</p>
+<p>.title-wrapper-viewport {<br />
+background: #ddd;<br />
+width: 80vw;<br />
+}</p>
+<p>See the Pen <a href="http://codepen.io/sendz/pen/cbDpf/">cbDpf</a> by Sendy Aditya Suryana (<a href="http://codepen.io/sendz">@sendz</a>) on <a href="http://codepen.io">CodePen</a>.<br />
+[/codepen_embed]</p>
+<p>Judulnya ngehek? Iya, padahal itu px gak bisa ditinggalin gitu aja :D</p>

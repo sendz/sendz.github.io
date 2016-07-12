@@ -1,0 +1,108 @@
+---
+layout: post
+title: '[Arch] Install Web Server (Apache, PHP5, MariaDB)'
+date: 2014-12-12 20:33:32.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+- Networking
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467595136;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2987;}i:1;a:1:{s:2:"id";i:3490;}i:2;a:1:{s:2:"id";i:3992;}}}}
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  dsq_thread_id: '3773089400'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Setelah pindah agama ke Arch Linux, install web server rada-rada manual dan gak serba otomatis kayak di ubuntu. Tapi ya tetep harus jalan :D</p>
+<h3>Siapin dulu si pacman</h3>
+<p>Ini si pacman harus ada dalam keadaan prima, cek, update repository, kalau perlu update system :D</p>
+<pre>$ sudo pacman -Syu</pre>
+<p>Setelah semua selesai, lanjut ke tahap selanjutnya.</p>
+<h3>Install apache</h3>
+<p>Apache itu . . . . web server, udah gitu aja...</p>
+<pre>$ sudo pacman -S apache</pre>
+<p>Selanjutnya setting apache</p>
+<pre>$ sudo nano /etc/httpd/conf/httpd.conf</pre>
+<p>Nah, ini rada ribet.... kudu teliti dan ikuti satu per satu.</p>
+<ol>
+<li>Comment baris <code>LoadModule unique_id_module modules/mod_unique_id.so</code> contoh:
+<pre>#LoadModule unique_id_module modules/mod_unique_id.so</pre>
+</li>
+<li>Restart apache
+<pre>$ sudo systemctl restart httpd</pre>
+</li>
+<li>Terus buka localhost di browser, kalau gak ada tampilan error, ya berarti berhasil.</li>
+</ol>
+<h3>Install mysql</h3>
+<p>Satu-satunya cara install mysql (gak satu-satunya sih) yaitu:</p>
+<pre>$ sudo pacman -S mysql</pre>
+<p>Terus start mysql service</p>
+<pre>$ sudo systemctl start mysqld</pre>
+<p>Setelah selesai, selesaikan proses installasi mysql</p>
+<pre>sudo mysql_secure_installation</pre>
+<p>Nah, nanti akan muncul beberapa pertanyaan wawancara kerja dari mysql, ikuti pola di bawah ini aja:</p>
+<pre>By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y                                            
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+... Success!
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...</pre>
+<h3>Install PHP</h3>
+<p>Caranya?</p>
+<pre>$ sudo pacman -S php php-apache</pre>
+<p>Kalau udah selesai, kenalin ini PHP ke apache, buka file httpd.conf terus tambah beberapa baris konfigurasi.</p>
+<pre>$ sudo nano /etc/httpd/conf/httpd.conf</pre>
+<p>Copy paste aja nih</p>
+<pre># Use for PHP 5.x:
+LoadModule php5_module       modules/libphp5.so
+AddHandler php5-script php
+Include conf/extra/php5_module.conf</pre>
+<p>Tahap akhir, restart lagi httpd / apache</p>
+<pre>$ sudo systemctl restart httpd</pre>
+<p>Selesai :D</p>
+<p><i>Disclaimer: tulisan ini dibuat dalam keadaan mengantuk. Sekian.</i></p>

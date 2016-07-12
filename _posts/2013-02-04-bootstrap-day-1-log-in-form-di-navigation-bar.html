@@ -1,0 +1,122 @@
+---
+layout: post
+title: '#Bootstrap #Day 1: Log In Form di Navigation Bar.'
+date: 2013-02-04 12:08:48.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Post
+- Webdev
+tags:
+- bootstrap
+- dropdown
+- form
+- login
+- pop up
+- sign up
+- twitter bootstrap
+meta:
+  geo_latitude: '-7.797224'
+  geo_longitude: '110.368797'
+  geo_accuracy: '3691'
+  geo_address: yogyakarta
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  publicize_twitter_user: SENDYYeah
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _thumbnail_id: '2693'
+  tiga_social_check: 'false'
+  post_views_count: '9'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466430745;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2720;}i:1;a:1:{s:2:"id";i:2647;}i:2;a:1:{s:2:"id";i:2746;}}}}
+  dsq_thread_id: '4059834808'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>[caption id="attachment_2694" align="alignnone" width="625"]<a href="http://sendy.pw/wp-content/uploads/2015/05/twitter-bootstrap-1-login_faqysj.png"><img class="size-large wp-image-2694" alt="Twitter Boootstrap - Login Form Didalam Dropdown." src="{{ site.baseurl }}/assets/twitter-bootstrap-1-login_faqysj.png" width="625" height="189" /></a> Twitter Boootstrap - Login Form Didalam Dropdown.[/caption]</p>
+<p><strong>Topik: </strong>Twitter Bootstrap<br />
+<strong>Tingkat: </strong>Menengah</p>
+<p>Hari Pertama, ada yang nanya via google dengan keyword "form sign in di dalam dropdown twitter bootstrap" jadi inilah yang akan dibahas.! Mari langsung aja dimulai.</p>
+<p>Jadi kita pastikan dulu semua file dasar dari twitter bootstrap sudah di-embed ke file HTML yang sedang dibuat, dari mulai <strong>CSS</strong>, <strong>jQuery</strong>, dan <strong>JS</strong>. Terus tambah <strong>bootstrap-dropdown.js</strong>.<!--more--></p>
+<p>Jadi untuk sementara kita punya file HTML seperti ini:</p>
+<pre class="prettyprint lang-html linenums">
+<!doctype HTML>
+<html>
+<head>
+  <title>#Bootstrap #Day 1: </title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <script src="js/jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.js"></script>
+  <script src="js/bootstrap-dropdown.js"></script>
+</head>
+<body>
+</body>
+</html>
+</pre>
+<p>Selanjutnya kita bikin panel navigasi, kalau ngikutin dokumentasi sih tinggal tambah ini diantara tag body:</p>
+<pre class="prettyprint lang-html linenums">
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div>
+</div>
+</pre>
+<p>Setelah script diatas itu, kita udah punya navbar sama navigasi, tinggal bikin sesi login/signup. Karena mau dibikin terpisah dari list-nya navigasi, tambah tag dropdown dibawah setelah tag</p>
+<pre class="prettyprint linenums lang-html">
+<ul class="nav pull-right">
+   <li class="dropdown">
+       <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Sign In / Sign Up<b class="caret"></b></a>
+       <ul class="dropdown-menu" aria-labelledby="drop3">
+          <li>
+                <form method="post" action="#">
+                    <input type="text" style="margin:10px;" name="username" placeholder="Username" />
+                    <input type="password" style="margin:10px;" name="password" placeholder="Password" />
+                    <input type="checkbox" style="margin:10px;" name="remember" value="remember" /> Remember Me
+                    <input type="submit" class="btn btn-primary" style="margin:10px;" name="submit" value="Sign In" />
+                </form>
+           </li>
+           <li class="divider"></li>
+           <li><a tabindex="-1" href="#">Or Signup, Maybe</a></li>
+       </ul>
+    </li>
+</ul>
+</pre>
+<p>Selesai sampai disitu, kita bakal dapet tampilan seperti ini:</p>
+<p>[caption id="attachment_2693" align="alignnone" width="321"]<a href="http://sendy.pw/wp-content/uploads/2015/05/bootstrap-day-1-gambar-1_fyobfl.png"><img class="size-full wp-image-2693" alt="Dropdown Login Form" src="{{ site.baseurl }}/assets/bootstrap-day-1-gambar-1_fyobfl.png" width="321" height="302" /></a> Dropdown Login Form[/caption]</p>
+<p>Tapiiiii..... Ada tapinya sih... Kalau kita klik input form, dropdown-nya bakal ngilang. Kenapa coba? Ternyata bootstrap-dropdown.js memang diatur untuk menutup pop-up alias dropdown kalau user nge-klik. Kita harus bikin script buat disable fungsi itu kalau user klik form input. Caranya gimana? Copy aja javascript dibawah ke HTML, atau ke file .JS (tapi buang tag &lt;javascript&gt;&lt;/javascript&gt; )</p>
+<pre class="prettyprint lang-html linenums"><script type="text/javascript">
+    $(function() {
+        // Setup drop down menu
+        $('.dropdown-toggle').dropdown();
+
+        // Fix input element click problem
+        $('.dropdown input, .dropdown label').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+</script></pre>
+<p>Udah? Ya udah tinggal save, terus buka di browser buat dicoba..<br />
+Selamat Mencoba ;)</p>
+<p>Kalau bingung, buka <a href="http://jsfiddle.net/sendz/LRVkc/6/" target="_blank">http://jsfiddle.net/sendz/LRVkc/6/</a> buat referensi :D</p>

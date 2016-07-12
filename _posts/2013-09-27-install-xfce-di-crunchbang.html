@@ -1,0 +1,54 @@
+---
+layout: post
+title: Install xfce di CrunchBang.
+date: 2013-09-27 08:14:46.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- compare
+- crunchbang
+- lxde
+- memory usage
+- openbox
+- openbox vs xfce
+- xfce
+meta:
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465787265;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3562;}i:1;a:1:{s:2:"id";i:3271;}i:2;a:1:{s:2:"id";i:3279;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Buat yang merasa ribet dengan obmenu di openbox, terus harus nambahin menu sendiri pake menu editor, mending pindah ke Desktop Environment yang lain seperti LXDE yang juga jalan di OpenBox atau xfce. Nah, disini aku pilih xfce biar lebih cantik dari openbox atau lxde. Sebenernya OpenBox dengan tint2 nya masih bisa lebih cantik, tapi males ngopreknya :D<br />
+<!--more--><br />
+Gimana cara install xfce di CrunchBang? Gini:</p>
+<pre class="prettyprint">$ sudo apt-get install xfce4</pre>
+<p>Terus kalau perlu install beberapa utility dari xfce, install juga xfce-goodies</p>
+<pre class="prettyprint">$ sudo apt-get install xfce4-goodies</pre>
+<p>Ini perbandingan memory usage antara openbox dan xfce:</p>
+<p>[caption id="attachment_3222" align="alignnone" width="656"]<a href="http://sendy.pw/wp-content/uploads/2015/05/2013-09-27-1380243793_656x409_scrot_tqsqug.png"><img class="size-full wp-image-3222" alt="2013-09-27--1380243793_656x409_scrot" src="{{ site.baseurl }}/assets/2013-09-27-1380243793_656x409_scrot_tqsqug.png" width="656" height="409" /></a> Resource Usage OpenBox + tint2[/caption]</p>
+<p>[caption id="attachment_3223" align="alignnone" width="648"]<a href="http://sendy.pw/wp-content/uploads/2015/05/Screenshot-09272013_lb2gzw.png"><img class="size-full wp-image-3223" alt="Screenshot - 09272013" src="{{ site.baseurl }}/assets/Screenshot-09272013_lb2gzw.png" width="648" height="409" /></a> Resource Usage xfce4[/caption]</p>
+<p>Gak beda jauh penggunaannya, tapi kalau setiap Byte memory kamu begitu berharga, lebih baik pilih OpenBox + tint2 bawaan CrunchBang atau malah tanpa DE sama sekali :p</p>
+<p>Selesai install, pindahin default session dari openbox ke xfce.</p>
+<pre class="prettyprint">
+$ sudo update-alternatives --config x-session-manager
+</pre>
+<p>Terus isi password, pilih nomor yang ada xfce session-nya, logout lalu login lagi.</p>
+<p>Selamat mencoba. ;)</p>

@@ -1,0 +1,55 @@
+---
+layout: post
+title: Revert Text
+date: 2015-04-02 09:57:16.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- CSS3
+- ID-ID
+- Internationalized
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465773591;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2729;}i:1;a:1:{s:2:"id";i:2718;}i:2;a:1:{s:2:"id";i:2690;}}}}
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  dsq_thread_id: '4035703104'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Udah cek <a href="http://com.google/" target="_blank">http://com.google/</a> ? Keren? Iya, setidaknya kalau googling ambulance di google image, tulisannya gak kebalik :D Sama kayak blog ini kemarin pas April Fools Day, layout tulisan jadi kebalik.</p>
+<p>[caption id="attachment_3741" align="alignnone" width="578"]<img class="size-large wp-image-3741" src="{{ site.baseurl }}/assets/Kebalik_ot51tv.png" alt="Keren? Nggak juga, banyak yang komplen malah." width="578" height="1024" /> Keren? Nggak juga, banyak yang komplen malah.[/caption]</p>
+<p>Kalau ada yang tanya "Mas, gimana caranya?" Gini . . .</p>
+<p>Kamu tambah aja property CSS ini ke CSS selector</p>
+<pre class="prettyprint linenums">  unicode-bidi: bidi-override;
+    direction: rtl;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+</pre>
+<p>Misal di <code>body</code></p>
+<pre class="prettyprint linenums lang-css">body {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+</pre>
+<p>Selesai deh.</p>

@@ -1,0 +1,43 @@
+---
+layout: post
+title: '[Fix] Proses Boot Stuck di Reached Target System Update'
+date: 2015-09-22 06:58:21.000000000 +07:00
+type: post
+published: true
+status: publish
+categories: []
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  spacious_page_layout: default_layout
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465788703;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3498;}i:1;a:1:{s:2:"id";i:3485;}i:2;a:1:{s:2:"id";i:4111;}}}}
+  _wpas_done_all: '1'
+  dsq_thread_id: '4153080266'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Kemarin Shubuh muncul pemberitahuan auto-update dari GNOME Software, yang ujung-ujungnya minta restart buat install, setelah saya restart dan ditinggal ke Puskesmas + Radio Visit demi kepentingan GNOME Release Party 3.18, ternyata masih belum selesai juga proses boot dan stuck di tampilan</p>
+<pre>[OK] Reached Target System Update</pre>
+<p>Lumayan nambah-nambah kerjaan nih.</p>
+<p>Googling, ketemu masalah yang sama di forum fedora<sup>[0]</sup> dengan cara menghapus folder <code>/var/cache</code>, lalu saya reboot, pindah ke Fedora 22 yang kebetulan terinstall dengan sengaja sebagai 'backup' OS. Setelah menghapus folder <code>/var/cache</code> dari partisi arch, ternyata malah nambah masalah lain, yaitu stuck di</p>
+<p>[OK] Reached Target Timers</p>
+<p>Apa-apaan ini?</p>
+<p>Setelah dipikir beberapa menit, saya kepikiran kalau masalah ini muncul karena auto-update, seperti di forum fedora<sup>[0]</sup> tersebut, saya berpikir bahwa system stuck karena auto-update tersendat dan saya harus update manual. Masuk akal.</p>
+<p>Kembali boot ke Fedora, lalu saya dump disk file installer (ISO) archlinux ke USB Flash Disk, cara untuk menduplikat file ISO ke UFD cukup mudah, begini</p>
+<pre>$ sudo dd if=/folder/file.iso of=/dev/sdX</pre>
+<p>Setelah UFD siap, reboot system lalu boot ke UFD via BIOS (laptop saya masih menggukanan BIOS) lalu pilih arch install yang sesuai dengan arsitektur sebelumnya. Jadi, misal dulu install arch 32 bit, pilihlah yang i386, tapi jika dulu install arch 64 bit, pilih yang x86_64.</p>
+<p>Setelah masuk ke konsol arch installer, mount partisi harddisk dimana arch terinstall, punya saya di /dev/sda2</p>
+<pre># mount /dev/sda2 /mnt</pre>
+<p>Setelah partisi bisa dibuka, akses partisi tersebut dengan hak akses root, selanjutnya update system di partisi tersebut.</p>
+<pre># arch-chroot /mnt
+# pacman -Syu</pre>
+<p>Jika sampai langkah di atas selesai, hal terakhir yang perlu dilakukan adalah reboot ke HDD dan jalankan arch seperti biasa. Dengan cara ini, saya langsung bisa masuk ke system dengan normal.</p>
+<p>Link:<br />
+[0] <a href="https://ask.fedoraproject.org/en/question/54667/boot-hangs-at-reached-target-system-update/" target="_blank">https://ask.fedoraproject.org/en/question/54667/boot-hangs-at-reached-target-system-update/</a></p>

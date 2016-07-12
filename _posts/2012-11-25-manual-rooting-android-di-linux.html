@@ -1,0 +1,83 @@
+---
+layout: post
+title: Manual Rooting Android di Linux
+date: 2012-11-25 07:06:42.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Android
+- Blog
+tags:
+- Android
+- Linux
+- root
+- software
+meta:
+  geo_latitude: '-7.345674'
+  geo_longitude: '108.189385'
+  geo_accuracy: '0'
+  geo_address: tasikmalaya
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  publicize_reach: a:3:{s:7:"twitter";a:1:{i:2198991;i:374;}s:2:"fb";a:1:{i:2198997;i:517;}s:2:"wp";a:1:{i:0;i:2;}}
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  publicize_twitter_user: SENDYYeah
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_4733321: '1'
+  post_views_count: '4'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466719089;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3324;}i:1;a:1:{s:2:"id";i:2984;}i:2;a:1:{s:2:"id";i:2934;}}}}
+  dsq_thread_id: '3824918566'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Rooting, atau root android, fungsinya untuk memberikan hak akses tertinggi dalam OS android (root) kepada pengguna, yang tadinya hanya punya akses sebagai user biasa. Apa gunanya root di android? Biar beberapa aplikasi yang meminta akses root untuk memodifikasi OS bisa dijalankan. Kerugiannya sampai sekarang masih diperdebatkan, apalagi masalah garansi. Ada juga sih beberapa vendor atau retailer yang tidak mempermasalahkan 'root' dalam ketentuan garansinya.</p>
+<p>Nah, sekarang kalau tetep keukeuh dan nekat pengen di root, download dulu <a title="SuperOneClick" href="http://shortfuse.org/?page_id=2" target="_blank">SuperOneClick</a>. Lho kok ekstensinya .exe sih? Ini kan buat windows? Ya memang sengaja di compile buat windows, tujuannya biar user windows lebih gampang tinggal click untuk menjalankan aplikasi dari adb shell di tools didalamnya. Bingung kan? Yaudah mending langsung aja kerja!<!--more--></p>
+<p>Tapi sebelumnya, perlu diingat, <strong>DO AT YOUR OWN RISK! </strong>dan jangan salahkan post ini kalau droid ente jadi bermasalah. *duh tobat*<strong><br />
+</strong></p>
+<p>Udah didownload? Extract arsipnya, terus buka terminal dan mount folder yang sudah diextract tadi. Sebelum android devicenya dikonekin ke PC melalui USB, set dulu droidnya jadi debuggable, caranya buka menu <strong>Settings -&gt; Applications -&gt; Development -&gt; Centang tanda USB Debug</strong> terus sambungin deh ke PC via USB. Setelah itu ketik perintah dibawah sampe jari keriting :p</p>
+<pre>linux:~$ cd ADB
+linux:~$ chmod 755 adblinux
+linux:~$ ./adblinux devices</pre>
+<p>nah, setelah langkah diatas, pastikan muncul seperti ini:</p>
+<pre>List of devices attached
+4257323032BC4C34385A device</pre>
+<p>Kalau gak muncul, ini yang paling ribet, bikin tambah keriting jari tangan! Ikuti langkah dibawah kalau device tidak terdeteksi oleh adblinux:</p>
+<pre>linux:~$ lsusb</pre>
+<p>Nanti akan dapet device info seperti ini:</p>
+<pre>Bus 001 Device 004: ID <strong>12d1</strong>:1039 Huawei Technologies Co., Ltd. Ideos</pre>
+<p>Kalau gak nemu, tambah/edit file <strong>/etc/udev/rules.d/50-android.rules</strong> terus isi dengan:</p>
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="<strong>12d1</strong>", MODE="0666", GROUP="plugdev"</pre>
+<p>Perhatikan yang di bold diatas, keduanya harus sama, lalu restart udevd dengan perintah</p>
+<pre>linux:~$ sudo /etc/init.d/udev restart</pre>
+<p>Sekarang terusin lagi keritingin jari di terminal :p</p>
+<pre>linux:~$ ./adblinux push ../Exploits/psneuter /data/local/tmp
+linux:~$ ./adblinux push ../Root/su-v3 /data/local/tmp
+linux:~$ ./adblinux push ../Root/Superuser.apk /data/local/tmp</pre>
+<p>Setelah langkah diatas selesai, lanjutkan dengan adb shell, biar bisa mengeksploit system androidnya, kalau udah masuk, disitu cuma ada symbol '$'.</p>
+<pre>linux:~$ ./adblinux shell
+$ cd /data/local/tmp
+$ chmod 755 psneuter
+$ ./psneuter</pre>
+<p>Setelah proses diatas, device akan disconnected sesaat lalu terkoneksi kembali dalam beberapa detik, kalau tidak berhasil, restart device dan ulangi langkah diatas, lalu masuk lagi ke adblinux shell, dan pastikan sudah masuk sebagai root dengan tanda hanya ada tanda pagar alias '#', lalu ketik <strong>id</strong> (enter) dan akan muncul uid=0.</p>
+<p>Masih di adb shell, gunakan perintah mount dan cari string dengan <strong>/system</strong> mount point. contoh:</p>
+<pre>/dev/block/mtdblock0 on /system type yaffs2 (rw)</pre>
+<p>Sekarang ikuti langkah dibawah sebagai tahap akhir</p>
+<pre># mount -o remount,rw /dev/block/mtdblock0 /system
+# cd /data/local/tmp
+# cat su-v3 &gt; /system/bin/su
+# cat Superuser.apk &gt; /system/app/Superuser.apk
+# chmod 06755 /system/bin/su
+# chmod 0755 /system/app/Superuser.apk</pre>
+<p>Setelah semua selesai, cek di App Drawer atau list aplikasi, nanti akan muncul aplikasi baru dengan nama <strong>Superuser</strong>, dan selesai! Tapi harus restart dulu HP nya...</p>
+<p>Siapa bilang root android gampang? Kalau gini caranya ya susah!</p>

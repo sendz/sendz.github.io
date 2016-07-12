@@ -1,0 +1,77 @@
+---
+layout: post
+title: '#Bootstrap #Day 3 : Tentang Loading State Button.'
+date: 2013-02-06 01:46:27.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Post
+- Twitter Bootstrap
+- Webdev
+tags:
+- bootstrap
+- JavaScript
+- loading
+- loading state button
+- twitter bootstrap
+meta:
+  geo_latitude: '-7.797224'
+  geo_longitude: '110.368797'
+  geo_accuracy: '3691'
+  geo_address: tasikmalaya
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  publicize_twitter_user: SENDYYeah
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  publicize_reach: a:3:{s:7:"twitter";a:1:{i:2198991;i:404;}s:2:"fb";a:1:{i:2198997;i:527;}s:2:"wp";a:1:{i:0;i:2;}}
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _thumbnail_id: '2722'
+  tiga_social_check: 'false'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465652481;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2690;}i:1;a:1:{s:2:"id";i:2718;}i:2;a:1:{s:2:"id";i:2746;}}}}
+  dsq_thread_id: '3835885130'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Awalnya saat bikin web theme pake bootstrap, terus pengen ada visual loading di tombol. Di bootstrap memang sudah ada, tapi yang jadi masalah adalah, di dokumentasi gak terlalu lengkap, akhirnya ya hasilnya tombol statis aja, gak ada efek loading seperti di gambar ini:</p>
+<p>[caption id="attachment_2722" align="alignnone" width="116"]<a href="http://sendy.pw/wp-content/uploads/2015/05/bloggif_5111b02eafb6a_hdkkzo.gif"><img class="size-full wp-image-2722" alt="Load More" src="{{ site.baseurl }}/assets/bloggif_5111b02eafb6a_hdkkzo.gif" width="116" height="52" /></a> Tombol Load More Dengan Efek Loading State.[/caption]</p>
+<p>Jadi, setelah cari cara dengan fitur "Inspect Element" yang ada di chrome, ternyata di dokumentasi itu tidak menyertakan user harus masukin ID di HTML untuk ditambahi script loading state. Nah lho, si <a href="http://twitter.com/fat" target="_blank">fat</a> lupa kali ya, atau memang sengaja begitu? Wallahu'alam. Nah sekarang, gimana sih caranya biar tombolnya ada tulisan "loading..." seperti itu?<!--more--></p>
+<p>Awalnya, di dokumentasi udah ditulis begini:</p>
+<pre class="prettyprint linenums lang-html">
+<button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button>
+</pre>
+<p>Cuma hasilnya ya begini:</p>
+<p>[caption id="attachment_2723" align="alignnone" width="116"]<a href="http://sendy.pw/wp-content/uploads/2015/05/bloggif_5111b2681b79c_c1blnf.gif"><img class="size-full wp-image-2723" alt="Tombol Loading Gagal." src="{{ site.baseurl }}/assets/bloggif_5111b2681b79c_c1blnf.gif" width="116" height="52" /></a> Tombol Loading Gagal.[/caption]</p>
+<p>Terus gimana lagi? Tambah aja attribute ID buat tag button, misal kita tambah <strong>id="btn-loading"</strong> dan hasilnya begini:</p>
+<pre class="prettyprint linenums lang-html">
+<button type="button" class="btn btn-primary" data-loading-text="Loading..." id="btn-loading">Load More</button>
+</pre>
+<p>Udah beres? Nah kita sisipkan script baru dibawah tag button tadi, ini scriptnya:</p>
+<pre class="prettyprint linenums lang-js">// button state
+$('#btn-loading')
+  .click(function () {
+    var btn = $(this)
+    btn.button('loading')
+      setTimeout(function () {
+        btn.button('reset')
+  }, 3000)
+})</pre>
+<p>Tanda pagar itu artinya kita melakukan getElementById di HTML via JS, jadi kita ngambil element HTML yang punya ID btn-loading. Terus kalau terlalu lama atau kurang lama, ganti aja angka 3000 itu, angka itu satuan milisecond, jadi kalau mau 5 detik, isi 5000 atau kalau mau 2 detik, isi 2000.</p>
+<blockquote><p>Sebenernya script diatas itu ada di file application.js dari paket <a title="Twitter Bootstrap JavaScript Pack." href="http://sendyyeah.wordpress.com/2013/01/30/twitter-bootstrap-javascript-pack/" target="_blank">bootstrap javascript plugin.</a></p></blockquote>
+<p>Kalau pengen liat contoh, kesini aja <a title="Bootstrap Loading State Button." href="http://jsfiddle.net/sendz/WL5RN/" target="_blank">http://jsfiddle.net/sendz/WL5RN/</a></p>

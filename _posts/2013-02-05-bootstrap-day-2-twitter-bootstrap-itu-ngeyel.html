@@ -1,0 +1,58 @@
+---
+layout: post
+title: '#Bootstrap #Day 2 : Twitter Bootstrap itu Ngeyel!'
+date: 2013-02-05 05:12:01.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Post
+- Twitter Bootstrap
+- Webdev
+tags:
+- bootstrap
+- CSS
+- twitter bootstrap
+meta:
+  _wpas_done_2198997: '1'
+  geo_latitude: '-7.797224'
+  geo_longitude: '110.368797'
+  geo_accuracy: '3691'
+  geo_address: yogyakarta
+  geo_public: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  publicize_twitter_user: SENDYYeah
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  _edit_last: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '8'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465797358;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2746;}i:1;a:1:{s:2:"id";i:2890;}i:2;a:1:{s:2:"id";i:2690;}}}}
+  dsq_thread_id: '3825785586'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Kalau yang sedang berkutat dengan file style.css dan gak mau ganggu bootstrap.css yang memang kalau lagi develop gak boleh diganggu, terus punya masalah karena styling CSS punya kita bentrok sama punya bootstrap dan hasilnya styling gak dipake browser, tapi tetep pake styling bawaan bootstrap, caranya gampang sih.</p>
+<p>Kalau inget "!important" yang biasa disispkan di value dari tiap property CSS, pake aja itu, ya emang itu sih yang sekarang dibahas. *Gak ada bahasan lain, soalnya lagi males bongkar-bongkar bootstrap di <abbr title="USB Flash Drive">UFD</abbr>.<!--more--></p>
+<p>Jadi gimana sih maksudnya?</p>
+<p>Kalau kamu punya CSS macam gini:</p>
+<pre class="prettyprint linenums lang-css">.navbar {
+font-family: ubuntu;
+font-color: white;
+}</pre>
+<p>tapi styling gak mau load, tambahi <b>!important</b> sebelum titik koma. Contoh:</p>
+<pre class="prettyprint linenums lang-css">.navbar {
+font-family: ubuntu !important;
+font-color: white !important;
+}</pre>
+<p>Insya allah dengan seijin tuhan dan sekemampuan browser, custom styling bisa loaded sempurna.</p>

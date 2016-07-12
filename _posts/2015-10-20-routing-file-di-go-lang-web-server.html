@@ -1,0 +1,57 @@
+---
+layout: post
+title: Routing File di Go Lang Web Server
+date: 2015-10-20 09:23:17.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Programming
+tags:
+- gin gonic
+- go
+- go-lang
+- golang
+- routing
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466650392;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:4094;}i:1;a:1:{s:2:"id";i:3684;}i:2;a:1:{s:2:"id";i:3503;}}}}
+  _wpas_done_all: '1'
+  dsq_thread_id: '4241147573'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Minggu ini bakal sibuk dengan golang, tugasnya kali ini bikin routing file, tujuannya apa? Tujuannya biar url <code>http://localhost:6060/gambar/700</code> bisa munculin <code>http://localhost:6060/asset/gambar/gambar_700.jpeg</code></p>
+<p>Karena saya baru belajar go, dan routing baru sebatas buat controller, dan saya pusing gimana caranya routing file, akhirnya tanya ke temen dan juga googling, ada cara yang lebih mudah untuk routing, pake gin gonic!</p>
+<p>Gin gonic itu semacam framework buat golang, singkatnya seperti itu. sebelumnya, install dulu gin gonic.</p>
+<pre class="prettyprint">$ go get github.com/gin-gonic/gin</pre>
+<p>Terus import gin gonic ke working file.</p>
+<pre class="prettyprint lang-js linenums">package main
+
+import (
+    "github.com/gin-gonic/gin" // import gin gonic framework
+)
+
+func main() {
+    router := gin.Default() // deklarase variable router sebagain gin.Default()
+
+    router.StaticFile("/gambar/1040","asset/gambar/gambar_1040.jpeg")
+    router.StaticFile("/gambar/700","asset/gambar/gambar_700.jpeg")
+    router.StaticFile("/gambar/460","asset/gambar/gambar_460.jpeg")
+    router.StaticFile("/gambar/300","asset/gambar/gambar_300.jpeg")
+    router.StaticFile("/gambar/240","asset/gambar/gambar_240.jpeg")
+    
+    router.Run(":6060") // port di localhost adalah 6060
+}</pre>
+<p>Setelah itu jalankan file go tersebut.</p>
+<pre class="prettyprint">$ go run *.go</pre>
+<p>Kalau sudah, bisa dicoba dengan buka <code>http://localhost:6060/gambar/700</code> di browser, kalau berhasil, akan menampilkan aset gambar yang dimaksud.</p>
+<p>Selamat mencoba.</p>

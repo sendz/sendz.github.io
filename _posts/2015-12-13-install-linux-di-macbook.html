@@ -1,0 +1,79 @@
+---
+layout: post
+title: Install Linux di MacBook
+date: 2015-12-13 14:39:59.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- install
+- mac
+- macbook
+- macbook pro
+- osx
+- refind
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _publicize_facebook_user: http://www.facebook.com/1663414729
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465967932;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3368;}i:1;a:1:{s:2:"id";i:3969;}i:2;a:1:{s:2:"id";i:3992;}}}}
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Pengalaman instal ArchLinux di MacBook White Pak <a href="https://tuanpembual.wordpress.com/" target="_blank">tuanpembual</a>, sekarang baru sempat nulis buat berbagi. Mungkin pernah lihat Pak tuanpembual atau temen-temen blankOn pake kaos dengan tulisan mac.di.blankon.in dan merasa keren, pengen install Linux di Mac? PENGEN? Pasti jarang yang pengen.... :(</p>
+<h3>Unduh file ISO Linux</h3>
+<p>Unduh dulu file ISO Linux dari distro manapun, misal ubuntu atau openSUSE, arch juga boleh.</p>
+<h3>Bakar file ISO</h3>
+<p>Bisa bakar file ISO ke media CD / DVD jika ada disc writer, kalau mau pake bootable USB, bisa dengan perintah <code>dd</code>, untuk perintah <code>dd</code>, harap ikuti langkah dibawah<br />
+Cari dulu UFD di direktori disk yang mana, lalu unmount.</p>
+<pre>$ diskutil list</pre>
+<p>Misal ada di disk3, maka</p>
+<pre>$ sudo diskutil unmountDisk /dev/disk3</pre>
+<p>Setelah itu, baru bisa gunakan <code>dd</code> untuk menulis file ISO ke UFD, misal seperti ini:</p>
+<pre>$ sudo dd if=/direktoridownload/fileLinux.iso of=/dev/disk3</pre>
+<h3>Unduh refind</h3>
+<p>Unduh dulu refind di <a href="http://www.rodsbooks.com/refind/" target="_blank">http://www.rodsbooks.com/refind/</a> lalu extract di folder Home, setelah itu buka Terminal, buka direktori hasil extract tadi, dan jalankan perintah</p>
+<h3>OSX Sebelum El Capitan</h3>
+<p>Langkah di bawah ini khusus buat OSX sebelum El Capitan, berarti mulai dari Yosemite kebawah ya :D</p>
+<h3></h3>
+<pre>$ sudo ./refind-install</pre>
+<p>Selesai? Lanjut restart Mac.</p>
+<h3>Untuk El Capitan</h3>
+<p>Karena ada restriksi di El Capitan, harus lewat 'Recovery Mode' dulu untuk install refind, caranya?</p>
+<ol>
+<li>Restart Mac, tekan dan tahan tombol Command + R di keyboard saat proses restart</li>
+<li>Setelah masuk ke Recovery Mode buka Terminal di "Utilities -&gt; Terminal"</li>
+<li>Ketik <code>csrutil disable</code> lalu Enter</li>
+<li>Restart lagi Mac nya, masuk lagi ke Recovery Mode dengan cara yang sama, tekan tahan tombol Command + R</li>
+<li>Buka lagi Terminal di "Utilities -&gt; Terminal"</li>
+<li>Buka folder hasil extract refind tadi dengan perintah <code># cd /Volumes/Macintosh\ HD/Users/namauser/</code></li>
+<li>Ketik perintah <code>./refind-install</code> dan tunggu hingga selesai.</li>
+<li>Restart Mac.</li>
+</ol>
+<h3>Installasi Linux</h3>
+<p>Setelah restart, layar mac dengan tampilan refind akan terbuka, pilih boot dari USB, biasanya ditandai dengan gambar penguin atau logo USB, selanjutnya adalah konfigurasi partisi harddisk dan dilanjut dengan instalasi Linux seperti biasa.</p>
+<h2><span style="color: #ff0000;">CATATAN</span></h2>
+<p><strong>Disarankan untuk mengatur partisi harddisk sebelum instalasi linux agar lebih memudahkan proses.</strong></p>
+<p>Karena instalasi Linux akan menghapus refind, dan masalah ini membuat kita tidak bisa masuk ke OSX karena tidak terdaftar di GRUB, maka perlu menginstal kembali refind dengan cara:</p>
+<ol>
+<li>Restart Mac nya, masuk ke Recovery Mode dengan cara tekan tahan tombol Command + R.</li>
+<li>Buka Terminal di "Utilities -&gt; Terminal".</li>
+<li>Buka folder hasil extract refind tadi dengan perintah <code># cd /Volumes/Macintosh\ HD/Users/namauser/.</code></li>
+<li>Ketik perintah <code>./refind-install</code> dan tunggu hingga selesai.</li>
+<li>Restart Mac.</li>
+<li>Sekarang muncul pilihan untuk boot Linux dan OSX.</li>
+</ol>

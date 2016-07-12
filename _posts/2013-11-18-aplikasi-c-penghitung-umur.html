@@ -1,0 +1,84 @@
+---
+layout: post
+title: Ngitung Sisa Umur
+date: 2013-11-18 17:44:04.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- C++
+- ID-ID
+- Internationalized
+- Programming
+tags: []
+meta:
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '6'
+  dsq_thread_id: '3816584254'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1464056229;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3179;}i:1;a:1:{s:2:"id";i:3401;}i:2;a:1:{s:2:"id";i:3334;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Tugas Algoritma Pemrograman lagi, pake C++ lagi, code lagi. Jadi aplikasi ini fungsinya buat ngitung umur, caranya <em>tanggal sekarang, bulan sekarang, tahun sekarang - tanggal lahir, bulan lahir, tahun lahir.</em></p>
+<p>Berhubung lagi males jelasin, mending langsung code nya aja.<!--more--></p>
+<pre class="prettyprint linenums lang-cpp">#include 
+
+using namespace std;
+int main() {
+    int lahirTgl, lahirBln, lahirThn;
+    int sekrgTgl, sekrgBln, sekrgThn;
+    int hasilTgl, hasilBln, hasilThn;
+    int addTgl;
+
+    cout &lt;&lt; "Masukan tanggal lahir, bulan lahir, tahun lahir secara berurutan." &lt;&lt; endl;
+    cin &gt;&gt; lahirTgl; cin &gt;&gt; lahirBln; cin &gt;&gt; lahirThn;
+    cout &lt;&lt; "Masukan tanggal sekarang, bulan sekarang, tahun sekarang secara berurutan." &lt;&lt; endl;
+    cin &gt;&gt; sekrgTgl; cin &gt;&gt; sekrgBln; cin &gt;&gt; sekrgThn;
+
+    // Jumlah hari dalam setiap bulan
+    if (sekrgBln == 1, 3, 5, 7, 8, 10, 12) {
+        addTgl = 31;
+    } else if (sekrgBln == 4, 6, 9, 11) {
+        addTgl = 30;
+    } else if (sekrgBln == 2) {
+        addTgl = 28;
+    }
+    if (sekrgThn % 4 == 0 &amp;&amp; sekrgBln == 2) {
+        addTgl = 29;
+    }
+
+    // Kalkulasi
+    if (sekrgBln &gt; lahirBln &amp;&amp; sekrgTgl &gt; lahirTgl) {
+        hasilThn = sekrgThn - lahirThn;
+        hasilBln = sekrgBln - lahirBln;
+        hasilTgl = sekrgTgl - lahirTgl;
+    } else
+    if (sekrgBln &gt; lahirBln &amp;&amp; sekrgTgl &lt; lahirTgl) {
+        hasilThn = sekrgThn - lahirThn;
+        hasilBln = (sekrgBln - 1) - lahirBln;
+        hasilTgl = (sekrgTgl + addTgl) - lahirTgl;
+    } else
+    if (sekrgBln &lt; lahirBln &amp;&amp; sekrgTgl &gt; lahirTgl) {
+        hasilThn = (sekrgThn - 1) - lahirThn;
+        hasilBln = (sekrgBln + 12) - lahirBln;
+        hasilTgl = sekrgTgl - lahirTgl;
+    } else
+    if (sekrgBln &lt; lahirBln &amp;&amp; sekrgTgl &lt; lahirTgl) {
+        hasilThn = (sekrgThn - 1) - lahirThn;
+        hasilBln = ((sekrgBln + 12) - 1) - lahirBln;
+        hasilTgl = (sekrgTgl + addTgl) - lahirTgl;
+    }
+    cout &lt;&lt; "Umur anda adalah " &lt;&lt; hasilThn &lt;&lt; " tahun " &lt;&lt; hasilBln &lt;&lt; " bulan " &lt;&lt; hasilTgl &lt;&lt; " hari " &lt;&lt; endl;
+}</pre>
+<p>di compile di g++.</p>
+<p>Selamat copas :D</p>

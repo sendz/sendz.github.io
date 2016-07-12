@@ -1,0 +1,40 @@
+---
+layout: post
+title: '[Fix] apt-get error'
+date: 2014-11-22 14:37:57.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  _edit_last: '1'
+  _wpcom_is_markdown: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  spacious_page_layout: default_layout
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465803510;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3440;}i:1;a:1:{s:2:"id";i:3490;}i:2;a:1:{s:2:"id";i:3434;}}}}
+  _wpas_done_all: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Gak tau lah error-nya kenapa dan sejak kapan, mungkin pas gagal update kemaren. Informasinya kayak gini di setiap jalanin apt-get:</p>
+<pre class="">
+Reading package lists... Error!
+E: Encountered a section with no Package: header
+E: Problem with MergeList /var/lib/apt/lists/ignorantguru.github.com_debian_dists_unstable_main_i18n_Translation-en
+E: The package lists or status file could not be parsed or opened.
+</pre>
+<p>Cara benerinnya gimana? Bersihin list di <code>/var/lib/apt/lists</code>.</p>
+<pre class="">
+sudo rm /var/lib/apt/lists/* -vf
+sudo apt-get update
+</pre>
+<p>Selesai sudah :D</p>

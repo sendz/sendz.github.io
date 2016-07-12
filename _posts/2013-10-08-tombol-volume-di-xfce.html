@@ -1,0 +1,44 @@
+---
+layout: post
+title: Tombol Volume di xfce.
+date: 2013-10-08 14:32:20.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- keyboard shortcut
+- shortcut
+- sound
+- volume
+- xfce
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466395501;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3443;}i:1;a:1:{s:2:"id";i:2313;}i:2;a:1:{s:2:"id";i:3221;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Habis install xfce dan gak tau file konfigurasi apa yang kehapus, soalnya sempet hapusin konfigurasi openbox :p, hasilnya tombol volume di notebook gak bisa dipake. Pasrah dengan keadaan, setting manual terus via audio mixer, lalu googling-googling dapet caranya. Ternyata cuma nambahin keyboard shortcut aja.</p>
+<p>Caranya gimana.?<br />
+Buka Menu -> Settings -> Keyboard -> Application Shurtcuts -> Add<br />
+Isi command ini buat Volume Up:</p>
+<pre class="prettyprint">amixer set Master 5%+</pre>
+<p>terus isi keyboard shortcut-nya.</p>
+<p>Isi command ini buat Volume Down:</p>
+<pre class="prettyprint">amixer set Master 5%-</pre>
+<p>terus isi keyboard shortcut-nya.</p>
+<p>Close terus cobain deh :D</p>

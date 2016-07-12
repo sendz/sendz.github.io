@@ -1,0 +1,103 @@
+---
+layout: post
+title: Akses WebCam pake HTML5.
+date: 2013-03-31 13:02:12.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- HTML5
+- ID-ID
+- Internationalized
+- Webdev
+tags:
+- access
+- akses
+- getUserMedia
+- HTML
+- HTML5
+- JavaScript
+- media
+- technology
+- webcam
+meta:
+  geo_latitude: '-7.345674'
+  geo_longitude: '108.189385'
+  geo_accuracy: '0'
+  geo_address: tasikmalaya
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  publicize_twitter_user: SENDYYeah
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  publicize_reach: a:3:{s:7:"twitter";a:1:{i:2198991;i:414;}s:2:"fb";a:1:{i:2198997;i:529;}s:2:"wp";a:1:{i:0;i:2;}}
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _thumbnail_id: '2922'
+  post_views_count: '16'
+  _jetpack_related_posts_cache: a:2:{s:32:"6dc2236411ecb4a535b86f73bb9c7a89";a:2:{s:7:"expires";i:1467944237;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3624;}i:1;a:1:{s:2:"id";i:2720;}i:2;a:1:{s:2:"id";i:2690;}}}s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467944262;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3624;}i:1;a:1:{s:2:"id";i:2720;}i:2;a:1:{s:2:"id";i:2690;}}}}
+  dsq_thread_id: '4049205497'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>[caption id="attachment_2922" width="625"]<a href="http://sendy.pw/wp-content/uploads/2015/05/webcam_iunj5m.png"><img class="size-large wp-image-2922" alt="Abaikan Photo Jidatnya!" src="{{ site.baseurl }}/assets/webcam_iunj5m.png" width="625" height="445" /></a> Abaikan Jidatnya![/caption]<br /></p>
+<p>Ide ini muncul saat temen mau bikin proyek buat kerja praktek, katanya mau bikin sistem e-learning. Nah, terus ditambahi ide "Gimana kalau system-nya bisa tele-conference." terus dia jawab "Kan ini PHP." lalu gue jawab lagi "HTML5 + Javascript kan bisa.".</p>
+<p>Nah, sekarang mulai gimana caranya akses webcam pake HTML5? Hayo gimana? Disini kita akan buat pake tag <kbd>video</kbd> dan fungsi <kbd>getUserMedia</kbd>. Kedengarannya ribet, bukan? Emang.</p>
+<p>Pertama, buatlah file HTML seperti ini:</p>
+<pre class="prettyprint linenums lang-html">
+<!doctype HTML>
+<html>
+<head>
+<meta charset="utf-8" /> <!-- penting gak sih meta charset ini? penting kalau udah nyampe server -->
+</head>
+<body>
+<div id="container">
+<video id="webCam" autoplay="true">
+</video>
+</div>
+</body>
+</html>
+</pre>
+<p><!--more-->Setelah file HTML selesai, buat file CSS, atau mau disimpen di file HTML juga bisa, terserah. Jadinya seperti ini:</p>
+<pre class="prettyprint lang-css linenums">
+#container {
+margin: 0px auto;
+width: 640px;
+height: 480px;
+border: 10px #aaa solid;
+}
+#webCam {
+width: 640px;
+height: 480px;
+background-color: #666;
+}
+</pre>
+<p>Diatas itu, CSS dengan id <kbd>container</kbd> buat frame si video itu akan muncul, kalau id <kbd>webCam</kbd>, itu juga buat ukuran layar TV yang nanti muncul di browser.</p>
+<p>Setelah CSS selesai, dilanjutkan dengan mengeksekusi si &lt;video id="webCam"&gt; dengan JavaScript. Disini kita gunakan <kbd>getUserMedia</kbd>, fungsi ini bisa ngambil webcam atau microphone, atau malah keduanya.</p>
+<pre class="prettyprint lang-js linenums"> var video = document.querySelector("#webCam"); //mulai eksekusi si video id webCam
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia; //ini API beberapa browser
+if (navigator.getUserMedia) {
+navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+function handleVideo(stream) {
+video.src = window.URL.createObjectURL(stream);
+}
+function videoError(e) {
+document.write("can't use the webcam"); //action kalau gak bisa akses webcam
+}
+</pre>
+<p>Udah selesai? Save semua, terus coba load di browser. Kalau ada permintaan akses media, klik Allow.</p>
+<p>Mau nyobain? Kesini aja <a href="http://jsfiddle.net/sendz/Bs5de/1/">http://jsfiddle.net/sendz/Bs5de/1/</a></p>
+<blockquote><p>Catatan: di Firefox, User Media share nya disable secara default, kalau mau aktifin, buka tab baru, terus ketik <kbd>about:config</kbd> terus cari <kbd>media.navigator.enabled</kbd>, double click biar value nya jadi true. Tapi step ini gak menjamin bisa berhasil, sekedar saran, PAKAILAH GOOGLE CHROME. :D</p></blockquote>

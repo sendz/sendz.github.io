@@ -1,0 +1,49 @@
+---
+layout: post
+title: Broadcom BCM4313 Wireless Chipset Driver in Debian
+date: 2015-06-01 14:10:13.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- EN-US
+- Linux
+tags:
+- BCM4313
+- BCM43224
+- BCM43225
+- broadcom
+- debian
+- laptop
+- lenovo
+- wireless
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467098879;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3219;}i:1;a:1:{s:2:"id";i:2930;}i:2;a:1:{s:2:"id";i:3562;}}}}
+  dsq_thread_id: '3811112562'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<blockquote>It also applicable for Broadcom BCM4313, BCM43224, BCM43225 devices (brcmsmac, brcm80211)</p></blockquote>
+<p>Got stuck with wireless problem in OpenSUSE, and found that in Debian it have easier way to solve. I have a lenovo laptop which came with Broadcom BCM4313 wireless chipset, because the drive is proprietary, not much linux distro comes with the driver, including OpenSUSE, Fedora and Debian, but Ubuntu will add the driver during the installation, so Ubuntu will not have same problem as in Debian or others.</p>
+<p>If you need to know how to find your wireless chipset, here is the command:</p>
+<pre>$ lspci | grep -i wireless</pre>
+<p>If the command give you nothing, try with sudo.</p>
+<p>If you have same problem with same wireless chipset, you can continue with this post, if you wireless chipset is different with mine, I suggest you to dig deeper on internet ;)</p>
+<p>First thing first, you need to add a "non-free" to your source.list</p>
+<pre>deb http://httpredir.debian.org/debian/ jessie main contrib non-free</pre>
+<p>Put that string to <code>/etc/apt/sources.list</code></p>
+<p>Done with that? Update apt and install the driver.</p>
+<pre>$ sudo apt update &amp;&amp; apt install firmware-brcm80211</pre>
+<p>The finishing, it need to insert the module to access installed firmware.</p>
+<pre> $ sudo modprobe -r brcmsmac ; modropbe brcmsmac</pre>
+<p>It's done, your wireless network ready to use.</p>

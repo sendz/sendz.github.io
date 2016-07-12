@@ -1,0 +1,117 @@
+---
+layout: post
+title: Setting Multi Input Mouse - Keyboard dengan xinput
+date: 2014-02-27 17:23:28.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- elementary
+- keyboard
+- mouse
+- multi
+- ubuntu
+- xinput
+- xorg
+meta:
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_done_all: '1'
+  _edit_last: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  post_views_count: '41'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466258934;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3567;}i:1;a:1:{s:2:"id";i:3368;}i:2;a:1:{s:2:"id";i:3761;}}}}
+  dsq_thread_id: '3773089340'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Kasusnya begini, gue punya dua mouse dan pengen punya dua pointer. Buat apa? Kan bisa buat maen game balap di genymotion atau buat multitouch input. Masalahnya, kalau cuma dicolokin doang, dua mouse bakal pake satu pointer yang sama. Gimana caranya bikin dua pointer yang bisa dipake bersamaan?</p>
+<p>*Ceritanya googling dulu*<br />
+<!--more--><br />
+Oh ternyata bisa pame XMP atau xinput. Kalau pake Ubuntu 10.04, xinput udah ada secara default di system. Ceritanya ini pake Ubuntu 12.04 di kantor :D</p>
+<p><strong>Pertama:</strong></p>
+<p>Lihat device apa aja yang kebaca sebagai input device dengan perintah:</p>
+<pre>
+xinput list
+</pre>
+<p>Contoh hasil xinput list</p>
+<pre>
+⎡ Virtual core pointer            id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer  id=4	[slave  pointer  (2)]
+⎜   ↳ Logitech USB Optical Mouse  id=8	[slave  pointer  (2)]
+⎜   ↳ KYE Wireless Mouse          id=12	[slave  pointer  (2)]
+⎣ Virtual core keyboard           id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard id=5	[slave  keyboard (3)]
+    ↳ Power Button                id=6	[slave  keyboard (3)]
+    ↳ Power Button                id=7	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=9	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=10	[slave  keyboard (3)]
+    ↳ UVC Camera (046d:0824)      id=11	[slave  keyboard (3)]
+</pre>
+<p>Sampai sini, ada Logitech USB Optical Mouse dengan id 4, ada KYE Wireless Mouse dengan id 12. Logitech ini biarin aja sebagai primary atau master input, dan KYE Wireless Mouse sebagai secondary atau slave input.</p>
+<p>Lanjut</p>
+<pre>
+xinput create-master Secondary
+xinput list
+</pre>
+<p>Contoh lagi setelah <kbd>xinput list</kbd> dieksekusi</p>
+<pre>
+⎡ Virtual core pointer            id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer  id=4	[slave  pointer  (2)]
+⎜   ↳ Logitech USB Optical Mouse  id=8	[slave  pointer  (2)]
+⎜   ↳ KYE Wireless Mouse          id=12	[slave  pointer  (2)]
+⎣ Virtual core keyboard           id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard id=5	[slave  keyboard (3)]
+    ↳ Power Button                id=6	[slave  keyboard (3)]
+    ↳ Power Button                id=7	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=9	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=10	[slave  keyboard (3)]
+    ↳ UVC Camera (046d:0824)      id=11	[slave  keyboard (3)]
+⎡ Secondary pointer               id=13	[master pointer  (14)]
+⎜   ↳ Secondary XTEST pointer     id=15	[slave  pointer  (13)]
+⎣ Secondary keyboard              id=14	[master keyboard (13)]
+    ↳ Secondary XTEST keyboard    id=16	[slave  keyboard (14)]
+</pre>
+<p>Sekarang kita punya satu pointer tambahan yang kadang suka ilang, kadang muncul di tengah layar, tapi masih belum bisa dipake sama Mouse kedua.</p>
+<p>Terus ada dua section baru dibawah, ada Secondary pointer, ada Secondary keyboard. Nah Secondary pointer ini yang bakal dipake buat Mouse kedua (si KYE)</p>
+<p>Lanjut attach KYE Wireless Mouse sebagai Secondary pointer</p>
+<pre>
+xinput reattach 12 "Secondary pointer"
+xinput list
+</pre>
+<p>Ini hasil list nya setelah attach si KYE sebagai Secondary pointer</p>
+<pre>
+⎡ Virtual core pointer            id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer  id=4	[slave  pointer  (2)]
+⎜   ↳ Logitech USB Optical Mouse  id=8	[slave  pointer  (2)]
+⎣ Virtual core keyboard           id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard id=5	[slave  keyboard (3)]
+    ↳ Power Button                id=6	[slave  keyboard (3)]
+    ↳ Power Button                id=7	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=9	[slave  keyboard (3)]
+    ↳ Logitech USB Keyboard       id=10	[slave  keyboard (3)]
+    ↳ UVC Camera (046d:0824)      id=11	[slave  keyboard (3)]
+⎡ Secondary pointer               id=13	[master pointer  (14)]
+⎜   ↳ KYE Wireless Mouse          id=12	[slave  pointer  (13)]
+⎜   ↳ Secondary XTEST pointer     id=15	[slave  pointer  (13)]
+⎣ Secondary keyboard              id=14	[master keyboard (13)]
+    ↳ Secondary XTEST keyboard    id=16	[slave  keyboard (14)]
+</pre>
+<p>Sekarang tinggal sesuaikan button layout buat mouse dua, kalau pengen tetep itu 'left click' di telunjuk tangan kiri :D</p>
+<pre>
+xinput set-button-map 12 3 2 1
+</pre>
+<p>Angka 12 itu id, angka 3 itu context menu atau normalnya klik kanan, angka 2 itu center click atau yang ada di scroll wheel, angka 1 itu command atau klik kiri. Gitu :D</p>
+<p>Dan sekarang ada dua pointer, dan dua-duanya bisa dipake :D</p>
+<p>Cara ini juga bisa dipake buat nambah keyboard, misal buat maen game bola bareng, atau coding bareng di satu komputer dengan dua keyboard biar mesra ;)</p>
+<p>Selamat mencoba dan jangan lupa kalau di desktop Unity pointer agak nge-bug :(</p>

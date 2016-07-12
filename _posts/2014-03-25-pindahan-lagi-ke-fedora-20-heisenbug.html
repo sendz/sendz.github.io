@@ -1,0 +1,286 @@
+---
+layout: post
+title: Pindahan (lagi) ke Fedora 20 Heisenbug.
+date: 2014-03-25 08:46:48.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- fedora
+- Linux
+- migrate
+- rpm
+- ubuntu
+- yum
+meta:
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  tiga_social_check: 'false'
+  _wpas_done_all: '1'
+  _thumbnail_id: '3491'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  post_views_count: '18'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466504217;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3992;}i:1;a:1:{s:2:"id";i:3562;}i:2;a:1:{s:2:"id";i:3667;}}}}
+  dsq_thread_id: '3773090067'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>[caption id="attachment_3491" align="alignnone" width="620"]<a href="http://sendy.pw/wp-content/uploads/2015/05/IJ554_BLACK_3Q_gpv8t9.jpg"><img class="size-large wp-image-3491" alt="Ini fedora-nya Indiana Jones" src="{{ site.baseurl }}/assets/IJ554_BLACK_3Q_gpv8t9.jpg" width="620" height="465" /></a> Ini fedora-nya Indiana Jones dari Mbah Google[/caption]</p>
+<p>ElementaryOS sebenernya nyaman, tapi lagi bosen aja sama keluarga ubuntu. Tanya-tanya sama oom Rian disaranin pindah ke Debian, Fedora, Slackware dan Mint. Aku sendiri pengennya pake Arch atau distro apapun yang isinya minimal, tapi masalahnya arch itu terlalu minimal dan butuh internet pas install buat downlod dependensi, akhirnya pilih Fedora karena mamang <a href="http://ha.hn.web.id/" target="_blank">Hahn</a> juga pake Fedora, tapi dia Fedora 19 :D</p>
+<p>Download Fedora dari sini <a href="http://fedoraproject.org/en_GB/get-fedora#desktops" target="_blank">http://fedoraproject.org/en_GB/get-fedora#desktops</a>, pilih aja yang default, urusan desktop bisa nambahin nanti. Proses install seperti kebanyakan distro modern pada umumnya, cuma kalau udah biasa sama proses installasi ubuntu bakal sedikit bingung sama prosesnya fedora, tapi gampang kok, serius :D<!--more--></p>
+<p>Selesai Install, harus mulai dibiasakan dengan command di fedora ini yang memang beda dari command di ubuntu. Biar tak copy dari <a href="https://help.ubuntu.com/community/SwitchingToUbuntu/FromLinux/RedHatEnterpriseLinuxAndFedora" target="_blank">ubuntu</a> aja biar langsung belajar :D</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td><strong>Red Hat/Fedora</strong></td>
+<td><strong>Ubuntu</strong></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Adding, Removing and Upgrading Packages</strong></td>
+</tr>
+<tr>
+<td>Refresh list of available packages</td>
+<td>Yum refreshes each time it's used</td>
+<td>apt-get update</td>
+</tr>
+<tr>
+<td>Install a package from a repository</td>
+<td>yum install <em>package_name</em></td>
+<td>apt-get install <em>package_name</em></td>
+</tr>
+<tr>
+<td>Install a package file</td>
+<td>yum install <em>package.rpm</em>rpm -i <em>package.rpm</em></td>
+<td>dpkg --install <em>package.deb</em></td>
+</tr>
+<tr>
+<td>Remove a package</td>
+<td>rpm -e <em>package_name</em></td>
+<td>apt-get remove <em>package_name</em></td>
+</tr>
+<tr>
+<td>Check for package upgrades</td>
+<td>yum check-update</td>
+<td>apt-get -s upgradeapt-get -s dist-upgrade</td>
+</tr>
+<tr>
+<td>Upgrade packages</td>
+<td>yum updaterpm -Uvh [args]</td>
+<td>apt-get upgrade</td>
+</tr>
+<tr>
+<td>Upgrade the entire system</td>
+<td>yum upgrade</td>
+<td>apt-get dist-upgrade</td>
+</tr>
+<tr>
+<td colspan="3"><strong>Package Information</strong></td>
+</tr>
+<tr>
+<td>Get information about an available package</td>
+<td>yum search <em>package_name</em></td>
+<td>apt-cache search <em>package_name</em></td>
+</tr>
+<tr>
+<td>Show available packages</td>
+<td>yum list available</td>
+<td>apt-cache dumpavail</td>
+</tr>
+<tr>
+<td>List all installed packages</td>
+<td>yum list installedrpm -qa</td>
+<td>dpkg --list</td>
+</tr>
+<tr>
+<td>Get information about a package</td>
+<td>yum info <em>package_name</em></td>
+<td>apt-cache show <em>package_name</em></td>
+</tr>
+<tr>
+<td>Get information about an installed package</td>
+<td>rpm -qi <em>package_name</em></td>
+<td>dpkg --status <em>package_name</em></td>
+</tr>
+<tr>
+<td>List files in an installed package</td>
+<td>rpm -ql <em>package_name</em></td>
+<td>dpkg --listfiles <em>package_name</em></td>
+</tr>
+<tr>
+<td>List documentation files in an installed package</td>
+<td>rpm -qd <em>package_name</em></td>
+<td>-</td>
+</tr>
+<tr>
+<td>List configuration files in an installed package</td>
+<td>rpm -qc <em>package_name</em></td>
+<td>dpkg-query --show -f '${Conffiles}n' <em>package_name</em></td>
+</tr>
+<tr>
+<td>Show the packages a given package depends on</td>
+<td>rpm -qR <em>package_name</em></td>
+<td>apt-cache depends</td>
+</tr>
+<tr>
+<td>Show other packages that depend on agiven package (reverse dependency)</td>
+<td>rpm -q -whatrequires [args]</td>
+<td>apt-cache rdepends</td>
+</tr>
+<tr>
+<td colspan="3"><strong>Package File Information</strong></td>
+</tr>
+<tr>
+<td>Get information about a package file</td>
+<td>rpm -qpi <em>package.rpm</em></td>
+<td>dpkg --info <em>package.deb</em></td>
+</tr>
+<tr>
+<td>List files in a package file</td>
+<td>rpm -qpl <em>package.rpm</em></td>
+<td>dpkg --contents <em>package.deb</em></td>
+</tr>
+<tr>
+<td>List documentation files in a package file</td>
+<td>rpm -qpd <em>package.rpm</em></td>
+<td>-</td>
+</tr>
+<tr>
+<td>List configuration files in a package file</td>
+<td>rpm -qpc <em>package.rpm</em></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Extract files in a package</td>
+<td>rpm2cpio <em>package.rpm</em> | cpio -vid</td>
+<td>dpkg-deb --extract <em>package.deb</em> dir-to-extract-to</td>
+</tr>
+<tr>
+<td>Find package that installed a file</td>
+<td>rpm -qf <em>filename</em></td>
+<td>dpkg --search <em>filename</em></td>
+</tr>
+<tr>
+<td>Find package that provides a particular file</td>
+<td>yum provides <em>filename</em></td>
+<td>apt-file search <em>filename</em></td>
+</tr>
+<tr>
+<td colspan="3"><strong>Misc. Packaging System Tools</strong></td>
+</tr>
+<tr>
+<td>Show stats about the package cache</td>
+<td>-</td>
+<td>apt-cache stats</td>
+</tr>
+<tr>
+<td>Verify all installed packages</td>
+<td>rpm -Va</td>
+<td>debsums</td>
+</tr>
+<tr>
+<td>Remove packages from the local cache directory</td>
+<td>yum clean packages</td>
+<td>apt-get clean</td>
+</tr>
+<tr>
+<td>Remove only obsolete packages from the local cache directory</td>
+<td>-</td>
+<td>apt-get autoclean</td>
+</tr>
+<tr>
+<td>Remove header files from the local cache directory(forcing a new download of same on next use)</td>
+<td>yum clean headers</td>
+<td>apt-file purge</td>
+</tr>
+<tr>
+<td colspan="3"><strong>General Packaging System Information</strong></td>
+</tr>
+<tr>
+<td>Package file extension</td>
+<td>*.rpm</td>
+<td>*.deb</td>
+</tr>
+<tr>
+<td>Repository location configuration</td>
+<td>/etc/yum.conf</td>
+<td>/etc/apt/sources.list</td>
+</tr>
+</tbody>
+</table>
+<p>Asyiknya fedora yang pake yum package handler, kita gak usah update package list setelah nambahin repository, tinggal eksekusi aja dia otomatis langsung refresh, beda sama apt. :D</p>
+<p><strong>Nah ini buat service command:</strong></p>
+<table>
+<tbody>
+<tr>
+<td> <strong>Task</strong> </td>
+<td>
+<p>  <strong>Red Hat / Fedora</strong>  </p>
+</td>
+<td>
+<p> <strong>Ubuntu</strong> </p>
+</td>
+<td>
+<p> <strong>Ubuntu</strong> <br />
+ (with sysv-rc-conf or sysvconfig) </p>
+</td>
+</tr>
+<tr>
+<td>
+<p> <strong>Starting/stopping services immediately</strong> </p>
+</td>
+<td>
+<p>service httpd start </p>
+</td>
+<td>
+<p>invoke-rc.d apache start </p>
+</td>
+<td>
+<p>service apache start </p>
+</td>
+</tr>
+<tr>
+<td>
+<p> <strong>Enabling a service at boot</strong> </p>
+</td>
+<td>
+<p>chkconfig httpd on </p>
+</td>
+<td>
+<p>update-rc.d apache defaults </p>
+</td>
+<td>
+<p>sysv-rc-conf apache on </p>
+</td>
+</tr>
+<tr>
+<td>
+<p> <strong>Disabling a service at boot</strong> </p>
+</td>
+<td>
+<p>chkconfig httpd off </p>
+</td>
+<td>
+<p>update-rc.d apache purge </p>
+</td>
+<td>
+<p>sysv-rc-conf apache off </p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Review + Screenshot nanti aja di sesi terpisah :p</p>

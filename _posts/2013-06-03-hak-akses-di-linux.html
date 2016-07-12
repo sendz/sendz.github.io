@@ -1,0 +1,128 @@
+---
+layout: post
+title: Hak Akses di Linux
+date: 2013-06-03 12:49:03.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- access file
+- chmod
+- file
+- hak akses
+- Linux
+meta:
+  _yoast_wpseo_linkdex: '62'
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _yoast_wpseo_focuskw: Hak Akses File dan Direktori di Linux Ubuntu
+  _yoast_wpseo_title: Hak Akses File dan Direktori atau Folder di Linux
+  _yoast_wpseo_metadesc: Mempelajari Hak akses File dan Direktori atau folder di Linux.
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '31'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465708579;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2915;}i:1;a:1:{s:2:"id";i:92;}i:2;a:1:{s:2:"id";i:2303;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Ada teman bertanya pada temannya, mengapa ada hak akses file di linux.</p>
+<p>Ibarat si gue punya file, itu file cuma boleh dibaca sama gue, dan temen gue, bukan temen gue gak boleh bisa buka apalagi baca. Nah temen gue cuma bisa baca dan gak boleh edit atau hapus itu file. Nah, sekarang kita lihat struktur <strong>attribute</strong> dari hak akses file.</p>
+<p>Kita buka terminal, lalu jalankan perintah <kbd>ls -l</kbd></p>
+<p>[caption id="attachment_2985" align="alignnone" width="727"]<a href="http://sendy.pw/wp-content/uploads/2015/05/Screenshot-from-2013-06-03-122231_z1ssjt.png"><img class="size-full wp-image-2985" alt="Terminal" src="{{ site.baseurl }}/assets/Screenshot-from-2013-06-03-122231_z1ssjt.png" width="727" height="466" /></a> Terminal[/caption]</p>
+<p><!--more-->Contohnya seperti ini: <strong><span style="color: #ff6600;">-</span><span style="color: #00ff00;">rw-</span><span style="color: #0000ff;">r--</span><span style="color: #ff0000;">r--<br />
+</span></strong><span style="color: #000000;">Terus keterangan warnanya seperti ini:<br />
+</span></p>
+<ul>
+<li><span style="color: #000000;"><span style="color: #ff6600;"><strong>Orange</strong></span> = Tipe file</span></li>
+<li><span style="color: #000000;"><span style="color: #00ff00;"><strong>Hijau</strong></span> = Owner</span></li>
+<li><span style="color: #000000;"><span style="color: #0000ff;"><strong>Biru</strong></span> = Group</span></li>
+<li><span style="color: #000000;"><span style="color: #ff0000;"><strong>Merah</strong></span> = Other</span></li>
+</ul>
+<p><span style="line-height: 1.714285714; font-size: 1rem;">Jadi cara baca hak aksesnya adalah: File tersebut adalah file biasa, owner mempunyai hak untuk <strong>read</strong> dan <strong>write</strong>, group hanya bisa <strong>read</strong> dan other juga cuma bisa <strong>read.</strong></span></p>
+<p>Terus Owner itu siapa? Owner adalah creator atau pemilik file tesebut, sementara group adalah orang yang ada dalam group/workgroup atau dalam satu kelompok dari si owner, dan others adalah kalangan dari luar kelompok tersebut.</p>
+<p>Sekarang, gimana cara ganti hak akses? Menggunakan perintah chmod, dan ada dua cara, yang pertama cara dengan alfabet, sebenernya ini gampang buat pemula, tapi kalau sudah mengerti cara kedua, cara ini serasa lebih ribet.</p>
+<pre class="prettyprint">$ chmod [ugoa][=+-][rwx] [filename]
+$ chmod [ugoa][=+-][rwx] [directoryname]</pre>
+<p>Keterangan:</p>
+<ul>
+<li>u : user atau pemilik, atau owner.</li>
+<li>g : group.</li>
+<li>o : others.</li>
+<li>a : all.</li>
+<li>= : membuat hak akses secara spesifik, misal hanya untuk read dan menghilangkan akses selain read.</li>
+<li>+ : menambahkan hak akses.</li>
+<li>- : mengurangi hak akses.</li>
+<li>r : read atau membaca.</li>
+<li>w : write atau menulis, termasuk mengedit file.</li>
+<li>x : mengeksekusi file tersebut.</li>
+<li>filename : nama file lengkap dengan ekstensinya jika ada</li>
+<li>directoryname : nama direktori atau folder</li>
+</ul>
+<p>Contoh (kita gunakan humans.txt sebagai filename):</p>
+<pre class="prettyprint">$ chmod u+x, g+w, a=r humans.txt</pre>
+<p>Sekarang cara terakhir yang menurut saya lebih gampang adalah dengan angka octal.</p>
+<ul>
+<li><span style="line-height: 14px;">r = 4</span></li>
+<li>w = 2</li>
+<li>x = 1</li>
+</ul>
+<p>Tabel penggunaannya seperti ini:</p>
+<table class="table">
+<tbody>
+<tr>
+<td></td>
+<td>Owner</td>
+<td>Group</td>
+<td>Others</td>
+</tr>
+<tr>
+<td>Read</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Write</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Execute</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Cara penggunaannya adalah, jumlahkan octal hak akses untuk setiap tipe pengguna, contoh:</p>
+<pre>$ chmod <span style="color: #00ff00;">7</span><span style="color: #0000ff;">5</span><span style="color: #ff0000;">5</span> humans.txt</pre>
+<p>Maka cara diatas akan mengubah hak akses:</p>
+<ul>
+<li><span style="line-height: 14px;">Read Write Execute untuk <span style="color: #00ff00;">owner</span></span></li>
+<li>Read Execute untuk <span style="color: #0000ff;">group</span></li>
+<li>Read Execute untuk <span style="color: #ff0000;">other</span></li>
+</ul>
+<p>Contoh lain, bagaimana jika ingin memberikan akses seperti dibawah:</p>
+<ul>
+<li><span style="line-height: 14px;">Read Write Execute untuk <span style="color: #00ff00;">owner</span></span></li>
+<li>Read Write untuk <span style="color: #0000ff;">group</span></li>
+<li>Read Execute untuk <span style="color: #ff0000;">other</span></li>
+</ul>
+<pre>$ chmod <span style="color: #00ff00;">7</span><span style="color: #0000ff;">6</span><span style="color: #ff0000;">5</span> humans.txt</pre>
+<p>Gimana, mana yang lebih gampang? Selamat mencoba.</p>
+<blockquote><p><span style="color: #ff0000;">File yang hanya bisa diakses super user membutuhkan privilege sebagai super user / root untuk mengubah hak akses.</span></p></blockquote>

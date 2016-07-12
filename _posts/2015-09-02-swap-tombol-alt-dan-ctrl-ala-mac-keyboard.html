@@ -1,0 +1,58 @@
+---
+layout: post
+title: Swap Tombol Alt dan Ctrl ala Mac Keyboard.
+date: 2015-09-02 19:27:21.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- keyboard
+- mac
+- mac keyboard
+- macbook
+- trick
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_done_all: '1'
+  _yoast_wpseo_metadesc: Mengganti posisi tombol Alt dan Ctrl di linux sehingga mirip
+    dengan Mac keyboard atau Macbook Keybaord.
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465646022;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:4111;}i:1;a:1:{s:2:"id";i:3567;}i:2;a:1:{s:2:"id";i:2930;}}}}
+  dsq_thread_id: '4090137421'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Niatnya cuma iseng, pengen coba ngetik ala pengguna macintosh, macbook, atau simplenya mac keyboard. Emang gimana sih? Jadi kalau di keyboard mac, tombol Alt dan Ctrl itu tukeran tempat, alias tombol Alt ada di tombol Ctrl dan sebaliknya. Jadi biar saya tampilkan gambarnya.</p>
+<p>Ini keyboard English (US) standar</p>
+<p>[caption id="attachment_4001" align="alignnone" width="724"]<a href="http://sendy.pw/post/swap-tombol-alt-dan-ctrl-ala-mac-keyboard.html/en_us" rel="attachment wp-att-4001"><img class="wp-image-4001 size-full" src="{{ site.baseurl }}/assets/en_US_zmvmg9.png" alt="Keyboard Standar en_US" width="724" height="244" /></a> Keyboard Standar en_US[/caption]</p>
+<p>Ini keboard Mac English (US)</p>
+<p>[caption id="attachment_4002" align="alignnone" width="700"]<a href="http://sendy.pw/post/swap-tombol-alt-dan-ctrl-ala-mac-keyboard.html/mac_en_us" rel="attachment wp-att-4002"><img class="size-large wp-image-4002" src="{{ site.baseurl }}/assets/mac_en_US_xirch9.jpg" alt="Keyboard Mac en_US" width="700" height="191" /></a> Keyboard Mac en_US[/caption]</p>
+<p><em>Sebagai catatan, cara ini baru berlaku untuk keyboard standar, untuk laptop beda lagi karena ada tombol Fn yang letaknya beda, laptop saya tombol Fn diapit tombol Ctrl dan tombol Super, untuk keyboard Macbook sendiri tombol Fn berada paling luar.</em></p>
+<p>Yang diperlukan adalah membuat file .Xmodmap dengan perintah <code>$ gedit ~/.Xmodmap</code> dan isikan konfigurasi ini:</p>
+<pre>clear control
+clear mod1
+clear mod4
+
+! LEFT
+keycode 37 = Alt_L Meta_L
+keycode 64 = Control_L
+
+
+! RIGHT
+keycode 108 = Control_L
+keycode 105 = Alt_L Meta_L
+
+! ADD CONTROL
+add control = Control_L Control_R
+add mod1 = Alt_L Alt_R Meta_L Meta_R</pre>
+<p>Jika sudah selesai, reload konfigurasi xmodmap dengan perintah <code>$ xmodmap ~/.Xmodmap</code></p>
+<p>Selamat mencoba, dan selamat menyesuaikan diri :)</p>

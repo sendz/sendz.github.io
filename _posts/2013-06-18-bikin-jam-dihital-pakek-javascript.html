@@ -1,0 +1,295 @@
+---
+layout: post
+title: Bikin Jam Dihital Pakek JavaScript.
+date: 2013-06-18 12:49:47.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- HTML
+- ID-ID
+- Internationalized
+- JavaScript
+- JQuery
+- Webdev
+tags: []
+meta:
+  _yoast_wpseo_linkdex: '74'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: script jam digital dengan javascript dan Jquery
+  _yoast_wpseo_title: Script Jam Untuk Web/Blog dengan JavaScript dan JQuery.
+  _yoast_wpseo_metadesc: Membuat script jam digital dengan JavaScript dan JQuery untuk
+    digunakan pada halaman web atau blog.
+  _yoast_wpseo_metakeywords: jam, digital, javascript, html, js, jquery, blog, web,
+    HTML5
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '6'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465634464;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3590;}i:1;a:1:{s:2:"id";i:2690;}i:2;a:1:{s:2:"id";i:2915;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Kemaren temen minta bikinin sekrip buat nampilin jam dihital di webnya, katanya buat tugas sih. Nah, kita mulai ya bikin script jam digital dengan javascript dan JQuery-nya.<br />
+Kita bikin dulu javascript-nya, terserah mau disimpen di file terpisah atau disamain di file HTML. Tapi sebelumnya, wajib pake JQuery, minimal versi 1.9.x</p>
+<p>Sekarang mulai dari sekrip buat bikin variabel buat nampilin jam sama tanggal.</p>
+<pre class="prettyprint linenums lang-js">
+function showTime()
+    {
+        var today=new Date(); // Variable buat ambil info waktu hari ini
+        var D=today.getDate(); // Variable buat nampilin tanggal
+        var M=today.getMonth(); // Variable buat nampilin bulan
+        var Y=today.getFullYear(); // Variable buat nampilin taun
+        var d=today.getDay(); // Variable buat nampilin hari
+        var h=today.getHours(); // Variable buat nampilin jam
+        var m=today.getMinutes(); // Variable buat nampilin menit
+        var s=today.getSeconds(); // Variable buat nampilin detik
+    }
+</pre>
+<p><!--more--><br />
+[spoiler title="Mau lanjut apa mau loncat?"]Kalau cuma butuh scirpt-nya aja, mending ke-ujung deh ;) kecuali kalau mau sekalian mempelajari sekript ini, bisa lanjutin baca :D[/spoiler]</p>
+<blockquote><p>Catatan: JavaScript itu case sensitive, jadi variable atau fungsi dalam huruf besar itu beda dengan huruf kecil, hati-hati ya! ;)</p></blockquote>
+<p>Udah.? Sekarang kita pindah ke file HTML atau sekrip HTML, cari tag <kbd>body</kbd> terus tambahin <kbd>onLoad="showTime()"</kbd> didalemnya, jadinya gini:</p>
+<pre class="prettyprint linenums lang-html">
+<body onload="showTime()">
+<!-- Sekrip Body -->
+</body>
+</pre>
+<p>Sampai sini jamnya siap ditampilkan tapi belum bisa tampil, terus gimana? Yang di JavaScript tadi, tambahin sekrip ini sebelum tanda <kbd>}</kbd> dalam function showTime sekrip ini fungsinya untuk mengganti raw data hasil dari variable tadi ke nama hari dan nama bulan.</p>
+<pre class="prettyprint linenums lang-js">
+        // Declare day
+        var day=new Array(7);
+        day[0]="Sun";
+        day[1]="Mon";
+        day[2]="Tue";
+        day[3]="Wed";
+        day[4]="Thu";
+        day[5]="Fri";
+        day[6]="Sat";
+        // Declare Month
+        var month=new Array(12);
+        month[0]="Jan";
+        month[1]="Feb";
+        month[2]="Mar";
+        month[3]="Apr";
+        month[4]="May";
+        month[5]="Jun";
+        month[6]="Jul";
+        month[7]="Aug";
+        month[8]="Sept";
+        month[9]="Oct";
+        month[10]="Nov";
+        month[11]="Des";
+</pre>
+<p>Sekarang hasil JavaScript-nya jadi seperti ini:</p>
+<pre class="prettyprint linenums lang-js">
+function showTime()
+    {
+        var today=new Date(); // Variable buat ambil info waktu hari ini
+        var D=today.getDate(); // Variable buat nampilin tanggal
+        var M=today.getMonth(); // Variable buat nampilin bulan
+        var Y=today.getFullYear(); // Variable buat nampilin taun
+        var d=today.getDay(); // Variable buat nampilin hari
+        var h=today.getHours(); // Variable buat nampilin jam
+        var m=today.getMinutes(); // Variable buat nampilin menit
+        var s=today.getSeconds(); // Variable buat nampilin detik
+        // Declare day
+        var day=new Array(7);
+        day[0]="Sun";
+        day[1]="Mon";
+        day[2]="Tue";
+        day[3]="Wed";
+        day[4]="Thu";
+        day[5]="Fri";
+        day[6]="Sat";
+        // Declare Month
+        var month=new Array(12);
+        month[0]="Jan";
+        month[1]="Feb";
+        month[2]="Mar";
+        month[3]="Apr";
+        month[4]="May";
+        month[5]="Jun";
+        month[6]="Jul";
+        month[7]="Aug";
+        month[8]="Sept";
+        month[9]="Oct";
+        month[10]="Nov";
+        month[11]="Des";
+    }
+</pre>
+<p>Sudah hampir siap, sekarang tambahin JQuery ini buat nampilin variabel-variabel ke HTML, seperti biasa, sebelum tanda <kbd>}</kbd> dalam function showTime:</p>
+<pre class="prettyprint linenums lang-js">
+$(".clock").text(day[d]+" "+D+"-"+month[M]+"-"+Y+" "+h+":"+m+":"+s);
+</pre>
+<p>Jadi sekrip JavaScript sekarang hasilnya begini:</p>
+<pre class="prettyprint linenums lang-js">
+function showTime()
+    {
+        var today=new Date(); // Variable buat ambil info waktu hari ini
+        var D=today.getDate(); // Variable buat nampilin tanggal
+        var M=today.getMonth(); // Variable buat nampilin bulan
+        var Y=today.getFullYear(); // Variable buat nampilin taun
+        var d=today.getDay(); // Variable buat nampilin hari
+        var h=today.getHours(); // Variable buat nampilin jam
+        var m=today.getMinutes(); // Variable buat nampilin menit
+        var s=today.getSeconds(); // Variable buat nampilin detik
+        // Declare day
+        var day=new Array(7);
+        day[0]="Sun";
+        day[1]="Mon";
+        day[2]="Tue";
+        day[3]="Wed";
+        day[4]="Thu";
+        day[5]="Fri";
+        day[6]="Sat";
+        // Declare Month
+        var month=new Array(12);
+        month[0]="Jan";
+        month[1]="Feb";
+        month[2]="Mar";
+        month[3]="Apr";
+        month[4]="May";
+        month[5]="Jun";
+        month[6]="Jul";
+        month[7]="Aug";
+        month[8]="Sept";
+        month[9]="Oct";
+        month[10]="Nov";
+        month[11]="Des";
+        // Print the Clock
+        $(".clock").text(day[d]+" "+D+"-"+month[M]+"-"+Y+" "+h+":"+m+":"+s);
+    }
+</pre>
+<p>Terus bikin tag HTML dengan class <kbd>clock</kbd> yang nantinya tag ini bakal jadi Jam dihitalnya, contoh disini pake <kbd>div</kbd> tapi terserah nantinya mau pake apa.</p>
+<pre class="prettyprint linenums lang-html">
+<div class="clock"></div>
+</pre>
+<p>Kalau udah, coba refresh deh browsernya. Masih ada masalah? Iya, detiknya gak nambah dan gak berubah. Terus tambahin ini, seperti biasa sebelum tanda <kbd>}</kbd> dalam function showTime.</p>
+<pre class="prettyprint linenums lang-js">
+setTimeout('showTime()',1000);
+</pre>
+<p>Jadi, si sekripnya bakal cek ulang fungsi showTime setiap 1000 milisecond atau setiap satu detik. Hasil akhir sekarang:</p>
+<pre class="prettyprint linenums lang-js">
+function showTime()
+    {
+        var today=new Date(); // Variable buat ambil info waktu hari ini
+        var D=today.getDate(); // Variable buat nampilin tanggal
+        var M=today.getMonth(); // Variable buat nampilin bulan
+        var Y=today.getFullYear(); // Variable buat nampilin taun
+        var d=today.getDay(); // Variable buat nampilin hari
+        var h=today.getHours(); // Variable buat nampilin jam
+        var m=today.getMinutes(); // Variable buat nampilin menit
+        var s=today.getSeconds(); // Variable buat nampilin detik
+        // Declare day
+        var day=new Array(7);
+        day[0]="Sun";
+        day[1]="Mon";
+        day[2]="Tue";
+        day[3]="Wed";
+        day[4]="Thu";
+        day[5]="Fri";
+        day[6]="Sat";
+        // Declare Month
+        var month=new Array(12);
+        month[0]="Jan";
+        month[1]="Feb";
+        month[2]="Mar";
+        month[3]="Apr";
+        month[4]="May";
+        month[5]="Jun";
+        month[6]="Jul";
+        month[7]="Aug";
+        month[8]="Sept";
+        month[9]="Oct";
+        month[10]="Nov";
+        month[11]="Des";
+        // Print the Clock
+        $(".clock").text(day[d]+" "+D+"-"+month[M]+"-"+Y+" "+h+":"+m+":"+s);
+        setTimeout('showTime()',1000);
+    }
+</pre>
+<p>Tapi masih ada yang kurang nih, apa ya.. Oh, kalau diliat sih, angka di jam/menit/detik sebelum nyentuh bilangan puluhan cuma ada 1 angka, biasanya kan jam dua angka per kelompok digit. Hehe... yaudah, tambahin lagi ini didalam fungsi showTime:</p>
+<pre class="prettyprint linenums lang-js">
+        h=checkTime(h);
+        m=checkTime(m);
+        s=checkTime(s);
+</pre>
+<p>Terus ini diluar fungsi showTime</p>
+<pre class="prettyprint linenums lang-js">
+function checkTime(i)
+    {
+        if (i<10)
+        {
+            i="0" + i;
+        }
+        return i;
+    }
+</pre>
+<p>Jadi sekarang kita punya JavaScript begini:</p>
+<pre class="prettyprint linenums lang-js">
+function showTime()
+    {
+        var today=new Date();
+        var D=today.getDate();
+        var M=today.getMonth();
+        var Y=today.getFullYear();
+        var d=today.getDay();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        // Declare day
+        var day=new Array(7);
+        day[0]="Sun";
+        day[1]="Mon";
+        day[2]="Tue";
+        day[3]="Wed";
+        day[4]="Thu";
+        day[5]="Fri";
+        day[6]="Sat";
+        // Declare Month
+        var month=new Array(12);
+        month[0]="Jan";
+        month[1]="Feb";
+        month[2]="Mar";
+        month[3]="Apr";
+        month[4]="May";
+        month[5]="Jun";
+        month[6]="Jul";
+        month[7]="Aug";
+        month[8]="Sept";
+        month[9]="Oct";
+        month[10]="Nov";
+        month[11]="Des";
+        // add a zero in front of numbers less than 10
+        h=checkTime(h);
+        m=checkTime(m);
+        s=checkTime(s);
+        $(".clock").text(day[d]+" "+D+"-"+month[M]+"-"+Y+" "+h+":"+m+":"+s);
+        setTimeout('showTime()',1000);
+    }
+        // add a zero in front of numbers less than 10
+    function checkTime(i)
+    {
+        if (i<10)
+        {
+            i="0" + i;
+        }
+        return i;
+    }
+</pre>
+<p>dan HTML begini:</p>
+<pre class="prettyprint linenums lang-html">
+<body onload="showTime()">
+    <div class="clock"></div>
+</body>
+</pre>
+<p>buat nampilin jam dihitalnya. Selesai deh. :D</p>
+<p>Selamat mencoba dan tetap berusaha!</p>
+<blockquote><p>Catatan lain: Kalau mau cobain, atau bingung karena gak ada contoh, lihat aja disini: <a href="http://jsfiddle.net/sendz/jypaF/" target="_blank">http://jsfiddle.net/sendz/jypaF/</a></p></blockquote>

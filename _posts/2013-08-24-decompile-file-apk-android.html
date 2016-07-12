@@ -1,0 +1,54 @@
+---
+layout: post
+title: Decompile File APK Android
+date: 2013-08-24 00:17:22.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Android
+- ID-ID
+- Internationalized
+tags:
+- Android
+- apk
+- apktool
+- compile
+- decompile
+- file
+meta:
+  _yoast_wpseo_linkdex: '44'
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _yoast_wpseo_focuskw: decompile apk file android
+  _yoast_wpseo_title: Decompile File APK Android
+  _yoast_wpseo_metadesc: Decompile file APK Android untuk keperluan development atau
+    pengembangan serta modifikasi aplikasi APK android.
+  _yoast_wpseo_metakeywords: android, file, apk, compile, decompile, compiler, apktool
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467119864;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3324;}i:1;a:1:{s:2:"id";i:2934;}i:2;a:1:{s:2:"id";i:3624;}}}}
+  dsq_thread_id: '4273508101'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Decompile file APK android, atau extract source code dari file <abbr title="Android Application Package File">APK</abbr> bisa gak sih? Ya bisa lah! Sebenernya kalau cuma mau lihat isi yang sebatas file name tinggal buka aja pake archive manager, tapi kalau buka source code-nya ya gak bisa, kan udah dicompile.</p>
+<p>Jadi caranya gini, download dulu apktool disini <a title="apktool" href="https://code.google.com/p/android-apktool/downloads/list" target="_blank">https://code.google.com/p/android-apktool/downloads/list</a> terus copy ke folder /usr/local/bin dan kasih <a title="Hak Akses di Linux" href="http://sendy.pw/article/hak-akses-di-linux.html" target="_blank">permission</a> 755 +x (yang pasti root required). Selanjutnya siapin bahan-bahan ini:<!--more--></p>
+<p>File framework-res.apk copy dari folder /system/framework/<br />
+File apk yang mau di-decompile, ambil contoh file SystemUI.apk dari folder /system/app/<br />
+Terminal</p>
+<p>Buka terminal, copy juga file framework-res.apk dan file yang mau di decompile di folder apa aja terserah, terus mount di terminal.</p>
+<p>Anggap aja ini udah mount di folder file-file tadi ya</p>
+<p>Pertama, install dulu framework compiler yang kita ekstrak dari framework-res.apk</p>
+<pre class="prettyprint">$ apktool if framework-res.apk</pre>
+<p>Terus disitu ada hasil prosesnya, kalau gak ada pesan error kita lanjut ke decompile file apk. Coba cek folder /home/username/framework/</p>
+<pre class="prettyprint">$ apktool -d SystemUI.apk</pre>
+<p>Kalau berhasil, ada folder baru di /home/username/NamaFileAPK, misal di /home/username/SystemUI.</p>
+<p>Sampai disini dulu, selamat mencoba :D *recompile nanti dibahas lagi*</p>

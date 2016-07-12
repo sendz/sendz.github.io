@@ -1,0 +1,59 @@
+---
+layout: post
+title: Persingkat Perintah di Terminal dengan alias.
+date: 2013-06-05 18:27:38.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- alias
+- easy
+- Linux
+- mempermudah
+- setting
+- terminal
+meta:
+  _yoast_wpseo_linkdex: '44'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: persingkat perintah terminal alias
+  _yoast_wpseo_metadesc: Mempersingkat perintah atau command line di terminal linux
+    dengan menggunakan alias agar mempermudah penggunaan.
+  _yoast_wpseo_metakeywords: linux, terminal, alias, setting, mempermudah, easy,
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466302727;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3440;}i:1;a:1:{s:2:"id";i:3510;}i:2;a:1:{s:2:"id";i:3434;}}}}
+  dsq_thread_id: '4102768752'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Sering pake terminal di linux? Bukan terminal Kelas A Tasik atau terminal Giwangan lho. Contohnya ngetik <kbd>apt-get install blablabla</kbd> gitu. Kesel kan kalau ternyata satu perintah itu panjang banget? Sekarang kita bikin perintahnya jadi singkat dengan alias. Caranya?</p>
+<p>Ini jelasin fungsi alias dulu ya, trick sebenarnya masih ada dibawah :D.<br />
+Buka terminal, terus ketik <kbd>alias namaalias='perintah yang akan dipersingkat'</kbd>. Contoh:<!--more--></p>
+<pre>$ alias install='sudo apt-get install'
+$ alias uninstall='sudo apt-get remove'
+$ alias update='sudo apt-get update'
+$ alias upgrade='sudo apt-get upgrade'</pre>
+<p>Jadi nanti kalau mau install, tinggal ketik <kbd>install namapackage</kbd>, misal:</p>
+<pre>$ install build-essential</pre>
+<p>Itu penjelasan penggunaan alias, selanjutnya edit file <kbd>.bashrc</kbd> via terminal</p>
+<pre>$ gedit .bashrc</pre>
+<p>terus masukan konfigurasi alias yang sudah atau mau ditambahkan di baris paling akhir, kalau perlu kasih komen diatasnya biar gak pusing nyarinya. Contoh:</p>
+<pre># Custom Alias
+alias install='sudo apt-get install'
+alias uninstall='sudo apt-get remove'
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'</pre>
+<p>Nah, sekarang manggil perintah atau contohnya mau install tinggal panggil aja aliasnya, gak ribet kan? :D</p>
+<p>Selamat Mencoba dan jangan lupa berdo'a.</p>

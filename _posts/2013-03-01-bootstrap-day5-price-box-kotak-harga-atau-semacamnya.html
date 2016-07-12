@@ -1,0 +1,123 @@
+---
+layout: post
+title: '#Bootstrap #Day5 : Price Box, Kotak Harga, atau semacamnya.'
+date: 2013-03-01 10:20:04.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Post
+- Twitter Bootstrap
+- Webdev
+tags:
+- bootstrap
+- CSS
+- CSS Framework
+- day5
+- price box
+- price list
+- twitter bootstrap
+meta:
+  geo_latitude: '-7.345674'
+  geo_longitude: '108.189385'
+  geo_accuracy: '0'
+  geo_address: tasikmalaya
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  publicize_twitter_user: SENDYYeah
+  publicize_reach: a:3:{s:7:"twitter";a:1:{i:2198991;i:406;}s:2:"fb";a:1:{i:2198997;i:525;}s:2:"wp";a:1:{i:0;i:2;}}
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  _thumbnail_id: '2892'
+  tiga_social_check: 'false'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465727171;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2690;}i:1;a:1:{s:2:"id";i:2718;}i:2;a:1:{s:2:"id";i:2720;}}}}
+  dsq_thread_id: '3835831614'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/kotak-harga_zxbjk6.png"><img class="wp-image-2892" alt="Kotak Harga" src="{{ site.baseurl }}/assets/kotak-harga_zxbjk6.png" width="159" height="214" /></a></p>
+<p>Udah lama gak nulis di blog, udah lebih dari seminggu ya, apalagi kalau nulis tentang bootstrap. Sekarang yang akan dibahas, gimana caranya bikin kotak harga ala penyedia hosting? Caranya gak gampang, juga gak susah.</p>
+<p>Inget, yang pertama di cek adalah, file <kbd>bootstrap.css</kbd> dan <kbd>bootstrap-responsive.css</kbd> sudah harus "loaded" di file html.</p>
+<p>Selanjutnya di file HTML, sisipkan baris-baris kerinduan seperti ini:</p>
+<p><!--more--></p>
+<pre class="prettyprint linenums lang-html">
+<div class="container">
+    <div class="row">
+        <div class="span3 price-box">
+            <ul class="package-details">
+                <li class="package-title"><h3>PACKAGE NAME</h3></li>
+                <li class="price-table">2<span class="mini">.99 USD /mo</span></li>
+                <li class="feature">1 GB Diskspace</li>
+                <li class="feature">10 GB Bandwidth</li>
+                <li class="feature">1 Domain</li>
+                <li class="feature">3 Subdomain</li>
+                <li class="feature">5 Email</li>
+                <li class="button"><a href="#" class="btn"><i class="icon-shopping-cart"></i>Buy Now</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</pre>
+<p>lalu tambahkan CSS untuk mempercantik hati dan iman kita:</p>
+<pre class="prettyprint linenums lang-css">.price-box {
+    background: #666;
+    border-radius: 3px;
+    border: #666 1px solid;
+    text-align: center;
+}
+.price-box h3 {
+    font-size: 20px;
+}
+ul.package-details {
+    margin-left: 0 !important;
+}
+ul.package-details li {
+    list-style: none;
+}
+li.package-title {
+    border-bottom: 1px #ccc solid;
+    color: #fff;
+}
+li.price-table {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+span.mini {
+    font-size: 14px;
+    position: relative;
+    top: -1em;
+}
+li.feature {
+    background: white;
+    padding: 5px 0;
+    border-bottom: 1px #ccc solid;
+}
+li:odd {
+    background: #ccc;
+}
+li:even {
+    background: #eee;
+}
+li.button {
+    padding-top: 10px;
+}</pre>
+<p>Sudah? Save file, buka di browser. Sisanya kalau ada yang tidak cocok, ya tambahakan sendiri. Selamat mencoba :)</p>
+<p>Contoh bisa dilihat di <a href="http://jsfiddle.net/sendz/rcusc/2/" target="_blank">http://jsfiddle.net/sendz/rcusc/2/</a></p>

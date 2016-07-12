@@ -1,0 +1,54 @@
+---
+layout: post
+title: Cara Cepat Bikin Bootable Live USB
+date: 2013-12-24 16:04:18.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  _edit_last: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  post_views_count: '5'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466307868;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:4111;}i:1;a:1:{s:2:"id";i:3485;}i:2;a:1:{s:2:"id";i:2718;}}}}
+  dsq_thread_id: '4060118183'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Pasti udah sering denger kan istilah Live CD? Itu lho, CD yang isinya installer distro linux tapi kita bisa pake distronya tanpa harus install dulu, jadi CD/DVD langsung pake aja. Nah, sekarang kalau cuma punya netbook tanpa ada optical drive gimana? Ya pake UFD alias USB Flash Disk dong :D</p>
+<p>Ada beberapa cara, misalnya pake unetbootin atau pake dumdisk. Pake unetbootin itu gampang, soalnya ini aplikasi portable dan punya GUI, tapi kadang gak berhasil boot ke USB kalau kita lupa kasih label boot ke UFD-nya. Biasanya sih dulu sering pake unetbootin, tapi sekarang nemu cara yang lebih cepet, lebih gampang juga.<!--more--><br />
+Bahan:</p>
+<ol>
+<li>Siapin dulu USB Flash Disk, terserah mau ukuran berapa, ya paling nggak 4 GB udah lebih dari cukup.</li>
+<li>File ISO installasi linux.</li>
+<li>Harus diperhatikan juga speed UFD-nya, ini menentukan speed tulis dan baca, merek juga penting. Disarankan sih transcend atau sandisk, kalau ada kingston enaknya seri baru semacam G-101.</li>
+<li>OS Linux, kenapa linux? Soalnya dumpdisk cuma ada di linux, disini pake ubuntu sih.</li>
+</ol>
+<p>Langkah:</p>
+<ol>
+<li>Backup data di UFD terus format, ke 32 aja, tujuannya cuma buat kosongin space aja.</li>
+<li>Buka terminal, terus ketik ini:
+<pre class="prettyprint">sudo dd if=/path-to-iso/iso of=/lokasiUFD</pre>
+<p>Misal:</p>
+<pre class="prettyprint">sudo dd if=~/documents/iso/ubuntu-12.04-amd64.iso of=/dev/sdb</pre>
+</li>
+<li>Tunggu sampai selesai.</li>
+<li>Restart komputer.</li>
+<li>Masuk ke BIOS -&gt; Setting boot priority pertama ke UFD</li>
+<li>Exit &amp; Save changes di BIOS</li>
+<li>Boot ke USB</li>
+</ol>
+<p>Selesai? Selamat mencoba live USB-nya dan jangan lupa belajar buat UAS!</p>

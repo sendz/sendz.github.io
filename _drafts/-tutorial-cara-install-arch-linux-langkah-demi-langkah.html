@@ -1,0 +1,39 @@
+---
+layout: post
+title: '[Tutorial] Cara Install Arch Linux Langkah Demi Langkah'
+date: 
+type: post
+published: false
+status: draft
+categories: []
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:0:{}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Saya gak akan menjelaskan panjang lebar apa itu Arch Linux, tapi secara singkat, Arch Linux adalah distro linux. Lha iya, gak salah kan? Yasudah, post ini hanya untuk yang yakin dan siap install Arch, yang belum terbiasa dengan lingkungan text, mohon bersabar membaca tutorial ini.</p>
+<h3>Siapkan file iso archlinux</h3>
+<p>ISO file archlinux bisa diunduh di sini <a href="https://www.archlinux.org/download/" target="_blank">https://www.archlinux.org/download/</a>, silakan memilih mirror paling dekat dari wilayah sekarang berada.</p>
+<h3>Buat bootable media archlinux</h3>
+<p>Ada beberapa cara untuk membuat bootable media, bisa burn ke kepingan CD / DVD, karena archlinux tidak lebih dari 700 MB, CD sudah cukup untuk menampung ISO archlinux. Karena bakar-bakar CD dan DVD sudah gampang, tinggal <em>double-click</em> file ISO lalu bakar dengan brasero, k3b dan semacamnya, di sini contohnya install arch dengan UFD (USB Flash Drive).</p>
+<p>Siapkan Flash Drive, atau Flash Disk, koneksikan ke USB, lalu duplikasi file ISO ke UFD</p>
+<pre>$ sudo dd if=/lokasi_file_iso.iso of=/dev/sdX</pre>
+<p>sdX di sini adalah lokasi dimana UFD berada, perlu diingat bahwa sdX tidak boleh menggunakan angka contoh seperti sdc1, sdc2, cukup sdc saja.</p>
+<p>Setelah selesai, boot komputer ke UFD, bisa dengan set boot priority di BIOS, saya menekan F12 ketika dialog BIOS muncul, kasus bisa berbeda jika komputer menggunakan UEFI.</p>
+<h2>Instalasi Arch</h2>
+<h3>Koneksi Internet</h3>
+<p>Sebelum dimulai, sangat dianjurkan terkoneksi ke internet menggunakan <em>ethernet</em>, selain karena instalasi arch mengharuskan komputer terkoneksi ke internet untuk mengunduh paket yang diperlukan, koneksi internet melalui <em>ethernet</em> lebih mudah digunakan dibanding melalui <em>wlan</em>.</p>
+<p>Setelah terkoneksi, coba ping ke google.</p>
+<pre>$ ping -c 3 www.google.com</pre>
+<h3><!--nextpage--><br />
+Persiapkan Hard Disk</h3>

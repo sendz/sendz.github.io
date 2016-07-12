@@ -1,0 +1,49 @@
+---
+layout: post
+title: Resize Partisi Linux biar Lega
+date: 2014-03-24 18:49:56.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- Linux
+tags: []
+meta:
+  post_views_count: '40'
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  tiga_social_check: 'false'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465870362;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3684;}i:1;a:1:{s:2:"id";i:3219;}i:2;a:1:{s:2:"id";i:3368;}}}}
+  dsq_thread_id: '3773089902'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Gara-gara koleksi ISO, musik dan pilem gak jelas, akhirnya partisi /home penuh juga, cuma nyisain 500 MB dan ini menyiksa dan bikin lemot. Akhirnya migrasi ke Fedora 20 biar ringan :D (apa hubungannya?).</p>
+<p>Setelah migrasi selesai, saatnya resize partisi. Terus install gparted dari Software manager, eh ternyata gak bisa resize atau unmount sekalipun karena 'volume is busy' (iyalah, lagi dipake itu harddisknya). Googling-googling ternyata harus pake live CD atau pake gparted live yang bisa didownload disini <a title="Gparted -- Live CD/USB/PXE/HD" href="http://gparted.org/livecd.php" target="_blank">http://gparted.org/livecd.php</a> tapi downloadnya gede amat, 127 MB kalau gak salah.<!--more--></p>
+<p>Ditengah frustasi tadi, tiba-tiba nengok UFD yang masih nempel di port USB laptop, dan punya ide buat jalanin live session fedora lagi lalu install gparted di live session. Pinter kan? :D</p>
+<p>[caption id="attachment_3486" align="alignnone" width="640"]<a href="http://sendy.pw/wp-content/uploads/2015/05/2014-03-24-184424_o1f9re.jpg"><img class="size-full wp-image-3486" alt="Ini dia tersangkanya!" src="{{ site.baseurl }}/assets/2014-03-24-184424_o1f9re.jpg" width="640" height="480" /></a> Ini dia tersangkanya![/caption]</p>
+<ul>
+<li>Jadi pertama-tama baca basmallah dulu, terus restart system terus pilih boot ke USB, kalau pake DVD / CD ya boot ke Optic Drive, terus masuk ke Live Session / Live CD atau apalah namanya.</li>
+<li>Buka software center, kalau di ubuntu namanya Ubuntu Software Center, di fedora namanya Software, menyesuaikan lah.</li>
+<li>Install gparted (bisa juga aplikasi partition editor yang lain).</li>
+<li>Buka gparted (atau sejenisnya).</li>
+<li>Unmount semua partisi yang mau di-resize.</li>
+<li>Resize masing-masing partisi, contoh sda7 dari 100 GB di-resize jadi 60 GB, terus sda5 dari 100 GB jadi 140 GB.</li>
+<li>Klik tombol apply.</li>
+<li>Tunggu proses selesai terus restart dan boot ke HDD.</li>
+<li>Cek hasil dan jangan lupa ucap hamdallah :D</li>
+</ul>

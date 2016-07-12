@@ -1,0 +1,118 @@
+---
+layout: post
+title: '[Solving] PHP: Error session_start() : Cannot send session cookie'
+date: 2015-06-05 06:42:38.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- ID-ID
+- Internationalized
+- PHP
+- Webdev
+tags:
+- cookie
+- error
+- headers
+- php
+- sent
+- session
+- session_start
+- warning
+meta:
+  _yoast_wpseo_title: 'Warning: session_start(): Cannot send session cookie - headers
+    already sent by'
+  spacious_page_layout: default_layout
+  _yoast_wpseo_metadesc: 'Mengatasi error "Warning: session_start(): Cannot send session
+    cookie - headers already sent by" pada PHP.'
+  _yoast_wpseo_metakeywords: 'Warning: session_start(): Cannot send session cookie
+    - headers already sent by,'
+  _yoast_wpseo_linkdex: '57'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: PHP, session, session start, warning, error, headers already
+    sent
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1465773589;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3667;}i:1;a:1:{s:2:"id";i:3306;}i:2;a:1:{s:2:"id";i:3606;}}}}
+  _publicize_twitter_user: '@SENDYYeah'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  dsq_thread_id: '3822106101'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Judulnya gitu, gak nemu judul yang pas. Ceritanya begini, hari Kamis kemarin, sebelum presentasi tugas akhir Mata Kuliah Pemrograman Web, banyak teman-teman yang mengeluh <em>page</em> PHP yang dibuatnya<em> error</em> (galat), saya bantu cek output error-nya, dan 5 dari 5 teman saya mengalami error yang sama, dengan log output yang sama, yaitu <code>Warning: session_start(): Cannot send session cookie - headers already sent by (output started at blablabla.php:bla) in blablabla.php on line blablabla</code>. Ini pasti urusan session lagi.</p>
+<h3>1. Mencari Masalah</h3>
+<p>Mencari masalah di sini bukanlah ngajakin ribut sama temen sebelah atau asdos atau bahkan dosen, tapi membaca log di mana terjadi error. Yang saya suka dari PHP adalah <em>log</em> yang ditampilkan cukup lengkap dari mulai lokasi berkas kode hingga lokasi baris kode yang salah, ya, dibandingkan dengan angular JS :p</p>
+<p>Kita cari <em>file</em> apa dan di baris berapa kode tersebut mengeluarkan error, cek apakah closing tag (karakter ; ) sudah benar tempatnya, cek juga <em>curly braces </em>({ / }), atau <em>bracket </em>([ / ]) sudah benar pada tempatnya, cek apapun itu yang akan mempengaruhi kesalahan kode termasuk variable. Jika semua sudah sesuai pada tempatnya, yang terakhir cek apakah <code>session_start();</code> berada di baris paling awal sebuah halaman?</p>
+<h3>2. Memecahkan Masalah</h3>
+<p>Masalah bukan untuk dilupakan apalagi ditinggalkan, masalah adalah sesuatu yang harus dipecahkan dan diselesaikan, setuju? Sebelum mulai memecahkan masalah, mari kita mengenal aturan dari pengetikan kode PHP dan penempatan <code>session_start();</code></p>
+<h4>2.1 Aturan Singkat Pengetikan Kode PHP</h4>
+<ul>
+<li> PHP adalah pemrograman <em>server side</em>, semua kode yang kita ketik akan diproses di PHP server lalu dikirimkan kembali ke peramban (<em>browser</em>) untuk ditampilkan di layar. PHP sendiri bisa dikombinasikan dengan tag HTML dan CSS di dalam berkas kerja sehingga mempermudah pekerjaan untuk <em>web programmer</em>, bayangkan jika tidak?</li>
+<li>Setiap kode (<em>script / code</em>) PHP diawali dengan <code>&lt;?php</code> dan diakhir dengan <code>?&gt;</code>, tetapi sebelum mengerjakan anda bisa membaca basmallah dan mengakhiri pekerjaan dengan hamdallah, itu lebih baik. Jika anda mendapatkan contoh code dari internet, pastikan mengganti <code>&lt;?</code> ke <code>&lt;?php</code>.</li>
+<li>Apa yang tidak ditulis dalam tag <code>&lt;?php</code> ... <code>?&gt;</code> akan diproses dan ditampilkan kembali sebagai HTML, termasuk spasi dan tab.</li>
+</ul>
+<p>Sekian aturan PHP yang menurut saya cukup untuk menyelesaikan masalah ini dari studi kasus kemarin. Selanjutnya adalah mengenal bagaimana menempatkan <code>session_start();</code> yang baik dan benar.</p>
+<h4>2.2 Aturan Singkat Penempatan session_start();</h4>
+<blockquote><p><span class="function"><strong>session_start()</strong></span> creates a session or resumes the current one based on a session identifier passed via a GET or POST request, or passed via a cookie.</p></blockquote>
+<p>Begitulah menurut penjelasan dari <a href="http://php.net/manual/en/function.session-start.php" target="_blank">dokumentasi PHP</a>. Artinya apa? Ayolah, masa harus diterjemahin juga?</p>
+<ul>
+<li><code>session_start();</code> harus ditempatkan di baris paling awal sebuah halaman, bukan baris awal berkas kode, jadi jika anda menggunakan metode <em>include</em> berkas untuk menampilkan bagian dari halaman, tempatkan <code>session_start();</code> sebelum file HTML anda dimulai, misal di file <code>head.php</code><br />
+Contoh salah:</p>
+<pre class="prettyprint lang-php linenums">
+<html>
+    <head>
+        <title>Ini file PHP</title>
+    </head>
+<body>
+    <h2>Selamat Datang
+        <?php session_start();
+            echo $_SESSION['nama'];
+        ?>
+    </h2>
+</body>
+</html>
+</pre>
+<p>Contoh yang benar:</p>
+<pre class="prettyprint lang-php linenums">
+<?php session_start();
+?>
+<html>
+    <head>
+        <title>Ini file PHP</title>
+    </head>
+<body>
+    <h2>Selamat Datang
+        <?php echo $_SESSION['nama'];
+        ?>
+    </h2>
+</body>
+</html>
+</pre>
+<p>&nbsp;</li>
+<li>Karena aturan singkat PHP di atas tadi menyatakan bahwa setiap sesuatu yang di luar tag <code><?php ... ?></code> akan diproses sebagai HTML dan <code>session_start();</code> tidak boleh ada yang mendahului, artinya <code>session_start();</code> harus selalu dieksekusi atau diproses pertama kali sebelum code / elemen lainnya, pastikan tidak ada spasi atau tab sebelum tag <code><?php ... ?> </code> dibuka.<br />
+Contoh salah:</p>
+<pre class="prettyprint lang-php linenums">
+    <?php // Perhatikan ada spasi / tab sebelum tag <?php dibuka
+        session_start();
+    ?>
+</pre>
+<p>Contoh benar:</p>
+<pre class="prettyprint lang-php linenums">
+<?php // Di sini boleh ada comment, karena comment tidak akan diproses, begitu pula spasi dan tab karena akan dibaca sebagai whitespace (tidak ikut diproses)
+    session_start();
+?>
+</pre>
+<p>&nbsp;</li>
+</ul>
+<p>Sekian aturan singkat mengenai <code>session_start();</code>, kesimpulannya adalah, bahwa <code>session_start();</code> tidak boleh didahului oleh apapun saat diproses, termasuk oleh spasi dari HTML. Semoga post yang <del datetime="2015-06-04T23:39:36+00:00">tidak</del> singkat ini mudah dipahami dan dimengerti.</p>
+<p>Selamat <em>debugging</em> dan jangan sungkan untuk bertanya.</p>

@@ -1,0 +1,146 @@
+---
+layout: post
+title: Automated Testing dengan Selenium IDE, Contoh Kasus SIA UIN Suka
+date: 2016-02-03 22:17:28.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Testing
+tags:
+- aplikasi web
+- automated
+- automated testing
+- automation
+- selenium
+- selenium IDE
+- testing
+- web application
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: http://www.facebook.com/1663414729
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467168344;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3452;}i:1;a:1:{s:2:"id";i:3567;}i:2;a:1:{s:2:"id";i:3440;}}}}
+  _wpas_done_all: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Kalau dari judul sih, udah bisa jadi bahan skripsi, tapi belum tau juga nanti mau ngambil skripsi temanya apa ( :D ). Jadi tujuannya adalah, mempermudah saya yang sebenarnya sudah terlalu malas buat nulis username sama password di Sistem Informasi Akademik waktu pengisian KRS. Jadi isi dari tulisan ini hanya sampai pada selesainya proses login, bisa dikembangkan lagi <em>test case</em> nya sampai ke pengisian KRS dll.</p>
+<h3>Persiapan</h3>
+<p>Di sini, kita akan menggunakan add-on Selenium IDE untuk Firefox, lebih gampang daripada yang CLI. Download add-on Selenium IDE di <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/</a></p>
+<h3>Interface Selenium IDE</h3>
+<p>[caption id="attachment_4137" align="alignnone" width="700"]<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-27-37" rel="attachment wp-att-4137"><img class="size-large wp-image-4137" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.27.37-1024x480.png" alt="Tampilan Selenium IDE" width="700" height="328" /></a> Tampilan Selenium IDE[/caption]</p>
+<ol>
+<li>Kolom Base URL, adalah kolom untuk menempatkan URL aplikasi web yang akan kita test<br />
+<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-28-48" rel="attachment wp-att-4138"><img class="alignnone size-large wp-image-4138" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.28.48-1024x31.png" alt="Screen Shot 2016-02-04 at 04.28.48" width="700" height="21" /></a></li>
+<li>Action Bar, adalah kumpulan menu untuk menjalankan testing<br />
+<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-29-30" rel="attachment wp-att-4139"><img class="alignnone wp-image-4139 size-large" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.29.30-1024x32.png" alt="Action Bar" width="700" height="22" /></a></li>
+<li>Kolom Test Case, adalah kumpulan dari <em>test case</em> atau kasus pengujian<br />
+<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-30-56" rel="attachment wp-att-4140"><img class="alignnone size-full wp-image-4140" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.30.56.png" alt="Screen Shot 2016-02-04 at 04.30.56" width="582" height="558" /></a></li>
+<li>Kolom Command, adalah tempat untuk menyimpan semua perintah-perintah yang akan dieksekusi selama pengujian<br />
+<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-32-11" rel="attachment wp-att-4141"><img class="alignnone size-large wp-image-4141" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.32.11-1024x339.png" alt="Screen Shot 2016-02-04 at 04.32.11" width="700" height="232" /></a></li>
+<li>Kolom Informasi yang berisi log, referensi, UI-element dan rollup<br />
+<a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-04-33-37" rel="attachment wp-att-4142"><img class="alignnone size-large wp-image-4142" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-04.33.37-1024x113.png" alt="Screen Shot 2016-02-04 at 04.33.37" width="700" height="77" /></a></li>
+</ol>
+<h3>Test Case</h3>
+<p>Membuat test case caranya gampang-gampang-susah, gampang karena kita hanya mengikuti arus, atau mengikuti flow diagram dari aplikasi web, susah karena kita harus sudah terbiasa dengan DOM (Data Object Manipulation), harus terbiasa dengan element inspector, susah kalau belum terbiasa. Misal, ini adalah contoh test case untuk login ke Sistem Informasi Akademik Universitas Islam Negeri Sunan Kalijaga:</p>
+<ol>
+<li>Buka http://akademik.uin-suka.ac.id</li>
+<li>Masukan username</li>
+<li>Masukan password</li>
+<li>Klik tombol Login</li>
+<li>Tunggu halaman http://akademik.uin-suka.ac.id/open_login selesai dimuat</li>
+<li>Tunggu halaman http://akademik.uin-suka.ac.id/mahasiswa dimuat</li>
+</ol>
+<p>Ada yang unik, karena kita harus menunggu halaman /open_login selesai, karena proses login dikerjakan di halaman tersebut. Dalam kasus saya, saya pengen langsung log out, tapi di contoh ini, cukup sampai halaman /mahasiswa dimuat</p>
+<h3>Membuat Test Case Login</h3>
+<ol>
+<li>Gunakan Test Case yang sudah ada atau buat test case baru dengan klik kanan di kolom Test Case, pilih "New Test Case"</li>
+<li><em>Double click</em> test case tersebut untuk mengaktifkan</li>
+<li>Masukan http://akademik.uin-suka.ac.id di kolom Base URL<br />
+Karena kita sudah memiliki Base URL, untuk membuka halaman, cukup gunakan simbol / di depan sub-halaman yang akan dibuka, contoh /mahasiswa untuk http://akademik.uin-suka.ac.id/mahasiswa</li>
+<li>Membuka halaman login
+<ol>
+<li>Klik kolom Command atau Klik kanan kolom Command lalu pilih Insert New Command
+<ol>
+<li>Isikan perintah <code>open</code> di isian Command</li>
+<li>Isikan / di isian Target</li>
+<li>Biarkan Value tetap kosong</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Mengisi username<br />
+Dalam test case ini dan selanjutnya, kita mulai menggunakan DOM untuk memilih elemen yang terdapat di halaman web, untuk mencari id element bisa menggunakan element inspector yang terdapat di Firefox.</p>
+<ol>
+<li>Klik kanan kolom Command, pilih Insert New Command
+<ol>
+<li>Isikan <code>type</code> di isian Command, type adalah perintah untuk mengetikan value yang telah ditentukan</li>
+<li>Isikan username sebagai id elemen yang akan kita pilih / isi di isian Target</li>
+<li>Isikan NIM / username di isian Value</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Mengisi password
+<ol>
+<li>Klik kanan kolom Command, pilih Insert New Command
+<ol>
+<li>Isikan <code>type</code> di isian Command</li>
+<li>Isikan password sebagai id elemen yang akan diisi di isian Target</li>
+<li>Isikan password kita di isian Value</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Klik tombol Login<br />
+Masalah di sini adalah, tombol Login pada halaman SIA tidak disertai id, kita bisa menggunakan JavaScript DOM atau CSS Selector, di sini saya menggunakan CSS Selector karena lebih mudah. Untuk referensi CSS Selector, silakan menuju <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">http://www.w3schools.com/cssref/css_selectors.asp</a><br />
+Saya mendapati bahwa tombol login memilik markup sebagai berikut <code>&lt;button type="submit" class="btn-uin btn btn-inverse btn btn-small" style="float:right;"&gt;Login&lt;/button&gt;</code> dan yang akan kita gunakan adalah type dari tombol tersebut, yaitu submit.</p>
+<ol>
+<li>Klik kanan kolom Command, pilih Insert New Command
+<ol>
+<li>Isikan <code>clickAndWait</code> di isian Command, artinya kita klik sebuah elemen lalu tunggu hingga proses berikutnya selesai</li>
+<li>Isikan css=button[type='submit'] di isian Target</li>
+<li>Biarkan isian Value tetap kosong</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Menunggu proses login selesai
+<ol>
+<li>Klik kanan kolom Command, pilih Insert New Command
+<ol>
+<li>Isikan <code>waitForLocation</code> di isian Command</li>
+<li>Isikan /open_login pada isian target</li>
+<li>Biarkan Value tetap kosong</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Menunggu halaman mahasiswa ditampilkan
+<ol>
+<li>Klik kanan kolom Command, pilih Insert New Command
+<ol>
+<li>Isikan <code>waitForLocation</code> di isian Command</li>
+<li>Isikan /mahasiswa pada isian target</li>
+<li>Biarkan Value tetap kosong</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>Contoh dari Test Case yang saya buat:</p>
+<p><a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-05-04-32" rel="attachment wp-att-4144"><img class="alignnone size-large wp-image-4144" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-05.04.32-1024x480.png" alt="Screen Shot 2016-02-04 at 05.04.32" width="700" height="328" /></a></p>
+<h3>Menjalankan Test Case</h3>
+<p>Jalankan Test Case yang telah dibuat dengan klik tombol <a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-05-01-14" rel="attachment wp-att-4145"><img class=" wp-image-4145 alignnone" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-05.01.14.png" alt="Screen Shot 2016-02-04 at 05.01.14" width="30" height="22" /></a> untuk menjalankan semua test case yang ada jika kita memiliki lebih dari 1 (satu) test case atau tombol <a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-05-11-27" rel="attachment wp-att-4146"><img class=" wp-image-4146 alignnone" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-05.11.27.png" alt="Screen Shot 2016-02-04 at 05.11.27" width="30" height="22" /></a> untuk menjalankan test case yang sedang aktif. Tunggu hingga proses pengujian selesai.</p>
+<p>Buka Log untuk evaluasi pengujian.</p>
+<p><a href="http://sendy.pw/automated-testing-dengan-selenium-ide-contoh-kasus-sia-uin-suka.html/screen-shot-2016-02-04-at-05-13-16" rel="attachment wp-att-4147"><img class="size-large wp-image-4147 alignnone" src="{{ site.baseurl }}/assets/Screen-Shot-2016-02-04-at-05.13.16-1024x475.png" alt="Screen Shot 2016-02-04 at 05.13.16" width="700" height="325" /></a></p>
+<h3>Penutup</h3>
+<p>Seperti itu kira-kira membuat automated testing untuk aplikasi web dengan Selenium IDE.</p>
+<p>Selamat mencoba dan selamat mengembangkan. Boleh lho ini diajukan buat bahan skripsi :D</p>

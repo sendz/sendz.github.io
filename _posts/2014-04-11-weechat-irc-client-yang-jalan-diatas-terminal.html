@@ -1,0 +1,60 @@
+---
+layout: post
+title: WeeChat - IRC Client yang Jalan diatas Terminal
+date: 2014-04-11 23:53:09.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Aplikasi
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- irc
+- Linux
+- terminal
+- weechat
+meta:
+  _edit_last: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '3512'
+  _wpas_done_all: '1'
+  post_views_count: '37'
+  _yoast_wpseo_focuskw: irc, terminal, linux, client, weechat, irssi
+  _yoast_wpseo_linkdex: '56'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  dsq_thread_id: '3773090077'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466501372;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3523;}i:1;a:1:{s:2:"id";i:2987;}i:2;a:1:{s:2:"id";i:3992;}}}}
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Karena keranjingan chat via IRC dan keracunan terminal juga, kenapa gak gabungin keduanya? Baiklah! Hasil googling nemu WeeChat dan IRSSI, sekarang mau bahas WeeChat dulu. WeeChat ini bukan messenger yang ada di henpon yang bisa lemparin botol, tapi IRC client buat terminal, khususon terminal linux. Jadi chatting-nya text mode, gak seperti di pidgin yang ada GUI nya, ini pake terminal, biar greget kayak heker!</p>
+<p>Install dulu WeeChat via package manager, bisa aptitude, yum, pacman, atau ngibrit ke software manager masing-masing. Karena sekarang si gue pake <a title="Dilarang Pindah Keluarga" href="http://sendy.pw/article/dilarang-pindah-keluarga.html">linux mint</a> dan otomatis pake apt, jadi perintahnya demikian:</p>
+<pre class="prettyprint">$ sudo apt-get install weechat<!--more--></pre>
+<p>Sudah selesai, jalankan weechat via terminal dengan perintah:</p>
+<pre class="prettyprint">$ weechat-curses</pre>
+<p>Kalau tampilan weechat yang seperti ini sudah muncul, langsung aja kirim perintah dengan command ala IRC, misal <kbd>/connect chat.freenode.net</kbd> lalu <kbd>Enter</kbd><br />
+<a href="http://sendy.pw/wp-content/uploads/2015/05/weechat_lrwiuv.png"><img class="alignnone size-large wp-image-3511" alt="weechat" src="{{ site.baseurl }}/assets/weechat_lrwiuv.png" width="1024" height="575" /></a></p>
+<p>Setelah konek ke IRC server, tinggal join deh ke kanal alias channel, misal buat nongkrong di kanal <kbd>#ubuntu-indonesia</kbd> tinggal ketik perintah <kbd>/join #ubuntu-indonesia</kbd> dan jangan lupa <kbd>Enter</kbd></p>
+<p>Dan ini tampilan setelah ngobrol banyak:<a href="http://sendy.pw/wp-content/uploads/2015/05/weechat2_i6p0pi.png"><img class="alignnone size-large wp-image-3512" alt="weechat2" src="{{ site.baseurl }}/assets/weechat2_i6p0pi.png" width="1024" height="575" /></a></p>
+<p>Kesannya adalah:</p>
+<ul>
+<li>Greget</li>
+<li>Ringan</li>
+<li>Cakep</li>
+<li>Simple</li>
+<li>Terminal</li>
+</ul>
+<p>Nanti review tetangganya IRSSI sekalian di-compare dari sisi kecantikannya. Fungsi dan fitur sepertinya sama aja :p</p>
+<p>Catatan: untuk keluar aplikasi ini tinggal gunakan command <kbd>/quit</kbd>, karena <kbd>Ctrl + C</kbd> gak ngaruh buat close ini aplikasi dari terminal :D</p>

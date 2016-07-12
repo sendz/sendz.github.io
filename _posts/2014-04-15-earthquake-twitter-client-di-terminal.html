@@ -1,0 +1,67 @@
+---
+layout: post
+title: Earthquake - Twitter Client di Terminal
+date: 2014-04-15 22:33:30.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Aplikasi
+- ID-ID
+- Internationalized
+- Linux
+tags:
+- cli
+- earthquake
+- Linux
+- terminal
+- twitter
+meta:
+  _edit_last: '1'
+  post_views_count: '18'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _thumbnail_id: '3524'
+  _wpas_done_all: '1'
+  _wpcom_is_markdown: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466701018;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2303;}i:1;a:1:{s:2:"id";i:3510;}i:2;a:1:{s:2:"id";i:3440;}}}}
+  dsq_thread_id: '3773090129'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/earthquake_s8h7va.png"><img class="alignnone size-full wp-image-3524" alt="earthquake" src="{{ site.baseurl }}/assets/earthquake_s8h7va.png" width="664" height="449" /></a></p>
+<p>"Throw away the graphical user interface!" kata sebuah judul post di suatu website. Cocok! Entah kenapa nyari aplikasi buat terminal itu bagai sebuah ambisi yang tidak bisa dihentikan, ada rasa bangga bisa browsing, muter musik, chatting, atau bahkan twitteran dengan layar hitam text putih ini, rasanya pengen bilang "GUE PUAAAAASSSS...!!!". Am I freak? No. Am I geek? No. Am I nerd? No. So? I just linux user yang sedang keranjingan terminal.<!--more--></p>
+<p>Setelah nulis <a title="Konfigurasi mutt Untuk Gmail." href="http://sendy.pw/article/konfigurasi-mutt-untuk-gmail.html">mutt</a>, moc, <a title="WeeChat – IRC Client yang Jalan diatas Terminal" href="http://sendy.pw/article/weechat-irc-client-yang-jalan-diatas-terminal.html">weechat</a> dan <a title="Aplikasi di Terminal, Console, Konsole linux." href="http://sendy.pw/article/aplikasi-di-terminal-console-konsole-linux.html">beberapa aplikasi lain yang running di terminal</a>, sekarang mari coba earthquake buat twitteran di terminal. Bukan twitteran di terminal bis lho ya.</p>
+<p>Nah sekarang mari kita install si cantik earthquake ini. Kalau merujuk ke project page-nya disini <a title="Earthquake" href="https://github.com/jugyo/earthquake" target="_blank">https://github.com/jugyo/earthquake</a>, earthquake ini pake ruby, jadi sebelum install earthquake, install ruby dan rubygems dulu. Kalau sudah tinggal install earthquake via gem.</p>
+<pre class="prettyprint">$ gem install earthquake</pre>
+<p>Kalau sudah, buka earthquake dengan perintah:</p>
+<pre class="prettyprint">$ earthquake</pre>
+<p>Untuk pertama kali, earthquake butuh access PIN ke akun twitter, cara mendapatkan PIN cukup klik link yang muncul, authorize access earthquake dan salin PIN ke konfigurasi earthquake, setelah selesai earthquake akan menampilkan timeline.</p>
+<p>Sekarang, gimana cara pake earthquake?</p>
+<ol>
+<li>Ketik perintah <kbd>:help</kbd> kalau bingung dan butuh pertolongan.</li>
+<li>Untuk mengirim tweet, ketik text disebelah tanda petir (⚡) lalu <kbd>enter</kbd>, terus konfirmasi, <kbd>y</kbd> / <kbd>n</kbd> lalu tekan <kbd>enter</kbd> lagi.</li>
+<li>Untuk membalas tweet atau reply tweet, lihat tanda yang ada di dalam bracket, isinya karakter dollar dan dua huruf/angka, itu sebagai tweet ID, jadi ketika reply / retweet, cantumkan ID tersebut. Misal untuk reply:
+<pre class="prettyprint">⚡ $ab Test Reply</pre>
+</li>
+<li>Untuk retweet:
+<pre class="prettyprint">⚡ :retweet $ab</pre>
+</li>
+<li>Untuk menghapus tweet:
+<pre class="prettyprint">⚡ :delete $ab</pre>
+</li>
+<li>Load timeline:
+<pre class="prettyprint">⚡ :recent</pre>
+</li>
+<li>Load mention
+<pre class="prettyprint">⚡ :mentions</pre>
+</li>
+<li>Untuk selengkapnya bisa lihat menu help tadi</li>
+</ol>
+<p>Ini screenshot earthquake punya si gueh:</p>
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/earthquake2_olzknx.png"><img class="alignnone size-full wp-image-3526" alt="earthquake2" src="{{ site.baseurl }}/assets/earthquake2_olzknx.png" width="688" height="551" /></a></p>
+<p>Tapi sayangnya, earthquake ini sering lag kalau kita lagi ngetik, apa karena pengaruh ruby?</p>

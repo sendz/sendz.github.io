@@ -1,0 +1,24 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Gems
+gems: [jekyll-paginate]
+
+# Site settings
+title: Sendy
+email: sendzation@gmail.com
+description: Cerita
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://sendz.github.io" # the base hostname & protocol for your site
+twitter_username: SENDYYeah
+github_username:  sendz
+timezone: Asia/Jakarta
+paginate: 5
+paginate_path: "page_:num"
+
+# Build settings
+markdown: kramdown

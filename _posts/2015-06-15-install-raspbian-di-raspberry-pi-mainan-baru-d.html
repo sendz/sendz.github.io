@@ -1,0 +1,54 @@
+---
+layout: post
+title: Install Raspbian di Raspberry Pi, Mainan Baru :D
+date: 2015-06-15 00:34:45.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Linux
+tags:
+- ARM
+- Linux
+- Raspberry Pi
+- Raspbian
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466811905;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3684;}i:1;a:1:{s:2:"id";i:4111;}i:2;a:1:{s:2:"id";i:3676;}}}}
+  _wpas_done_all: '1'
+  _yoast_wpseo_focuskw: Install Raspbian di Raspberry Pi
+  _yoast_wpseo_title: Install Raspbian di Raspberry Pi
+  _yoast_wpseo_metadesc: Tutorial installasi Raspbian di Raspberry Pi type A.
+  _yoast_wpseo_linkdex: '68'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+  dsq_thread_id: '3848136107'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Malam ini cukup membahagiakan, setelah berkunjung ke kosan <a href="https://www.facebook.com/FahmiImronFauzie" target="_blank">Fahmi</a> dan dia curhat galau Tugas Akhir yang tak kunjung selesai, akhirnya saya berniat membantunya, dan yang membuat saya bahagia adalah saya mendapat Raspberry Pi A yang sudah lama saya idamkan tapi belum ada rezeki untuk memboyong satu unit ke kosan.</p>
+<p>Tugasnya 'cuma', (gak mau meremehkan sih) bikin script PHP yang bisa print langsung ke printer via raspi, kenapa? Karena web servernya nanti ada di raspi, begitu ceritanya.</p>
+<p>Nah, saya dapet raspi A kosongan, belum install apa-apa bahkan SD Card yang Fahmi kasih belum ada OSnya. Baiklah.</p>
+<p>Sekarang yang akan saya ulas adalah cara install Sistem Operasi di Raspberry Pi, saya menggunakan Raspbian Wheezy.</p>
+<ol>
+<li>Download file Raspbian dari sini <a href="https://www.raspberrypi.org/downloads/" target="_blank">https://www.raspberrypi.org/downloads/</a></li>
+<li>Extract file yang telah didownload tadi, cari file dengan ekstensi .img lalu rename menjadi <code>raspbian.img</code> untuk memudahkan proses selanjutnya.</li>
+<li>Masukkan SD Card ke USB Card Reader / Card Reader yang tersedia di laptop (notebook / netbook) lalu cek lokasi SD Card, misal di /dev/sdb</li>
+<li>Buka aplikasi terminal di linux lalu buka folder di mana file <code>raspbian.img</code> tadi disimpan dengan perintah <code>cd</code>.</li>
+<li>Ketikan perintah <code>sudo dd if=raspbian.img of=/dev/sdb</code> untuk mengekstrak raspbian ke SD Card.</li>
+<li>Setelah proses dump disk selesai, pindahkan SD Card ke slot yang tersedia di Raspberry Pi.</li>
+<li>Nyalakan Raspberry Pi.</li>
+<li>Langkah selanjutnya adalah konfigurasi Raspbian, tidak perlu melakukan partisi karena sudah mengikuti pengaturan dari Raspbian, yang saya lakukan hanya mengganti password. Dialog ini bisa dimunculkan kembali dengan perintah <code>sudo raspi-config</code></li>
+<li>Klik tombol <code>Finish</code> di dialog untuk menyelesaikan konfigurasi, lalu system akan merestart sendiri.</li>
+</ol>

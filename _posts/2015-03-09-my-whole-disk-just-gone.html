@@ -1,0 +1,46 @@
+---
+layout: post
+title: My Whole Disk Just Gone
+date: 2015-03-09 02:45:20.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- EN-US
+tags:
+- arch
+- Linux
+- windows
+meta:
+  dsq_thread_id: '3824177800'
+  _wpcom_is_markdown: '1'
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpas_done_all: '1'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466434630;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:4111;}i:1;a:1:{s:2:"id";i:2930;}i:2;a:1:{s:2:"id";i:4174;}}}}
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>I thought today was a bad day. I need to repair my Windows 8.1 installation after broken for months because of arch installation, and problem began.</p>
+<p>At first, I decided to do fresh install of Windows 8.1, then format whole C drive of windows installation. After that, installer said windows can't be installed because my disk is of GPT when I click "next".</p>
+<p>I was "it's okay, I'll do it later, just reboot and back to arch then.", but another problem came, my GRUB configuration is missing, it just show me grub recover screen. Got help from my friend to make bootable USB to repair my grub, it was help me a lot.</p>
+<p>USB stick with Ubuntu 13.10 will do the best, I thought. Try to reconfigure the grub configuration and got error told me that grub can't be installed in 'ext2' or something like that. It was weird, I have ext4 format for all linux partition. After getting sick with GPT that cause Windows 8.1 won't install, I thought it was GPT's fault that make my partition 'misread', so I format the boot partition to ext4 to make sure it will work with grub.</p>
+<p>Re-read the instruction again, but wait, I should configure for the disk, not for the partition! What happened to my boot partition then? Gone.</p>
+<p>So, how if I install arch for just boot partition? No one article related to this issue on internet. How about restore the partition? Great idea.</p>
+<p>Found a tool named testdisk, it can restore a partition, internet said. Downloaded, run, and when analyze progress completed, I found the partition that have exact size with my last boot partition. Okay, restore that and restart.</p>
+<p>Nothing happened.</p>
+<p>Damn.</p>
+<p>Boot to USB again, check the disk, and only sda1 hanging there, my 'boot' partition. But, where are the rest? Gone.</p>
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/wpid-tumblr_mlirgg3lvi1s3c4xeo1_500_yjfs1y.jpg"><img class="alignnone size-full" title="tumblr_mlirgg3LVI1s3c4xeo1_500.jpg" src="{{ site.baseurl }}/assets/wpid-tumblr_mlirgg3lvi1s3c4xeo1_500_yjfs1y.jpg" alt="image" /></a></p>
+<p>But show must go on, I can't cry a lot, at least I can install Windows 8.1 and learn something.</p>

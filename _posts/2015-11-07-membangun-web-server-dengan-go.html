@@ -1,0 +1,76 @@
+---
+layout: post
+title: Membangun Web Server dengan Go
+date: 2015-11-07 01:37:23.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Go
+- ID-ID
+- Webdev
+tags:
+- go
+- go language
+- golang
+- server
+- web
+- webserver
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: http://www.facebook.com/1663414729
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466013150;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3933;}i:1;a:1:{s:2:"id";i:3578;}i:2;a:1:{s:2:"id";i:3452;}}}}
+  _wpas_done_all: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Tanpa angin tanpa badai, mendadak ada tulisan <a href="http://sendy.pw/routing-file-di-go-lang-web-server.html">Routing File di Go Lang Web Server</a>, tapi belum dibahas cara untuk membangun web server dengan Go. Ha, gimana?</p>
+<p>Apa itu Go? Go adalah bahasa pemrograman <em>structural</em> yang dikembangkan di Google, bahasa pemrograman yang mirip dengan C. Kenapa Go? Go menjanjikan kecepatan dan beban yang ringan ketika digunakan.</p>
+<h3>Persiapan 1 - Install Go</h3>
+<p>Untuk pengguna sistem GNU/Linux dan kerabatnya, termasuk Mac OS X dan BSD, gunakan perintah ini di terminal untuk menginstall go.<br />
+<code>$ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz</code><br />
+Setelah selesai, export directory go sebagai PATH dan tentukan juga GOPATH sebagai berkas kerja.</p>
+<pre>$ export PATH=$PATH:/usr/local/go/bin
+$ export GOPATH=$HOME/WORKING_DIRECTORY</pre>
+<h3>Persiapan 2 - Berkas Kerja</h3>
+<p>Sebelum mulai kecebur basah-basahan <em>coding</em>, siapkan dulu berkas kerja (working directory) untuk aplikasi pertama, format berkas kerja untuk go seperti ini: <code>$GOPATH/src/domain/username/projectname</code></p>
+<p>Misal <code>/home/sendy/Documents/project/go</code> adalah $GOPATH saya, jadi berkas kerja untuk proyek saya sekarang adalah <code>/home/sendy/Documents/project/go/src/sendy.pw/sendy/webserver</code>. Contoh lain jika nanti proyeknya akan disimpan di github, bisa menggunakan domain github dan <em>username</em> github seperti ini <code>/home/sendy/Documents/project/go/src/github.com/sendz/webserver</code>.</p>
+<h3>Persiapan 3 - Install Gin HTTP Framework</h3>
+<p>Apa itu Gin? Gin adalah HTTP Framework yang memudahkan pengembangan web server berbasis go.</p>
+<p><code>$ go get github.com/gin-gonic/gin</code></p>
+<h3>Coding</h3>
+<p>Buatlah satu file dengan ekstensi .go dengan nama yang sama dengan nama project di berkas kerja yang sudah ditentukan, misal <code>webserver.go</code>.<br />
+[codeflask language="go" title="webserver.go"]package main</p>
+<p>import (<br />
+"github.com/gin-gonic/gin" // import package gin<br />
+"net/http" // import package http<br />
+)</p>
+<p>func PageAbout(c *gin.Context) {<br />
+c.String(http.StatusOK, "Ini adalah halaman About")<br />
+}</p>
+<p>func main() {<br />
+router := gin.Default() // deklarasi variable router sebagai gin default</p>
+<p>router.GET("/", func (c *gin.Context) { // bentuk routing dengan inline function<br />
+c.String(http.StatusOK, "Selamat Datang di GO Server")<br />
+})<br />
+router.GET("/about", PageAbout) // bentuk routing dengan memanggil fungsi</p>
+<p>router.Run(":8080") // menjalankan go server di port 8080<br />
+}[/codeflask]</p>
+<p>Selesai? jalankan perintah <code>$ go run *.go</code> di berkas kerja via terminal lalu buka <code>http://localhost:8080/</code> di web browser, lalu akan tampil seperti ini</p>
+<p>[caption id="attachment_4104" align="alignnone" width="700"]<a href="http://sendy.pw/membangun-web-server-dengan-go.html/screen-shot-2015-11-07-at-08-31-53" rel="attachment wp-att-4104"><img class="size-large wp-image-4104" src="{{ site.baseurl }}/assets/Screen-Shot-2015-11-07-at-08.31.53-1024x736.png" alt="Tampilan dari web server go" width="700" height="503" /></a> Tampilan dari web server go[/caption]</p>
+<p>[caption id="attachment_4105" align="alignnone" width="700"]<a href="http://sendy.pw/wp-content/uploads/2015/11/Screen-Shot-2015-11-07-at-08.32.04.png"><img class="wp-image-4105 size-large" src="{{ site.baseurl }}/assets/Screen-Shot-2015-11-07-at-08.32.04-1024x736.png" alt="Screen Shot 2015-11-07 at 08.32.04" width="700" height="503" /></a> Halaman About dari webserver go[/caption]</p>
+<p>Coba lagi buka <code>http://localhost:8080/about</code> untuk menampilkan halaman About yang telah dibuat, dan akan tampil seperti ini</p>
+<p>Selesai? Selamat mengembangkan.</p>
+<p>Link kiranya bermanfaat:</p>
+<ul>
+<li><a href="https://golang.org/" target="_blank">https://golang.org/</a></li>
+<li><a href="https://github.com/gin-gonic/gin" target="_blank">https://github.com/gin-gonic/gin</a></li>
+<li><a href="https://gin-gonic.github.io/gin/" target="_blank">https://gin-gonic.github.io/gin/</a></li>
+</ul>

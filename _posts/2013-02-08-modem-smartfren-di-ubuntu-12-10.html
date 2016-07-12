@@ -1,0 +1,86 @@
+---
+layout: post
+title: Modem Smartfren di Ubuntu 12.10
+date: 2013-02-08 06:08:42.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- ID-ID
+- Internationalized
+- Linux
+- Post
+tags:
+- '12.10'
+- ac
+- konek
+- Linux
+- modem
+- quantal
+- smart
+- smartfren
+- t
+- wvdial
+- zte
+meta:
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  _wpas_done_2198997: '1'
+  geo_latitude: '-7.345674'
+  geo_longitude: '108.189385'
+  geo_accuracy: '0'
+  geo_address: tasikmalaya
+  geo_public: '1'
+  publicize_twitter_user: SENDYYeah
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  post_views_count: '3'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466954754;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:3510;}i:1;a:1:{s:2:"id";i:3440;}i:2;a:1:{s:2:"id";i:3992;}}}}
+  dsq_thread_id: '3836066908'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Setelah migrasi dari Jendela Belanda ke Quantal, akhirnya bingung pas setting modem susah banget. Setelah googling kemana-mana tetep aja gak bisa, dan ternyata ada hal yang memang gak usah dilakukan dari versi sebelumnya, yaitu eject device.</p>
+<p>Case nya begini, setelah perintah lsusb di terminal hasilnya seperti ini (padahal belum diapa-apain):</p>
+<pre>Bus 006 Device 005: ID 19d2:ffdd ONDA Communication S.p.A.</pre>
+<p>Dimana di versi lama, ID nya masih <strong>19d2:ffde</strong></p>
+<pre>Bus 006 Device 005: ID 19d2:ffde ONDA Communication S.p.A.</pre>
+<p>Jadi perintah sudo <strong>eject /dev/sr1</strong> ini sudah tak berguna karena USB modem udah kedetek jadi modem beneran...<!--more--></p>
+<p>Kalau sudah begini, langsung aja hajar modifikasi kernel biar mau baca itu modem.</p>
+<pre>sudo modprobe usbserial vendor=0x19d2 product=0xffdd</pre>
+<p>Selesai, install wvdial</p>
+<pre>sudo apt-get install wvdial</pre>
+<p>Pasti gak bisa kan? Iya lah, internetnya kan belum konek. Yaudah, cek aja dulu wvdial udah keinstall apa belum, kalau udah ada tinggal run perintah</p>
+<pre>sudo wvdialconf</pre>
+<p>Terus nanti bakal muncul tulisan dari negeri antah-berantah, kalau gak ada error berarti sukses.. *iyalah*</p>
+<p>Kalau belum ada, pergi dulu ke warnet, terus download dari sini <a href="https://launchpad.net/ubuntu/+source/wvdial" target="_blank">https://launchpad.net/ubuntu/+source/wvdial</a> terserah mau download yang tar.gz atau yang .deb.</p>
+<p>Terus masih di terminal, edit wvdial.conf dulu</p>
+<pre>sudo gedit /etc/wvdial.conf</pre>
+<p>Udah? Tambah baris-baris ini dibawah</p>
+<pre>[Dialer semar]
+Init1 = ATZ
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Stupid Mode = 1
+Modem Type = Analog Modem
+Command Line = ATDT
+ISDN = 0
+New PPPD = yes
+Phone = #777
+Modem = /dev/ttyUSB0
+Username = smart
+Password = smart
+Baud = 460800</pre>
+<p>Selesai? Sekarang suruh wvdial konekin ke internet dengan perintah</p>
+<pre>sudo wvdial semar</pre>
+<p>Konek.? Selamat.!</p>
+<p>Kalau besok PC nya mau dikonekin lagi, cukup dua langkah ini</p>
+<pre>sudo modprobe usbserial vendor=0x19d2 product=0xffdd</pre>
+<p>terus</p>
+<pre>sudo wvdial semar</pre>

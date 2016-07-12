@@ -1,0 +1,64 @@
+---
+layout: post
+title: Fix Webcam ASUS X200CA
+date: 2015-09-16 08:19:03.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Arch Linux
+- Linux
+tags:
+- asus
+- fix
+- laptop
+- netbook
+- notebook
+- webcam
+- x200ca
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+  spacious_page_layout: default_layout
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1467703708;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:4027;}i:1;a:1:{s:2:"id";i:3684;}i:2;a:1:{s:2:"id";i:3271;}}}}
+  _wpas_done_all: '1'
+  dsq_thread_id: '4133533634'
+  _wpas_skip_2198997: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_4733321: '1'
+  _wpas_skip_5676305: '1'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p>Masalah datang ke meja, ketika adiknya <a href="https://iskandarsiska.wordpress.com/" target="_blank">Siska</a> bawa ASUS X200CA dengan webcam yang gak bisa nyala, gak konek gitu, Cheese aja ngeblank (wkwkwkwkwk)</p>
+<p>Kalau bingung seperti apa ASUS X200CA, bisa buka ke halaman resmi ASUS<sup><a href="#link0">[0]</a></sup></p>
+<p>Karena saya yang install manjaro di netbooknya dia, saya jadi merasa bertanggung jawab. Baiklah, googling semalaman ternyata internet Telkomsel lemot banget. Akhirnya hari ini bisa ngerjain ini webcam!</p>
+<p>Begini cara saya memecahkan masalah</p>
+<h3>1. Cek BIOS</h3>
+<p>Siapa tau webcam dinonaktifkan dari BIOS, maka cek dulu konfigurasi hardware di BIOS, masuk BIOS bisa dengan tombol F2 atau Delete. Sudah masuk BIOS? Umumnya, konfigurasi untuk webcam ada di menu Advance dan bisa berada di sub-menu yang berbeda, di ASUS X200CA ini saya lupa di mana :D</p>
+<p>Ternyata di BIOS sudah Unlock, artinya sudah diaktifkan, tapi masih belum bisa tersambung ke Cheese, langkah selanjutnya . . .</p>
+<h3>2. Cek Hardware</h3>
+<p>Biasanya dengan perintah <code>lsusb</code> di terminal akan menampilkan informasi webcam, kalau dari beberapa forum dan website sih begitu, tapi di sini nihil.</p>
+<p>Cara terakhir menggunakan <code>lshw</code>. Karena di manjaro tidak ada <code>lshw</code>, kita perlu install lshw terlebih dahulu.</p>
+<pre>$ sudo pacman -S lshw
+$ sudo lshw &gt; hardware.txt</pre>
+<p>Kalau sudah selesai, buka file <code>hardware.txt</code> dengan file editor favorit, lalu cari informasi webcam, di kasus ini saya menemukan <code>USB2.0 UVC Camera</code>, sepertinya webcam generik.</p>
+<h3>3. Penyelesaian</h3>
+<p>Meluncur ke archwiki<sup><a href="#link1">[1]</a></sup> lalu cari keyword uvc, di sana ada paket <code>linux-uvc</code> yang ternyata sudah terinstall di Manjaro, lalu cari lagi dan menemukan <code>guvcview</code> dan wajib dicoba.</p>
+<pre>$ sudo pacman -S guvcview</pre>
+<p>Setelah <code>guvcview</code> terinstall, coba buka aplikasi guvcview dari application menu, jangan panik jika masih blank, coba akses menu <code>Setting -&gt; Camera Select</code> (kalau tidak salah) dan secara ajaib aplikasi guvcview langsung bisa mengakses kamera.</p>
+<p>Ini hasil akhirnya</p>
+<p><a href="http://sendy.pw/post/fix-webcam-asus-x200ca.html/screenshot-from-2015-09-15-192312" rel="attachment wp-att-4018"><img class="alignnone size-large wp-image-4018" src="{{ site.baseurl }}/assets/Screenshot-from-2015-09-15-192312_e6m9sq.png" alt="Screenshot from 2015-09-15 19:23:12" width="700" height="394" /></a></p>
+<p>Coba buka aplikasi Cheese</p>
+<p><a href="http://sendy.pw/post/fix-webcam-asus-x200ca.html/screenshot-from-2015-09-15-192357" rel="attachment wp-att-4017"><img class="alignnone size-large wp-image-4017" src="{{ site.baseurl }}/assets/Screenshot-from-2015-09-15-192357_dhdare.png" alt="Screenshot from 2015-09-15 19:23:57" width="700" height="394" /></a></p>
+<p>BISA!</p>
+<p>Link:</p>
+<p>[0] <a id="link0" href="http://www.asus.com/Notebooks/X200CA/" target="_blank">http://www.asus.com/Notebooks/X200CA/</a><br />
+[1] <a id="link1" href="https://wiki.archlinux.org/index.php/Webcam_setup" target="_blank">https://wiki.archlinux.org/index.php/Webcam_setup</a></p>

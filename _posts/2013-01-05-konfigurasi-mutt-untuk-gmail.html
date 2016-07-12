@@ -1,0 +1,120 @@
+---
+layout: post
+title: Konfigurasi mutt Untuk Gmail.
+date: 2013-01-05 14:59:03.000000000 +07:00
+type: post
+published: true
+status: publish
+categories:
+- Blog
+- Linux
+- Post
+tags:
+- configuration
+- gmail
+- konfigurasi
+- Linux
+- mutt
+- setting
+- terminal
+- text
+meta:
+  _publicize_facebook_user: https://www.facebook.com/ndy.aditya
+  _publicize_twitter_user: '@SENDYYeah'
+  _wpcom_is_markdown: '1'
+  _wpas_skip_2365524: '1'
+  _wpas_skip_2198991: '1'
+  _wpas_skip_2198997: '1'
+  geo_latitude: '-7.797224'
+  geo_longitude: '110.368797'
+  geo_accuracy: '3691'
+  geo_address: yogyakarta
+  geo_public: '1'
+  _wpas_done_2198997: '1'
+  _publicize_done_external: a:1:{s:8:"facebook";a:1:{i:1663414729;b:1;}}
+  publicize_twitter_user: SENDYYeah
+  _wpas_done_2198991: '1'
+  _wpas_done_2365524: '1'
+  publicize_reach: a:3:{s:7:"twitter";a:1:{i:2198991;i:389;}s:2:"fb";a:1:{i:2198997;i:519;}s:2:"wp";a:1:{i:0;i:2;}}
+  _thumbnail_id: '2310'
+  _edit_last: '1'
+  tiga_social_check: 'false'
+  post_views_count: '2'
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1466701786;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:2303;}i:1;a:1:{s:2:"id";i:3667;}i:2;a:1:{s:2:"id";i:3523;}}}}
+  dsq_thread_id: '3879926737'
+author:
+  login: sendy
+  email: sendzation@gmail.com
+  display_name: sendy
+  first_name: ''
+  last_name: ''
+---
+<p><a href="http://sendy.pw/wp-content/uploads/2015/05/mutt_cjmynu.png"><img class="alignnone size-full wp-image-2310" alt="mutt" src="{{ site.baseurl }}/assets/mutt_cjmynu.png" width="625" height="402" /></a></p>
+<p>Sorry nih, baru bisa share lagi, kemaren sok sibuk aja sih dan agak males buat post blog.</p>
+<p>Jadi kalau ngikutin post yang <a title="Aplikasi di Terminal, Console, Konsole linux." href="http://sendyyeah.wordpress.com/2012/12/23/aplikasi-di-terminal-console-konsole-linux/" target="_blank">sebelumnya</a>, ada mutt buat baca dan kirim email. Cuma, gimana konfigurasinya? Nah, agak ribet sih sebenernya, soalnya harus copy paste string segambreng. Seriusan copy paste ribet? Iya sih.</p>
+<p>setelah install mutt dengan perintah "sudo apt-get install mutt", lanjutkan dengan edit file .muttrc, gimana? Begini:<!--more--></p>
+<pre>gedit .muttrc</pre>
+<p>Terus paste ini:</p>
+<pre># A basic .muttrc for use with Gmail
+
+# Change the following six lines to match your Gmail account details
+set imap_user = "email_ente@gmail.com"
+set imap_pass = "password_gmail_ente"
+set smtp_url = "smtp://email_ente@smtp.gmail.com:587/"
+set smtp_pass = "password_gmail_ente"
+set from = "email_ente@gmail.com"
+set realname = "Nama Ente"
+
+# Change the following line to a different editor you prefer.
+set editor = "nano"
+
+# Basic config, you can leave this as is
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set postponed = "+[GMail]/Drafts"
+set record = "+[GMail]/Sent Mail"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor  complete-query
+bind editor ^T complete
+bind editor  noop 
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "unset trashn " "Gmail archive message"
+macro index,pager d "set trash="imaps://imap.googlemail.com/[GMail]/Bin"n " "Gmail delete message"
+macro index,pager gi "=INBOX" "Go to inbox"
+macro index,pager ga "=[Gmail]/All Mail" "Go to all mail"
+macro index,pager gs "=[Gmail]/Starred" "Go to starred messages"
+macro index,pager gd "=[Gmail]/Drafts" "Go to drafts"</pre>
+<p>Ganti detail yang ada disini sesuai dengan username dan password email:</p>
+<pre># Change the following six lines to match your Gmail account details
+set imap_user = "email_ente@gmail.com"
+set imap_pass = "password_gmail_ente"
+set smtp_url = "smtp://email_ente@smtp.gmail.com:587/"
+set smtp_pass = "password_gmail_ente"
+set from = "email_ente@gmail.com"
+set realname = "Nama Ente"</pre>
+<p>Terus kalau merasa ribet dengan nano yang text mode itu, ganti aja "nano" ke "gedit" atau text editor yang lain. Yang ini nih:</p>
+<pre># Change the following line to a different editor you prefer.
+set editor = "nano"</pre>
+<p><strong>Kirim Email</strong></p>
+<p>Caranya buka mutt di terminal pake perintah</p>
+<pre>mutt</pre>
+<p>Tunggu sampai selesai login, terus pencet tombol <strong>m</strong> terus isi To: dengan email tujuan, terus Subject dengan judulnya, nanti keluar nano atau gedit, tulis isi emailnya, close terus save. Setelah semua langkah diatas selesai, pencet tombol <strong>y</strong> di keyboard. Beres. Ribet memang, tapi asyik.</p>
