@@ -36,13 +36,14 @@ layout: default
     {% endfor %}
 
     <!-- Pagination links -->
+
     <ul class="pagination">
         {% if paginator.previous_page %}
         <li class="waves-effect"><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
         {% else %}
         <li class="disabled"><a href="#!">Previous</a></li>
         {% endif %}
-        <li class="disabled"><a href="#!">Page: {{ paginator.page }} of {{ paginator.total_pages }}</a></li>
+        <li class="active"><a href="#!">Page: {{ paginator.page }} of {{ paginator.total_pages }}</a></li>
         {% if paginator.next_page %}
         <li><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
         {% else %}
