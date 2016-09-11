@@ -4,8 +4,9 @@ title: Tinggalkan Saja Twitter Bootstrap-nya
 date: 2016-09-11 08:19:20 +07:00
 type: post
 published: true
-categories: webdev, bootstrap
+categories: [webdev,bootstrap]
 author: Sendy
+comments: true
 ---
 
 ![Twitter Bootstrap]({{ site.baseurl }}/assets/bootstrap-site.png)
