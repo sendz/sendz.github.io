@@ -20,7 +20,7 @@ layout: default
         </div>
 
         <div class="post-comment">
-            {% if page.comments %}
+            {% if page.comments != false %}
             <div id="disqus_thread"></div>
             <script>
                 /**
