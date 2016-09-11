@@ -8,7 +8,7 @@ status: publish
 categories: [webdev, bootstrap]
 ---
 
-Judulnya dibikin gitu, biar rame. Saya adalah tipe orang yang gampang bosan dan suka mencoba hal baru, ketika sedang mencoba untuk membuat sebuah halaman web, saya selalu memanfaatkan sumber daya bantuan yang ada di internet, contohnya CSS Framework. CSS Framework mungkin adalah pilihan yang baik untuk mengawali sebuah desain tampilan dan membuat prototype (saya lebih senang membuat prototype langsung dengan file HTML tanpa alat pengolah gambar).
+Judulnya dibikin gitu, biar rame, dan pos ini saya buat untuk mencoba integrasi jekyll blog saya dengan IFTTT. Saya adalah tipe orang yang gampang bosan dan suka mencoba hal baru, ketika sedang mencoba untuk membuat sebuah halaman web, saya selalu memanfaatkan sumber daya bantuan yang ada di internet, contohnya CSS Framework. CSS Framework mungkin adalah pilihan yang baik untuk mengawali sebuah desain tampilan dan membuat prototype (saya lebih senang membuat prototype langsung dengan file HTML tanpa alat pengolah gambar).
  
 Kasus saya saat ini adalah, saya ingin membuat halaman web yang responsif, elemen yang bersahabat dengan perangkat mobile, ada beberapa tampilan yang menggunakan animasi parallax dan menu navigasi menggunakan off-canvas ketika dibuka di perangkat mobile. Lalu pertimbangan untuk memilih CSS Framework yaitu:
 
