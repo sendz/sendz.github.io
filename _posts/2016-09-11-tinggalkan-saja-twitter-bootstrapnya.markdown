@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Tinggalkan Saja Dulu Twitter Bootstrap-nya
-date: 2016-01-11 08:19:20 +07:00
+title: Tinggalkan Saja Twitter Bootstrap-nya
+date: 2016-09-11 08:19:20 +07:00
 type: post
 published: true
-status: publish
-categories: [webdev, bootstrap]
+categories: webdev, bootstrap
+author: Sendy
 ---
+
+![Twitter Bootstrap]({{ site.baseurl }}/assets/bootstrap-site.png)
 
 Judulnya dibikin gitu, biar rame, dan pos ini saya buat untuk mencoba integrasi jekyll blog saya dengan IFTTT. Saya adalah tipe orang yang gampang bosan dan suka mencoba hal baru, ketika sedang mencoba untuk membuat sebuah halaman web, saya selalu memanfaatkan sumber daya bantuan yang ada di internet, contohnya CSS Framework. CSS Framework mungkin adalah pilihan yang baik untuk mengawali sebuah desain tampilan dan membuat prototype (saya lebih senang membuat prototype langsung dengan file HTML tanpa alat pengolah gambar).
  
