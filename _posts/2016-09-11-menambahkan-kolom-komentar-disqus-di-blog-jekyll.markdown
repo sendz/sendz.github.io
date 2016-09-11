@@ -12,7 +12,7 @@ author: Sendy
 
 ![Disqus]({{ site.baseurl }}/assets/disqus.png)
 
-Mulai berpindah dari wordpress ke Jekyll yang dihost di github, karena gratis dan gak bakal pusing takut sama defacer lagi, lah kan repo blog nya udah diset private :D
+Mulai berpindah dari wordpress ke Jekyll yang dihost di github, karena gratis dan gak bakal pusing takut sama defacer lagi, lah kan repo blog nya udah diset private :smile:
 
 Karena Jekyll ini static page, dan tidak memiliki fitur manajemen komentar, pilihannya adalah dengan menyisipkan disqus. Yang belum tau apa itu disqus, silakan akses link [Disqus](https://disqus.com/) dan buat channel baru di [Link ini](https://disqus.com/admin/create/).
 
@@ -26,4 +26,4 @@ Setelah dengan file `_layouts/post.html` selanjutnya file `_layouts/page.html`, 
 
 Selanjutnya, untuk mengaktifkan atau menonaktifkan kolom komentar, di page setting bisa diatur dengan mengganti variabel `comments: true` atau `comments: false`.
 
-Selamat mencoba.
+Selamat mencoba :+1:.
