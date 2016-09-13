@@ -1,27 +1,27 @@
-<footer class="page-footer">
+<footer class="uk-page-footer">
 
-  <div class="container">
+  <div class="uk-container uk-container-center">
 
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">{{ site.title }}</h5>
-        <p class="grey-text text-lighten-4">{{ site.description }}</p>
+    <div class="uk-grid">
+      <div class="uk-width-large-1-2 uk-width-small-1-1">
+        <h5>{{ site.title }}</h5>
+        <p>{{ site.description }}</p>
       </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
-        <ul class="grey-text text-lighten-4">
+      <div class="uk-width-large-1-2 uk-width-small-1-1">
+        <h5>Links</h5>
+        <ul>
           <li>
-            <a class="grey-text text-lighten-4" href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> {{ site.email }}</a>
+            <a href="mailto:{{ site.email }}"><i class="uk-icon-envelope"></i> {{ site.email }}</a>
           </li>
             {% if site.github_username %}
           <li>
-            <a class="grey-text text-lighten-4" href="http://github.com/{{ site.github_username }}"><i class="fa fa-github" aria-hidden="true"></i> {{ site.github_username }}</a>
+            <a href="http://github.com/{{ site.github_username }}"><i class="uk-icon-github" aria-hidden="true"></i> {{ site.github_username }}</a>
           </li>
           {% endif %}
 
           {% if site.twitter_username %}
           <li>
-            <a class="grey-text text-lighten-4" href="http://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i> {{ site.twitter_username }}</a>
+            <a href="http://twitter.com/{{ site.twitter_username }}"><i class="uk-icon-twitter"></i> {{ site.twitter_username }}</a>
           </li>
           {% endif %}
         </ul>
@@ -29,10 +29,10 @@
     </div>
 
   </div>
-  <div class="footer-copyright">
-    <div class="container">
-      &copy; 2016 {{ site.title }}
-      <a class="grey-text text-lighten-4 right" href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> Subscribe</a>
+  <div class="uk-footer-copyright">
+    <div class="uk-container uk-container-center">
+      <span class="uk-float-left">&copy; 2016 {{ site.title }}</span>
+      <a class="uk-float-right" href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> Subscribe</a>
     </div>
 
   </div>

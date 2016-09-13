@@ -7,3 +7,26 @@
 img {
   max-width:100%;
 }
+
+.uk-page-footer {
+  background: #1C1C1C;
+  margin-top: 20px;
+  padding-top: 20px;
+  color: #F2F2F2;
+  a, h5 {
+    color: #F2F2F2;
+  }
+}
+
+.uk-footer-copyright {
+  background-color: rgba(0,0,0,0.5);
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  font-weight: 300;
+  margin-top: 20px;
+  color: #F2F2F2;
+  a, h5 {
+    color: #F2F2F2;
+  }
+}
