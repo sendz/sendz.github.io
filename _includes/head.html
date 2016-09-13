@@ -8,6 +8,7 @@
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/uikit.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "
@@ -22,11 +23,4 @@
             $(".button-collapse").sideNav();
         });
     </script>
-    <style>
-        @media only screen and (min-width: 993px) {
-            .container {
-                width: 50%;
-            }
-        }
-    </style>
 </head>
