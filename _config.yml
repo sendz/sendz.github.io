@@ -19,6 +19,7 @@ github_username:  sendz
 timezone: Asia/Jakarta
 paginate: 5
 paginate_path: "page_:num"
+disqus_shortname: "sendy"
 
 # Build settings
 markdown: kramdown
