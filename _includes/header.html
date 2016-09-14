@@ -1,28 +1,28 @@
-<header class="site-header">
-
-  <div class="wrapper navbar-fixed">
-
-    <nav>
-      <div class="nav-wrapper container">
-        <a href="{{ site.baseurl }}/" class="brand-logo">{{ site.title }}</a>
-        <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="fa fa-bars"></i></a>
-        <ul class="right hide-on-med-and-down">
-          {% for my_page in site.pages %}
-            {% if my_page.title %}
-              <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a> </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <ul class="side-nav" id="mobile-nav">
-          {% for my_page in site.pages %}
-            {% if my_page.title %}
-              <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a> </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
+<header>
+    <nav class="uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center">
+            <a href="#mobilenav" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+            <a href="{{ site.baseurl }}/" class="uk-navbar-brand">{{ site.title }}</a>
+            <div class="uk-navbar-flip">
+                <ul class="uk-navbar-nav uk-hidden-small">
+                    {% for my_page in site.pages %}
+                    {% if my_page.title %}
+                    <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </nav>
-
-  </div>
-
+    <div id="mobilenav" class="uk-offcanvas">
+        <div class="uk-offcanvas-bar">
+            <ul class="uk-nav uk-nav-offcanvas">
+                {% for my_page in site.pages %}
+                {% if my_page.title %}
+                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </header>
