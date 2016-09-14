@@ -1,3 +1,9 @@
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif';
+
+body, h1, h2, h3, h4, h5, h6, .uk-navbar-nav>li>a {
+  font-family: 'Droid Serif', serif;
+}
+
 @media only screen and (min-width: 993px) {
   .uk-container, .container {
     width: 50%;
@@ -48,4 +54,8 @@ ul.no-style {
   > li {
     list-style: none;
   }
+}
+
+article {
+  margin:5px 0px;
 }
