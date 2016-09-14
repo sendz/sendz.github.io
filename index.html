@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<div class="home container">
+<div class="home uk-container uk-container-center">
 
     {% for post in paginator.posts %}
 
-    <div class="row">
-        <div class="col s12">
-            <div class="card large white">
+    <article class="uk-grid">
+        <div class="uk-width-1-1">
+            <div class="">
                 {% assign foundImage = 0 %}
                 {% assign images = post.content | split:"<img " %}
                 {% for image in images %}
@@ -16,38 +16,38 @@ layout: default
 
                 {% if foundImage == 0 %}
                 {% assign html = image | split:"/>" | first %}
-                <div class="card-image">
+                <div class="uk-cover-background">
                     <img {{ html }} />
                 </div>
                 {% assign foundImage = 1 %}
                 {% endif %}
                 {% endif %}
                 {% endfor %}
-                <div class="card-content black-text">
+                <section class="excerpt content">
                     <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="card-title" style="line-height: 1;">{{ post.title }}</h2></a>
-                    <p>{{ post.excerpt | strip_html | truncatewords:175 }}</p>
-                </div>
-                <div class="card-action">
-                    <a href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+                    <p>{{ post.excerpt | strip_html | truncatewords:75 }}</p>
+                </section>
+                <div class="action">
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="uk-align-right">Read More &raquo;</a>
                 </div>
             </div>
         </div>
-    </div>
+    </article>
     {% endfor %}
 
     <!-- Pagination links -->
 
-    <ul class="pagination">
+    <ul class="uk-pagination">
         {% if paginator.previous_page %}
-        <li class="waves-effect"><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
+        <li class="uk-pagination-previous"><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
         {% else %}
-        <li class="disabled"><a href="#!">Previous</a></li>
+        <li class="uk-pagination-previous uk-disabled"><a href="#!">Previous</a></li>
         {% endif %}
-        <li class="active"><a href="#!">Page: {{ paginator.page }} of {{ paginator.total_pages }}</a></li>
+        <li class="uk-active"><a href="#!">Page: {{ paginator.page }} of {{ paginator.total_pages }}</a></li>
         {% if paginator.next_page %}
-        <li><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
+        <li class="uk-pagination-next"><a href="{{ paginator.next_page_path }}" class="next">Next</a></li>
         {% else %}
-        <li class="disabled"><a href="#!">Next</a></li>
+        <li class="uk-pagination-next uk-disabled"><a href="#!">Next</a></li>
         {% endif %}
     </ul>
 
