@@ -24,7 +24,7 @@ layout: default
             {{ content }}
         </div>
 
-        {% if page.comments != false %}
+        {% if site.disqus_shortname && page.comments != false %}
             {% include comment.html %}
         {% endif %}
 
