@@ -1,7 +1,7 @@
 <header>
     <nav class="uk-navbar uk-navbar-attached">
+        <a href="#mobilenav" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
         <div class="uk-container uk-container-center">
-            <a href="#mobilenav" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
             <a href="{{ site.baseurl }}/" class="uk-navbar-brand">{{ site.title }}</a>
             <div class="uk-navbar-flip">
                 <ul class="uk-navbar-nav uk-hidden-small">
@@ -30,9 +30,22 @@
     <div id="mobilenav" class="uk-offcanvas">
         <div class="uk-offcanvas-bar">
             <ul class="uk-nav uk-nav-offcanvas">
+                {% if page.url == "/" %}
+                <li class="uk-active">
+                    {% else %}
+                <li>
+                    {% endif %}
+                    <a href="{{ site.baseurl }}/">Home</a>
+                </li>
                 {% for my_page in site.pages %}
                 {% if my_page.title %}
-                <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+                {% if page.url == my_page.url %}
+                <li class="uk-active">
+                    {% else %}
+                <li>
+                    {% endif %}
+                    <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+                </li>
                 {% endif %}
                 {% endfor %}
             </ul>
