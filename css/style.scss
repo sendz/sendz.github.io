@@ -41,3 +41,11 @@ img {
     width: 100%;
   }
 }
+
+ul.no-style {
+  margin: 0px;
+  padding-left: 0px;
+  > li {
+    list-style: none;
+  }
+}
