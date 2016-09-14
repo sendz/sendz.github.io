@@ -6,29 +6,32 @@ layout: default
 
     {% for post in paginator.posts %}
 
-    <article class="uk-grid">
-        <div class="uk-width-1-1">
-            <div class="">
-                {% assign foundImage = 0 %}
-                {% assign images = post.content | split:"<img " %}
-                {% for image in images %}
-                {% if image contains 'src' %}
+    <article>
+        <div class="uk-grid">
+            <div class="uk-width-1-1">
+                <div class="">
+                    {% assign foundImage = 0 %}
+                    {% assign images = post.content | split:"<img " %}
+                    {% for image in images %}
+                    {% if image contains 'src' %}
 
-                {% if foundImage == 0 %}
-                {% assign html = image | split:"/>" | first %}
-                <div class="uk-cover-background">
-                    <img {{ html }} />
-                </div>
-                {% assign foundImage = 1 %}
-                {% endif %}
-                {% endif %}
-                {% endfor %}
-                <section class="excerpt content">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="card-title" style="line-height: 1;">{{ post.title }}</h2></a>
-                    <p>{{ post.excerpt | strip_html | truncatewords:75 }}</p>
-                </section>
-                <div class="action">
-                    <a href="{{ post.url | prepend: site.baseurl }}" class="uk-align-right">Read More &raquo;</a>
+                    {% if foundImage == 0 %}
+                    {% assign html = image | split:"/>" | first %}
+                    <div class="uk-cover-background">
+                        <img {{ html }}/>
+                    </div>
+                    {% assign foundImage = 1 %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    <section class="excerpt content">
+                        <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="card-title" style="line-height: 1;">
+                            {{ post.title }}</h2></a>
+                        <p>{{ post.excerpt | strip_html | truncatewords:75 }}</p>
+                    </section>
+                    <div class="action">
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="uk-align-right">Read More &raquo;</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,7 +42,8 @@ layout: default
 
     <ul class="uk-pagination">
         {% if paginator.previous_page %}
-        <li class="uk-pagination-previous"><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a></li>
+        <li class="uk-pagination-previous"><a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        </li>
         {% else %}
         <li class="uk-pagination-previous uk-disabled"><a href="#!">Previous</a></li>
         {% endif %}
