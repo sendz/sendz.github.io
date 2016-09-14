@@ -30,3 +30,14 @@ img {
     color: #F2F2F2;
   }
 }
+
+.uk-cover-background {
+  height: 320px;
+  overflow: hidden;
+  object-position: center;
+  -o-object-position: center;
+
+  > img {
+    width: 100%;
+  }
+}
