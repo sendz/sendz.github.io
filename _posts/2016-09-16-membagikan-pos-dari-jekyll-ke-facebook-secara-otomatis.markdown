@@ -51,7 +51,7 @@ Sampai sini, terserah deh mau diisi apa, setelah itu jangan lupa klik **Create A
 
 Sampai sini, kita tinggal klik **Create Recipe** atau kasih nama sekalian biar gak salah edit.
 
-![IFTT Give a Recipe Name]{{ site.baseurl }}/assets/ifttt-give-a-name.png)
+![IFTT Give a Recipe Name]({{ site.baseurl }}/assets/ifttt-give-a-name.png)
 
 Terakhir adalah, coba pos satu buah konten melalui Jekyll dan tunggu hasilnya :+1:
 
