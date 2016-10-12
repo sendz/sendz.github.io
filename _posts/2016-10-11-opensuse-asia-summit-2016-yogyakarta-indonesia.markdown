@@ -1,6 +1,6 @@
 ---
 layout: post
-title: openSUSE.Asia Summit 2016 in Yogyakarta, Indonesia - My Point of View as Local Team
+title: openSUSE.Asia Summit 2016 in Yogyakarta, Indonesia - My Story of View as Local Team
 date: 2016-10-11 13:36:00 +07:00
 type: post
 published: true
