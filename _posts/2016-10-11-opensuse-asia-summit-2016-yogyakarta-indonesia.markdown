@@ -134,7 +134,7 @@ PS: If you are happy with our volunteer, giving them a lunch will also make them
 
 Thanks, see you at openSUSE.Asia Summit 2016.
 
-Team of openSUSE.Asia Summit 2015
+### Team of openSUSE.Asia Summit 2015
 
 ![Full Team - Photo by openSUSE Indonesia]({{ site.baseurl }}/assets/30070059471_9e59e629e1_k.jpg)
 
