@@ -30,6 +30,8 @@ About May 2016, Estu started to develop the proposal for openSUSE Board, I helpe
 
 Done with event proposal, it's time to develop a team. First initialization meetup attended by me, Estu, [Siska](https://iskandarsiska.wordpress.com), Yuni, Agung, Nopal, Anisa, and some folks I can't remember. But in the middle of the journey, some people leave and left me, Estu, Siska as -core- Local Team. Agung and Anisa still in the team, but not as core team as the trio.
 
+And then we did some radio visit, thank you Ibra for your help to promote us to local radio!
+
 ### The Volunteer
 
 Done with everything, come my part as 'Coordinator of Local Volunteer' to do lots of work. At 30 August 2016, we are calling for volunteers, about 53 people are registered, but we only pick 42 people at that time, and kicked 2 people for some reason. So, here is our troops after additional volunteer are joining
