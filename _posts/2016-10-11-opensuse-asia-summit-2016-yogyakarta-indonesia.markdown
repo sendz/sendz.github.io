@@ -114,7 +114,7 @@ The last day of summit, stamina already drained, Estu seen exhausted, we are lac
 
 Problem begin when one of our Keynote Speaker's Assistant ask for internet connection, I ask our Info Desk to talk with our sponsor which will provide internet connection for whole day including workshop and conference day, I tell him to ask what's the SSID and Password, and my team came with sad news because they didn't setup the internet since Day 1. So I gave our Keynote Speaker's Assistant my internet connection, tethered from my phone.
 
-Honestly, I still mad at this single sponsor.
+Honestly, I still mad at this single sponsor :triumph:.
 
 At the end of the day, I watched the video from second day activities, and it made me cry, why? Because of our hard work, we successfully managed this event till the last day!
 
