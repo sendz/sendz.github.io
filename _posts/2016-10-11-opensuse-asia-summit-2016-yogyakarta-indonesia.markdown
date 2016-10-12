@@ -138,7 +138,7 @@ As our thank you to the volunteers, we chose one volunteer as best of the best, 
 
 > Thanks, see you at openSUSE.Asia Summit 2017 in Japan! I hope.
 
-### Team of openSUSE.Asia Summit 2015
+### Team of openSUSE.Asia Summit 2016
 
 ![Full Team - Photo by openSUSE Indonesia]({{ site.baseurl }}/assets/30070059471_9e59e629e1_k.jpg)
 
