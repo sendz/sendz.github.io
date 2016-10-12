@@ -128,6 +128,14 @@ As our thank you to the volunteers, we chose one volunteer as best of the best, 
 
 ![Haedar as The Best Volunteer - Photo by openSUSE Indonesia]({{ site.baseurl }}/assets/30070500081_c4bfe1f948_k.jpg)
 
+*^photo by openSUSE Indonesia*
+
 PS: If you are happy with our volunteer, giving them a lunch will also make them happy :grin:
 
 Thanks, see you at openSUSE.Asia Summit 2016.
+
+Team of openSUSE.Asia Summit 2015
+
+![Full Team - Photo by openSUSE Indonesia]({{ site.baseurl }}/assets/30070059471_9e59e629e1_k.jpg)
+
+*^photo by openSUSE Indonesia*
