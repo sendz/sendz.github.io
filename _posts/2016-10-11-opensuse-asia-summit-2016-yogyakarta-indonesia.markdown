@@ -118,7 +118,7 @@ Honestly, I still mad at this single sponsor.
 
 At the end of the day, I watched the video from second day activities, and it made me cry, why? Because of our hard work, we successfully managed this event till the last day!
 
-![![Highlight openSUSE Asia Summit 2016 Yogyakarta | DAY 2](http://img.youtube.com/vi/o1tNvUtSm_U/0.jpg)](http://www.youtube.com/watch?v=o1tNvUtSm_U)
+![![Highlight openSUSE Asia Summit 2016 Yogyakarta DAY 2](http://img.youtube.com/vi/o1tNvUtSm_U/0.jpg)](http://www.youtube.com/watch?v=o1tNvUtSm_U)
 
 ## Conclusion
 
