@@ -99,4 +99,8 @@ Dan ini aplikasi dengan tampilan dan hasil yang sama dengan sebelumnya
 
 ![Aplikasi]({{ site.baseurl }}/assets/Screen Shot 2016-10-28 at 23.59.35.png)
 
+## Tautan Project di github
+
+[Github Project](https://github.com/KSL-Kusuka/belajar-android/tree/mvp)
+
 Sekian, selamat mencoba.
