@@ -16,3 +16,5 @@ Selama perkuliahan saya memperhatikan pertanyaan-pertanyaan dari man-teman dan d
 *Dik, kamu yakin gak salah jurusan?* Mungkin kamu sebenernya pengen masuk fakultas sebelah tapi ngeliat fakultas kita tamannya lebih hijau? Padahal dengan era informasi digital saat ini, sangat mudah untuk menyebarluaskan informasi, apalagi cuma sekedar dakwah, macam blog maspiyungan dan voa-islam itu, mereka ~~berdakwah~~ menyebarkan informasi (yang embuh). Giliran dik-adik yang menyebar dakwah dan informasi yang mencerahkan dan mendamaikan. Kalau saya sih takutnya gak konsisten.
 
 Dah ah, mau kerjain sesuatu dulu.
+
+INGAT! NOTHING IMPOSSIBLE sama Teknologi Informasi bro! Untuk saat ini sih.
