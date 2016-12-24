@@ -13,6 +13,6 @@ Semester ini saya ikut kuliah yang non-IT yang seharusnya sudah saya ambil di se
 
 Selama perkuliahan saya memperhatikan pertanyaan-pertanyaan dari man-teman dan dik-adik saat diskusi, pertanyaan yang hampir sama bentuknya selalu terulang, tapi waktu itu saya malah ikutan mumet mikirin jawabannya, jadi baru sempat kepikiran hari ini. Jadi gini, pertanyaannya semacam "Bagaimana cara mengimplementasi bla bla bla dengan disiplin ilmu yang sedang kita pelajari saat ini (Teknik Informatika)".
 
-*Dik, kamu yakin gak salah jurusan?* Karena dengan era informasi digital ini, sangat mudah untuk menyebarluaskan informasi, apalagi cuma sekedar dakwah, macam blog maspiyungan dan voa-islam itu, mereka ~~berdakwah~~ menyebarkan informasi (yang embuh). Giliran dik-adik yang menyebar dakwah dan informasi yang mencerahkan dan mendamaikan. Kalau saya sih takutnya gak konsisten.
+*Dik, kamu yakin gak salah jurusan?* Mungkin kamu sebenernya pengen masuk fakultas sebelah tapi ngeliat fakultas kita tamannya lebih hijau? Padahal dengan era informasi digital saat ini, sangat mudah untuk menyebarluaskan informasi, apalagi cuma sekedar dakwah, macam blog maspiyungan dan voa-islam itu, mereka ~~berdakwah~~ menyebarkan informasi (yang embuh). Giliran dik-adik yang menyebar dakwah dan informasi yang mencerahkan dan mendamaikan. Kalau saya sih takutnya gak konsisten.
 
 Dah ah, mau kerjain sesuatu dulu.
