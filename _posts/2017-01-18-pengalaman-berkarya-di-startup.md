@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pengalaman Kerja di Sratap
+title: Pengalaman Kerja di Startup
 date: 2017-01-18 19:47:38 +07:00
 type: post
 published: true
