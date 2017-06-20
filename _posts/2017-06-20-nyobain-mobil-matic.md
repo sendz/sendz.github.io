@@ -15,7 +15,7 @@ Beberapa hari yang lalu dapat kesempatan nyopir pake Avanza Matic punya Pak Angg
 
 Kemarin, karena [juragan bango](https://bango29.com/) dengan keisengannya nyuruh beli part tamiya ke [LALA Toys](https://www.instagram.com/ridwantamiya/) dan saya males kalau harus motoran, dengan pasrah belio kasih kunci mobilnya yang gak ada kuncinya, cuma tombol! Mobil mahal kok cuma dikasih tombol! Mobilnya apa? Mitsubishi Outlander Sport. Seperti biasa, kalau Mitsubishi itu mobil apapun dikasih label 'Sport' artinya downgrade dari mobil aslinya. Contoh? Mitsubishi Pajero VS Mitsubishi Pajero Sport, Mitsubishi Outlander VS Mitsubishi Outlander Sport.
 
-Terus gimana transmisi metik si Mitsubishi Outlander Sport ini? MULUSSSSS.... Tapi saya rada ragu-ragu buat bejek gas di mobil ini, karena saya dipaksa untuk hemat BBM karena ada perbandingan konsumsi BBM/KM. Mobil mahal kok khawatir sama konsumsi BBM, hih!
+Terus gimana transmisi metik si Mitsubishi Outlander Sport ini? MULUSSSSS.... Tapi saya rada ragu-ragu buat bejek gas di mobil ini, karena saya dipaksa untuk hemat BBM karena ada perbandingan konsumsi BBM/KM. Mobil mahal kok khawatir sama konsumsi BBM, berani mobil mahal tapi kok gak berani boros bensin, hih! :joy:
 
 ![Dashboard Mitsubishi Outlander Sport]({{ site.baseurl }}/assets/dash_outlander.jpeg)
 
