@@ -4,3 +4,5 @@ _site
 wp.xml
 .idea
 *.css.map
+.DS_Store
+*/.DS_Store
