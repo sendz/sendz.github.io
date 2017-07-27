@@ -51,7 +51,7 @@ Istri saya adalah seorang aktivis, dia adalah anggota yayasan [GNOME](https://ww
 
 Hari ini, kami sudah banyak menjalani cerita, belajar tentang apapun dalam kehidupan ini.
 
-Dengan tulisan ini, saya berucap syukur saya memiliki istri yang baik, saya juga berterima kasih kepada Ibu, Bapak, Mama, Ayah, Mama, Ayah (Alm.), semua teman-teman, saudara-saudara, sahabat-sahabat yang telah banyak membantu kami selama ini, semoga kebaikan menyertai kita semua.
+Dengan tulisan ini, saya berucap syukur saya memiliki istri yang baik, saya juga berterima kasih kepada Ibu, Bapak, Mama, Ayah, Mama, Ayah (Alm.), semua teman-teman, saudara-saudara, sahabat-sahabat yang telah banyak membantu kami selama ini (sengaja namanya tidak saya sebutkan agar tidak jadi riya :grin:), semoga kebaikan menyertai kita semua.
 
 Ngomong-ngomong, dulu kami adalah sahabat baik, jadi dengan ini saya berhasil keluar dari yang namanya kutukan "Friendzoned"! :joy:
 
