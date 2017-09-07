@@ -9,6 +9,8 @@ author: Sendy
 comments: false
 ---
 
+![TypeScript]({{ site.baseurl }}/assets/typescript.png)
+
 Saya dulu koding JavaScript kemudian pindah ke Java, saat itu saya kangen dengan simple-nya JavaScript. Tahun ini, saya kembali ke JavaScript dan garap angularjs, framework tua. Yang terjadi adalah, saya rindu Java dengan data type yang dideklarasikan untuk setiap variable, kenapa? Karena kesederhanaan JavaScript sering membuat saya kebingungan apakah saya harus mengirim parameter dengan tipe data `string`, `integer`, `float` atau `object`?
 
 Kemudian kami di kantor memutuskan untuk sedikit memindahkan beberapa basis kode ke tempat lain, berpindah ke format bahasa pemrograman, atau berpindah framework. Opsi saat itu adalah pindahkan keseluruhan kode ke Angular 4, atau ke ES6, atau ke TypeScript, atau ke ReactJS. Dari berbagai opsi, kami sepakat untuk memindahkan ke TypeScript karena tidak ingin menulis ulang keluruhan kode jika beralih framework. Kenapa tidak memilih ES6? Karena kami tidak bisa mendeklarasikan tipe data secara eksplisit untuk tiap variable yang kami buat.
