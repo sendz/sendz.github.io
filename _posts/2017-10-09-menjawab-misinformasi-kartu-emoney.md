@@ -126,4 +126,15 @@ Dengan ide ini, diharapkan pelaku usaha yang memiliki cicilan kredit ke Bank tid
 - ATM CIMB Niaga, gratis biaya pengambilan tunai di CIMB Group, biasa saya gunakan ketika mengunjungi Singapura dan Malaysia
 - GO-PAY
 
+#### Beberapa Merchant yang Bisa Menerima Transaksi Non-Tunai
+
+- SPBU Pertamina tertentu
+- Indomaret
+- Alfamart
+- Supermarket
+  - Toserba Yogya
+  - Toserba Samudera
+  - Pamela Swalayan
+  - Mirota Swalayan
+
 Apakah saya masih bermimpi Indonesia bisa masuk era _Cashless Society_? [Ya, saya masih memimpikannya.](https://sendz.github.io/2016/06/07/masih-ngimpi-indonesia-bisa-masuk-era-cashless-society.html)
