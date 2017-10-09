@@ -2,7 +2,7 @@
 layout: post
 title: Menjawab Misinformasi tentang Kartu eMoney (eToll, eCash, eMoney)
 type: post
-date: 2017-10-09 15:13:00 +07:00
+date: 2017-10-09 20:20:00 +07:00
 published: true
 categories: life
 tags: life, tools, emoney
@@ -36,47 +36,31 @@ Poin-poin bahasan yang akan saya ulas adalah sebagai berikut:
 
 #### Jawaban tentang Kerugian Konsumen
 
-1. Pemotongan biaya Rp. 20.000,- setiap pembelian kartu E-Tol
-  
-Perlu diketahui bahwa kartu e-Toll adalah produk dari bank dan merupakan platform (program) yang sama dengan e-Money atau uang elektronik. Biaya sebesar Rp. 20.000,- yang dikeluarkan oleh konsumen adalah biaya pembelian kartu e-Money, dan hanya dibayarkan sekali saja karena kartu e-Money bisa diisi ulang.
+1. **Pemotongan biaya Rp. 20.000,- setiap pembelian kartu E-Tol**
+  Perlu diketahui bahwa kartu e-Toll adalah produk dari bank dan merupakan platform (program) yang sama dengan e-Money atau uang elektronik. Biaya sebesar Rp. 20.000,- yang dikeluarkan oleh konsumen adalah biaya pembelian kartu e-Money, dan hanya dibayarkan sekali saja karena kartu e-Money bisa diisi ulang.
+  Potensi misinformasi dari poin ini adalah, masyarakat akan menganggap bahwa kartu e-Money adalah kartu sekali pakai yang saat saldo habis, masyarakat harus membeli kembali kartu tersebut. Padahal, kartu e-Money atau e-Toll bisa diisi ulang ketika saldo sudah hampir habis, dan kartu tersebut masih bisa digunakan sampai kapan pun.
+  Lalu, bagaimana dengan biaya pembeliannya? Ke mana masuknya? Uang pembelian kartu e-Money akan masuk ke bank untuk menutup biaya penerbitan kartu, pencetakan desain kartu, dan lain-lainnya yang merupakan kebijakan dari Bank, jadi saya tidak perlu membahas ini lebih lanjut.
 
-Potensi misinformasi dari poin ini adalah, masyarakat akan menganggap bahwa kartu e-Money adalah kartu sekali pakai yang saat saldo habis, masyarakat harus membeli kembali kartu tersebut. Padahal, kartu e-Money atau e-Toll bisa diisi ulang ketika saldo sudah hampir habis, dan kartu tersebut masih bisa digunakan sampai kapan pun.
+2. **Potensi terkumpulnya triliunan rupiah dari konsumen yang tidak setiap hari menggunakan tol**
+  Secara sederhana, konsep kerja sebuah bank memang seperti itu, uang yang kita simpan di rekening bank secara otomatis akan dikumpulkan di bank dan dikelola oleh bank.
+  Potensi misinformasinya adalah, hal ini terdengar mengerikan oleh masyarakat awam dengan anggapan bahwa Bank akan menimbun uang, dan keseluruhan uang yang ada di dalam saldo sisa e-Money tidak bisa digunakan lagi.
+  Faktanya adalah, bahwa platform e-Money bisa digunakan untuk berbagai kebutuhan, seperti berbelanja di toko retail modern, di SPBU yang menerima e-Money, di Indomaret, di Alfamart, dan merchant lain yang mendukung pembayaran dengan e-Money. Jadi, ketika konsumen tidak lagi menggunakan jalan tol karena memang tidak selalu masuk jalan tol, saldo sisa di kartu e-Money bisa dihabiskan untuk belanja apapun termasuk sabun colek di gerai-gerai tertentu.
 
-Lalu, bagaimana dengan biaya pembeliannya? Ke mana masuknya? Uang pembelian kartu e-Money akan masuk ke bank untuk menutup biaya penerbitan kartu, pencetakan desain kartu, dan lain-lainnya yang merupakan kebijakan dari Bank, jadi saya tidak perlu membahas ini lebih lanjut.
+3. **Potensi triliunan rupiah saldo sisa akan dikelola oleh pihak bank**
+  Seperti yang sudah saya bahas sebelumnya, bahwa cara kerja sebuah bank adalah mengelola dana simpanan agar mendapatkan keuntungan untuk menutupi biaya operasional Bank. Bahkan, simpanan kita di rekening akan dikelola oleh bank sehingga kita akan mendapatkan bagi hasil yang biasa disebut `bunga`. Meskipun begitu, saya belum pernah mendengar kebijakan bank yang membagikan bunga ke saldo e-Money.
+  Poin ini juga menimbulkan keresahan masyarakat awam, menganggap bahwa Bank adalah sebuah lembaga mengerikan, padahal tidak sedikit yang mempercayakan Bank sebagai tempat untuk menyimpan uang.
+  Kalau memang tidak ikhlas ada sisa, ya tinggal dihabiskan untuk beli popok bayi di Indomaret atau Alfamart, bisa kok.
 
-2. Potensi terkumpulnya triliunan rupiah dari konsumen yang tidak setiap hari menggunakan tol
+4. **Sisa saldo minimum Rp. 10.000,- tidak bisa digunakan akan menjadi milik bank**
+  Saya nyatakan TIDAK, sisa saldo tetap menjadi hak pemegang kartu e-Money dan bisa digunakan di mana saja yang menerima sistem pembayaran e-Money yang sama.
+  Lalu, kenapa harus ada saldo minimum? Saldo minimum dimaksudkan agar pengguna layanan tersebut memiliki saldo yang cukup untuk membayar layanan tersebut ketika konsumen selesai menggunakan layanan itu. Biasanya, saldo minimum yang diharuskan adalah sebanyak biaya layanan termahal dari penyedia layanan tersebut. Misal, biaya layanan adalah Rp. 30.000,-, maka saldo minimal yang harus dimiliki adalah Rp. 30.000,-, lalu tambahan Rp. 10.000,- itu apa? Mungkin saja sebagai buffer atau jeda.
+  Pengalaman saya menggunakan KRL dengan e-Money dari Bank Mandiri berupa Kartu Indomaret, saat masuk peron, saya diwajibkan memiliki saldo minimal Rp. 10.000,- karena tarif termahal dari jalur tersebut adalah Rp. 10.000,-. Biasanya, Rp. 10.000,- teserbut akan dikurangi dari saldo saat memasuki peron, dan akan dilakukan perhitungan ulang saat keluar stasiun tujuan.
+  Untuk saldo e-Money itu sendiri, bisa digunakan sampai habis. Saat ini saldo saya di Kartu Indomaret masih tersisa sekitar Rp. 4.000 dan masih bisa digunakan.
+  ![Saldo Kartu Indomaret Saya]({{ site.baseurl }}/assets/mandiri-saldo.jpg)
 
-Secara sederhana, konsep kerja sebuah bank memang seperti itu, uang yang kita simpan di rekening bank secara otomatis akan dikumpulkan di bank dan dikelola oleh bank.
-
-Potensi misinformasinya adalah, hal ini terdengar mengerikan oleh masyarakat awam dengan anggapan bahwa Bank akan menimbun uang, dan keseluruhan uang yang ada di dalam saldo sisa e-Money tidak bisa digunakan lagi.
-
-Faktanya adalah, bahwa platform e-Money bisa digunakan untuk berbagai kebutuhan, seperti berbelanja di toko retail modern, di SPBU yang menerima e-Money, di Indomaret, di Alfamart, dan merchant lain yang mendukung pembayaran dengan e-Money. Jadi, ketika konsumen tidak lagi menggunakan jalan tol karena memang tidak selalu masuk jalan tol, saldo sisa di kartu e-Money bisa dihabiskan untuk belanja apapun termasuk sabun colek di gerai-gerai tertentu.
-
-3. Potensi triliunan rupiah saldo sisa akan dikelola oleh pihak bank
-
-Seperti yang sudah saya bahas sebelumnya, bahwa cara kerja sebuah bank adalah mengelola dana simpanan agar mendapatkan keuntungan untuk menutupi biaya operasional Bank. Bahkan, simpanan kita di rekening akan dikelola oleh bank sehingga kita akan mendapatkan bagi hasil yang biasa disebut `bunga`. Meskipun begitu, saya belum pernah mendengar kebijakan bank yang membagikan bunga ke saldo e-Money.
-
-Poin ini juga menimbulkan keresahan masyarakat awam, menganggap bahwa Bank adalah sebuah lembaga mengerikan, padahal tidak sedikit yang mempercayakan Bank sebagai tempat untuk menyimpan uang.
-
-Kalau memang tidak ikhlas ada sisa, ya tinggal dihabiskan untuk beli popok bayi di Indomaret atau Alfamart, bisa kok.
-
-4. Sisa saldo minimum Rp. 10.000,- tidak bisa digunakan akan menjadi milik bank
-
-Saya nyatakan TIDAK, sisa saldo tetap menjadi hak pemegang kartu e-Money dan bisa digunakan di mana saja yang menerima sistem pembayaran e-Money yang sama.
-
-Lalu, kenapa harus ada saldo minimum? Saldo minimum dimaksudkan agar pengguna layanan tersebut memiliki saldo yang cukup untuk membayar layanan tersebut ketika konsumen selesai menggunakan layanan itu. Biasanya, saldo minimum yang diharuskan adalah sebanyak biaya layanan termahal dari penyedia layanan tersebut. Misal, biaya layanan adalah Rp. 30.000,-, maka saldo minimal yang harus dimiliki adalah Rp. 30.000,-, lalu tambahan Rp. 10.000,- itu apa? Mungkin saja sebagai buffer atau jeda.
-
-Pengalaman saya menggunakan KRL dengan e-Money dari Bank Mandiri berupa Kartu Indomaret, saat masuk peron, saya diwajibkan memiliki saldo minimal Rp. 10.000,- karena tarif termahal dari jalur tersebut adalah Rp. 10.000,-. Biasanya, Rp. 10.000,- teserbut akan dikurangi dari saldo saat memasuki peron, dan akan dilakukan perhitungan ulang saat keluar stasiun tujuan.
-
-Untuk saldo e-Money itu sendiri, bisa digunakan sampai habis. Saat ini saldo saya di Kartu Indomaret masih tersisa sekitar Rp. 4.000 dan masih bisa digunakan.
-
-![Saldo Kartu Indomaret Saya]({{ site.baseurl }}/assets/mandiri-saldo.jpg)
-
-5. Biaya tambahan setiap isi ulang
-
-Tidak setiap pengisian ulang e-Money dikenakan biaya, jika kita memiliki rekening dari Bank yang sama dengan Bank penerbit kartu e-Money yang kita gunakan, pengisian dibawah Rp. 200.000,- di ATM Bank yang sama tidak akan dikenakan biaya alias GRATIS.
-
-Intinya adalah, jika anda punya rekening Bank Mandiri, maka pakailah kartu e-Money Mandiri Prabayar, jika rekening anda BNI, gunakan kartu e-Money BNI, jika anda memiliki rekening BRI, gunakan e-Money BRI. Begitu seterusnya.
+5. **Biaya tambahan setiap isi ulang**
+  Tidak setiap pengisian ulang e-Money dikenakan biaya, jika kita memiliki rekening dari Bank yang sama dengan Bank penerbit kartu e-Money yang kita gunakan, pengisian dibawah Rp. 200.000,- di ATM Bank yang sama tidak akan dikenakan biaya alias GRATIS.
+  Intinya adalah, jika anda punya rekening Bank Mandiri, maka pakailah kartu e-Money Mandiri Prabayar, jika rekening anda BNI, gunakan kartu e-Money BNI, jika anda memiliki rekening BRI, gunakan e-Money BRI. Begitu seterusnya.
 
 > jadi, poin-poin tersebut yang dibahas di dalam video memang benar adanya, tapi pembahasan yang kurang lengkap akan menjadikan kekeliruan penyerapan informasi di masyarakat.
 
