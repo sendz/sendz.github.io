@@ -7,7 +7,7 @@ published: true
 categories: life
 tags: life, tools, emoney
 author: Sendy
-comments: false
+comments: true
 ---
 
 ![Kartu Indomaret, Mandiri Prabayar e-Money]({{ site.baseurl }}/assets/indomaret-card.jpg)
