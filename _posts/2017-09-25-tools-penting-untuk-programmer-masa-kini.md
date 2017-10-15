@@ -12,6 +12,8 @@ comments: true
 
 Tujuan utama sebagai seorang programmer adalah menghasilkan produk, selain itu juga harus bisa menjaga kualitas produk dengan baik. Betul apa betul?
 
+Jadi, saya akan sedikit berbagi beberapa alat yang bisa membantu kita untuk jadi frontend programmer yang baik dan keliatan lebih keren dari teman-teman yang belum tahu. Selain itu, kita bisa jadi lebih produktif dan lebih sering ngopi-ngopi hangat atau minum coklat hangat :joy:
+
 ### Bash
 
 ![Bash dengan zsh]({{ site.baseurl }}/assets/bash.png)
