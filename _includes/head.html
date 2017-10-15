@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description"
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="fb:app_id" content="299814487170716" />
+    <meta property="fb:app_id" content="{{ page.fb_app_id }}" />
 
     <link rel="stylesheet" href="{{ site.baseurl }}/css/uikit.min.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
