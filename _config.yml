@@ -20,6 +20,7 @@ timezone: Asia/Jakarta
 paginate: 5
 paginate_path: "page_:num"
 disqus_shortname: "sendy"
+fb_app_id: 299814487170716
 
 # Build settings
 markdown: kramdown
