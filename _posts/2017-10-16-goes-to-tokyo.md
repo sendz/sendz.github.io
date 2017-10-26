@@ -17,3 +17,5 @@ Walaupun tidak terlalu berharap keterima karena rasanya materi saya biasa saja, 
 Waktu itu saya lagi nyetir abis pulang mudik Idul Adha, baru sampai Banyumas atau Kebumen gak inget, karena ban mobil sedikit tidak enak, saya melipir ngisi angin ban di pompa angin SPBU yang katanya niupin Nitrogen. Cek HP kok ada notifikasi dari openSUSE, setelah saya baca ternyata materi khutbah saya diterima, dan saya dapat undangan ke Jepang.
 
 Persiapannya banyak banget, karena saya harus siapin dokumen sendiri termasuk Visa. Dulu waktu saya ke India, urusan Visa diurusi sama ~~mantan~~ kantor, jadi tinggal kumpulin persyaratan saja. Pas ke Sri Lanka, tinggal beli lewat e-Visa mereka. Sisanya? Jalan-jalan tanpa urus Visa karena cuma seputaran ASEAN saja.
+
+Dan akhirnya saya berangkat lah ke Tokyo. Udah, gitu aja. Nanti dilanjut.
