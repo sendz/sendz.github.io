@@ -2,7 +2,7 @@
 layout: post
 title: openSUSE Asia Summit 2017 - Tokyo, Japan
 type: post
-date: 2017-11-02 13:43:00 +07:00
+date: 2017-10-25 14:43:00 +07:00
 published: true
 categories: community
 tags: opensource, trip, travel, community, opensuse
