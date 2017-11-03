@@ -69,3 +69,9 @@ The event is not ended here, we have city tour on 3rd day, visited Hinode Pier, 
 ![Max Huang Proposing openSUSE Asia Summit 2018 in Taiwan]({{ site.baseurl }}/assets/osas2017-12.jpg)
 
 > Thank you openSUSE, and all Sponsors to make this summit happens every year.
+
+### Important Links
+
+- [openSUSE Asia Summit 2017 Flickr Group](https://www.flickr.com/groups/3727654@N21/)
+- [openSUSE Asia Summit 2017 Conference Page](https://events.opensuse.org/conference/summitasia17)
+- [openSUSE Asia Summit 2017 Full Schedule](https://events.opensuse.org/conference/summitasia17/schedule)
