@@ -56,4 +56,4 @@ _Foto dari Si Tidy_
 
 Makan Malam hari Sabtu dipersembahkan oleh LibreOffice Indonesia.
 
-![Sponsor Makan Malam]({{ site.baseurl }}/assets/libreofficedinnerbadge.png)
+[![Sponsor Makan Malam]({{ site.baseurl }}/assets/libreofficedinnerbadge.png)](https://www.libreoffice.id/)
