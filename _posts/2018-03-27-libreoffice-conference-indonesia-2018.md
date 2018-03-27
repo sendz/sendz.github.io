@@ -46,7 +46,7 @@ Tapi yakin, kalau sudah semeja di tempat makan, semua terasa lebih baik dan meny
 
 ### Terima Kasih
 
-Akhir tulisan ini, saya mengucapkan terima kasih kepada LibreOffice Indonesia yang sudah menyelenggarakan acara ini dan traktir-traktir, semua sponsor yang membantu mensukseskan acara, semua tim panitia, pembicara, peserta, pengunjung booth kami di Endless dan GNOME ID, semua yang tidak bisa saya sebutkan namanya.
+Akhir tulisan ini, saya mengucapkan terima kasih kepada LibreOffice Indonesia yang sudah menyelenggarakan acara ini dan traktir-traktir, semua sponsor yang membantu mensukseskan acara, semua tim panitia, pembicara, peserta, pengunjung booth kami di Endless dan GNOME ID, semua yang tidak bisa saya sebutkan namanya. Terima kasih Endless.
 
 ![Foto Paguyuban Kakek Sugiyanarief]({{ site.baseurl }}/assets/39176118220_c106d3b385_z.jpg)
 
