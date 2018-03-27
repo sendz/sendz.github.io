@@ -10,6 +10,8 @@ author: Sendy
 comments: true
 ---
 
+![LibreOffice Conference Indonesia 2018]({{ site.baseurl }}/40312370704_9ae2227419_z.jpg)
+
 Awalnya saya ogah-ogahan pergi ke [LibreOffice Conference 2018](https://www.libreoffice.id/), karena saya jarang pakai perangkat lunak perkantoran (Office Application) sebagai hasil dari kebiasaan menulis dengan markdown. Kenapa markdown? Karena di tempat kerja saya, satu-satunya alasan untuk menulis adalah menulis dokumentasi pengembangan perangkat lunak yang biasa kami simpan di wiki github atau wiki gitlab.
 
 Saya juga tidak mengirimkan proposal pada saat Call for Paper, karena alasan tersebut di atas. Tapi saya sempat curhat kenapa tidak ada dukungan markdown di LibreOffice Writer? Padahal bisa lebih mudah untuk membuat dokumen sederhana.
