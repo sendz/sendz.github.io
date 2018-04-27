@@ -40,4 +40,4 @@ Kalau sekiranya saya tidak bisa berbuat apa-apa, saya akan diam. Kalau sudah ter
 
 Karena nyatanya, kehidupan tidak sesederhana apa yang kita pikirkan.
 
-> GNOME berat? Iya. GNOME jelek? Ah, perasaanmu saja.
+> GNOME berat? Iya, kamu tak akan sanggup, biar aku saja. GNOME jelek? Ah, perasaanmu saja.
