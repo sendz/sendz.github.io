@@ -32,6 +32,8 @@ Dan saya juga pernah bilang ke orang Yayasan GNOME kalau Desktop Environment mer
 
 Bagaimana saya berkomunikasi dengan pengguna jalan yang ugal-ugalan? Pejalan kaki yang serampangan? Klakson yang panjang adalah cara saya berkomunikasi demi mengingatkan mereka kalau "your driving skill is suck!".
 
+Dengan cara seperti ini, celaan menjadi kritik positif.
+
 ### Mending Diam, Nanti dibilang Tidak Beretika
 
 Kalau sekiranya saya tidak bisa berbuat apa-apa, saya akan diam. Kalau sudah terlanjur mencela, saya akan memohon maaf dan beristighfar, dan kalau terlanjur keceplosan dan saya tidak berbuat apa-apa, selalu ada saja yang menegur dan mengingatkan, sebelum orang lain bilang kalau saya tidak beretika :grin:
