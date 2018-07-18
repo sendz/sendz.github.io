@@ -10,7 +10,7 @@ gems: ["jekyll-paginate", "jemoji"]
 
 # Site settings
 title: Sendy
-email: sendzation@gmail.com
+email: hi@sendz.xyz
 description: Cerita
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sendz.xyz" # the base hostname & protocol for your site
