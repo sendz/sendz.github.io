@@ -13,7 +13,7 @@ title: Sendy
 email: sendzation@gmail.com
 description: Cerita
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://sendz.xyz" # the base hostname & protocol for your site
+url: "https://sendz.xyz" # the base hostname & protocol for your site
 twitter_username: SENDYYeah
 github_username:  sendz
 timezone: Asia/Jakarta
