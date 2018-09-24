@@ -50,6 +50,15 @@ Hal-hal yang perlu diperhatikan:
 * Berkas *ViewModel* harus bersih dari hal-hal yang berkaitan dengan *View*, misal tidak menggunakan tipe dari `React` atau `React.Component`, tidak ada `JSX`, jadi murni `JS` atau `TS`, kenapa? Agar mudah ketika membuat *unit test*.
 * *Model* dan *ViewModel* tidak mengikat pada suatu *View* tertentu, dan memungkinkan untuk digunakan ulang (*reuse*).
 
+Keuntungan-keuntungan yang didapatkan dengan pola seperti ini:
+
+* Tim bisa bekerja dengan metode TDD atau *Test Driven Development*, rujukan bisa dicek di [Wikipedia - Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) yang juga memiliki beberapa keuntungan, diantaranya:
+  * Developer fokus pada mencari solusi untuk pemecahan masalah
+  * Mengurangi kegiatan-kegiatan tidak perlu karena menambah kode yang memang tidak perlu dalam penyelesaian masalah
+  * Menjaga unit kode tetap kecil dan mudah dalam maintenance
+* Angka *Code Coverage* yang bikin kita nyengir walau saya bukan penganut paham "harus ada code coverage", tapi kan *just in case* :grin:
+* *Maintenance* yang lebih mudah, karena fokus developer tidak akan terbagi dalam satu waktu, misal fokus terpecah antara maintenance *logic code* dan *UI code*.
+
 ### Contoh Implementasi
 
 `/src/screen/login/Login.tsx`
