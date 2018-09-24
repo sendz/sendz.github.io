@@ -4,7 +4,7 @@ title: Arsitektur Proyek ReactJS dengan MVVM Pattern
 type: post
 date: 2018-09-24 15:16:00 +07:00
 published: true
-categories: community
+categories: programming
 tags: reactjs, react, javascript, web, programming, mvvm
 author: Sendy
 comments: true
