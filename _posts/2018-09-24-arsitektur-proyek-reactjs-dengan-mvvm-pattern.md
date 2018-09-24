@@ -63,6 +63,7 @@ Keuntungan-keuntungan yang didapatkan dengan pola seperti ini:
   * Menjaga unit kode tetap kecil dan mudah dalam maintenance
 * Angka *Code Coverage* yang bikin kita nyengir walau saya bukan penganut paham "harus ada code coverage", tapi kan *just in case* :grin:
 * *Maintenance* yang lebih mudah, karena fokus developer tidak akan terbagi dalam satu waktu, misal fokus terpecah antara maintenance *logic code* dan *UI code*.
+* Dengan adanya *ViewModel*, component *View* jadi seolah-olah *stateless*, karena *'state'* sudah berpindah ke *ViewModel*.
 
 ### Contoh Implementasi
 
