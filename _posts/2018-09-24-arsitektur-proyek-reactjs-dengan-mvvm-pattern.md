@@ -442,19 +442,16 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
 /src
   /components
     /Header
-      Header.test.tsx
       Header.tsx
       index.ts
     /LocationPicker
       index.ts
       language.en.ts
       language.id.ts
-      LocationPicker.test.tsx
       LocationPicker.tsx
       ViewModel.test.ts
       ViewModel.ts
     /BankInfo
-      BankInfo.test.tsx
       BankInfo.tsx
       index.ts
       language.en.ts
@@ -468,11 +465,8 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
       index.ts
       language.en.ts
       language.id.ts
-      StatusApproved.test.tsx
       StatusApproved.tsx
-      StatusConfirmed.test.tsx
       StatusConfirmed.tsx
-      StatusRejected.test.tsx
       StatusRejected.tsx
       ViewModel.test.ts
       ViewModel.ts
@@ -480,7 +474,6 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
       index.ts
       language.en.ts
       language.id.ts
-      Navigation.test.tsx
       Navigation.tsx
       ViewModel.test.ts
       ViewModel.ts
@@ -495,7 +488,6 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
     validationHelper.ts
   /screens
     /Confirmation
-      Confirmation.test.tsx
       Confirmation.tsx
       ViewModel.test.ts
       ViewModel.ts
@@ -508,7 +500,6 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
           index.ts
           language.en.ts
           language.id.ts
-          Agreement.test.tsx
           Agreement.tsx
           ViewModel.test.ts
           ViewModel.ts
@@ -517,7 +508,6 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
           language.en.ts
           language.id.ts
           OUTLET_CITY.ts
-          OutletInfo.test.tsx
           OutletInfo.tsx
           ViewModel.test.ts
           ViewModel.ts
@@ -525,14 +515,12 @@ Dan hasil akhirnya, struktur proyek saya akan berbentuk seperti ini:
           index.ts
           language.en.ts
           language.id.ts
-          UserInfo.test.tsx
           UserInfo.ts
           ViewModel.test.ts
           ViewModel.ts
       index.ts
       language.en.ts
       language.id.ts
-      Onboarding.test.tsx
       Onboarding.tsx
       ViewModel.test.ts
       ViewModel.ts
