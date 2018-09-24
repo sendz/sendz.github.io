@@ -50,7 +50,7 @@ Hal-hal yang perlu diperhatikan:
 
 * Saya masih menggunakan `mobx` untuk state manager.
 * Berkas *View* tidak boleh memiliki kode logika yang berkaitan dengan *business logic* atau *data*, *logic* hanya diperkenankan untuk manipulasi tampilan.
-* Berkas *Model* berisi interface yang merepresentasikan data-data yang dibutuhkan oleh *ViewModel*
+* Berkas *Model* yang saya implementasikan hanya berisi interface yang merepresentasikan data-data yang dibutuhkan oleh *ViewModel*, tapi tidak hanya terbatas pada interface saja. *Model* bisa saja digunakan sebagai data holder, memiliki `variable`, `setter` dan `getter` misal, tetapi manipulasi data hanya dilakukan dari dalam *ViewModel*.
 * Berkas *ViewModel* harus bersih dari hal-hal yang berkaitan dengan *View*, misal tidak menggunakan tipe dari `React` atau `React.Component`, tidak ada `JSX`, jadi murni `JS` atau `TS`, kenapa? Agar mudah ketika membuat *unit test*.
 * *Model* dan *ViewModel* tidak mengikat pada suatu *View* tertentu, dan memungkinkan untuk digunakan ulang (*reuse*).
 
