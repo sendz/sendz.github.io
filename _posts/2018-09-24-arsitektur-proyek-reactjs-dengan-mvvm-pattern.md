@@ -65,7 +65,9 @@ Keuntungan-keuntungan yang didapatkan dengan pola seperti ini:
 * *Maintenance* yang lebih mudah, karena fokus developer tidak akan terbagi dalam satu waktu, misal fokus terpecah antara maintenance *logic code* dan *UI code*.
 * Dengan adanya *ViewModel*, component *View* jadi seolah-olah *stateless*, karena *'state'* sudah berpindah ke *ViewModel*.
 
-### Contoh Implementasi
+### Contoh Implementasi di ReactJS dengan Mobx
+
+> Silakan sesuaikan dengan library atau state management yang anda gunakan
 
 `/src/screen/login/Login.tsx`
 ```
