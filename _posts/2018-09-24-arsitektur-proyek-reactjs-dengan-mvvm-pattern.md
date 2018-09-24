@@ -101,11 +101,6 @@ interface Props {
 @observer
 export class Login extends React.Component<Props> {
 
-  text = {
-    en: EN,
-    id: ID
-  };
-
   viewModel: ViewModel;
 
   constructor(props: Props) {
