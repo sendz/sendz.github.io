@@ -36,6 +36,8 @@ Kemudian saya memiliki ide untuk mengubah struktur kode yang sudah ada, dengan m
 
 ![MVVM Schema]({{ site.baseurl }}/assets/mvvm-schema.png)
 
+*Gambar dari [dotnetcurry.com](https://www.dotnetcurry.com/xamarin/1382/mvvm-in-xamarin-forms)*
+
 * **Model** merepresentasikan Data dan State untuk masing-masing komponen, tetapi tidak menutup kemungkinan untuk digunakan ulang di komponen lain. Bisa berupa sebuah file atau hanya attached interface di *ViewModel*
 * **ViewModel** bertugas untuk mengolah data yang dibutuhkan oleh *View*, selain itu *ViewModel* juga menyajikan fungsi-fungsi untuk memanipulasi data yang ada pada *Model*.
 * **View** menampilkan data-data *observable* dan *actions* yang disediakan oleh *ViewModel*.
