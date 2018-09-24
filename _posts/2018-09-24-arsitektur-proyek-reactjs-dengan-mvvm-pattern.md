@@ -48,7 +48,7 @@ Tujuan dengan digunakannya pola arsitektur seperti ini adalah untuk memindahkan 
 
 Hal-hal yang perlu diperhatikan:
 
-* Saya masih menggunakan `mobx` untuk state manager.
+* Saya masih menggunakan `mobx` untuk state manager, jadi untuk library lain mungkin butuh penyesuaian.
 * Berkas *View* tidak boleh memiliki kode logika yang berkaitan dengan *business logic* atau *data*, *logic* hanya diperkenankan untuk manipulasi tampilan.
 * Berkas *Model* yang saya implementasikan hanya berisi interface yang merepresentasikan data-data yang dibutuhkan oleh *ViewModel*, tapi tidak hanya terbatas pada interface saja. *Model* bisa saja digunakan sebagai data holder, memiliki `variable`, `setter` dan `getter` misal, tetapi manipulasi data hanya dilakukan dari dalam *ViewModel*.
   * Alasan saya hanya menggunakan *Model* sebagai `interface` karena tidak semua isi dari `DataType` saya gunakan, dan ukuran datanya masih terlalu kecil untuk membuatnya jadi sebuah modul independen terpisah, jadi implementasi yang saya terapkan hanyalah setengah-setengah dari konsep MVVM yang sesungguhnya(?).
