@@ -69,7 +69,7 @@ Keuntungan-keuntungan yang didapatkan dengan pola seperti ini:
 
 > Silakan sesuaikan dengan library atau state management yang anda gunakan
 
-`/src/screen/login/Login.tsx`
+Berkas `/src/screen/login/Login.tsx` sebagai *View*
 ```
 import * as React from 'react';
 import {
@@ -181,7 +181,16 @@ export class Login extends React.Component<Props> {
 }
 ```
 
-`/src/screen/login/ViewModel.ts`
+Bisa diperhatikan pada baris kode berikut, *View* akan menginisiasi `ViewModel` sebagai object `viewModel`, `ViewModel` haruslah berbentuk pure native code, atau kode pemrograman murni tanpa ada *markup language*.
+
+```
+this.viewModel = new ViewModel({
+  isUsePhoneNumber: false,
+  locale: this.props[INJECTIONS.LOCALE]!.state
+});
+```
+
+Berkas `/src/screen/login/ViewModel.ts` sebagai *ViewModel* dan juga *Model*
 ```
 import { observable, action, computed } from 'mobx';
 import { LocaleInterface } from '../../states';
@@ -283,7 +292,7 @@ export class ViewModel {
 }
 ```
 
-`/src/screen/login/ViewModel.test.ts`
+Berkas `/src/screen/login/ViewModel.test.ts` sebagai *Unit Test* untuk *ViewModel*
 
 ```
 import { EN, ID } from './languages';
