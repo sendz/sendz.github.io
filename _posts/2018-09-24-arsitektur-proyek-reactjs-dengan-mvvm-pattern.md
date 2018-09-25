@@ -410,11 +410,8 @@ describe('ViewModel of Login', () => {
         viewModel.verificationCodeSent(true);
         expect(viewModel.primaryButtonLabel).toEqual(viewModel.loginButtonLabel);
       });
-
     });
-
   });
-
 });
 ```
 
