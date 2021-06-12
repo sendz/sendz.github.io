@@ -16,7 +16,7 @@ comments: true
 
 Sebelum saya mulai pembahasan ini, saya anggap anda sekalian sudah memahami dasar-dasar membuat atau mendesain PCB mechanical keyboard dan cara membuat firmware di QMK. Jika belum, silakan kunjungi tautan berikut:
 - [ruiqimao/keyboard-pcb-guide: Guide on how to design keyboard PCBs with KiCad](https://github.com/ruiqimao/keyboard-pcb-guide)
-- [PCB Design | Keyboard Designer Wiki @ ai03.me](https://wiki.ai03.com/books/pcb-design)
+- [PCB Design Keyboard Designer Wiki ai03.me](https://wiki.ai03.com/books/pcb-design)
 - [QMK Firmware](https://docs.qmk.fm/#/)
 
 ## Pembahasan
@@ -37,6 +37,7 @@ Pada umumnya, 1 pin di MCU akan digunakan untuk 1 *column* atau 1 *row*, sehingg
 Apa itu duplex matrix? Yaitu sebuah cara untuk memaksimalkan penggunaan matriks atau grid dengan mengalikan 2 jumlah row, dan 1/2 jumlah column. Dari kasus keyboard 60% tadi, dengan 14 column dan 5 row, bisa dibuat duplex dengan 7 column dan 10 row, sehingga hanya membutuhkan 17 pin dibandingkan 19 pin, lebih hemat 2 pin. Tapi apakah semua kasus bisa diselesaikan atau bisa diefisienkan dengan duplex? Tentu tidak, macropad akan sama saja borosnya antara duplex dan matrix biasa.
 
 Contoh matriks keyboard dengan dupleks:
+
 |          | **col0** | **col0** | **col1** | **col1** | **dst** |
 |----------|----------|----------|----------|----------|---------|
 | **row0** |   Esc    |          |    2     |          |   dst   |
