@@ -10,6 +10,8 @@ author: Sendy
 comments: true
 ---
 
+![75 Pixels Schematic]({{ site.baseurl }}/assets/75pixels-sch.png)
+
 ## Pendahuluan
 
 Sebelum saya mulai pembahasan ini, saya anggap anda sekalian sudah memahami dasar-dasar membuat atau mendesain PCB mechanical keyboard dan cara membuat firmware di QMK. Jika belum, silakan kunjungi tautan berikut:
